@@ -1,0 +1,7 @@
+# Allow Googlebot and all search engine crawlers
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# Sitemap location
+Sitemap: https://sushiarij.app/sitemap.xml
