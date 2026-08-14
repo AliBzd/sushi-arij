@@ -1161,3 +1161,98 @@ function sendReservationWhatsApp() {
   if (resModal) resModal.classList.remove('active');
   if (resOverlay) resOverlay.classList.remove('active');
 }
+
+// PDF Menu Generator
+function downloadMenuPDF() {
+  const menu = getActiveMenuItems();
+  const brandName = localStorage.getItem('arij_brand_name') || 'Café & Restaurant Sushi Arij';
+  
+  const printWindow = window.open('', '_blank');
+  if (!printWindow) {
+    alert('Veuillez autoriser les fenêtres surgissantes (popups) pour télécharger le PDF.');
+    return;
+  }
+
+  const categoryNames = {
+    sushi: '🍣 SUSHI & SPÉCIALITÉS JAPONAISES',
+    cafe: '☕ CAFÉ & BOISSONS CHAUDES / FRAÎCHES',
+    breakfast: '🥐 PETIT-DÉJEUNER & BRUNCH',
+    mains: '🍽️ PLATS, PÂTES & POKÉ BOWLS',
+    desserts: '🍰 DESSERTS & GOURMANDISES'
+  };
+
+  const grouped = {};
+  menu.forEach(item => {
+    const cat = item.category || 'sushi';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push(item);
+  });
+
+  let contentHtml = `
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <title>Carte du Menu - ${brandName}</title>
+      <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #1a1e24; margin: 0; padding: 25px; background: #fff; }
+        .header { text-align: center; border-bottom: 2px solid #d4a373; padding-bottom: 15px; margin-bottom: 25px; }
+        .header h1 { margin: 0; color: #d4a373; font-size: 26px; text-transform: uppercase; letter-spacing: 1px; }
+        .header p { margin: 5px 0 0; color: #666; font-size: 13px; }
+        .cat-title { background: #fdf8f3; color: #b58352; padding: 8px 12px; font-size: 15px; font-weight: bold; border-left: 4px solid #d4a373; margin-top: 25px; margin-bottom: 12px; }
+        .item-row { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dotted #ccc; padding: 8px 0; font-size: 13px; }
+        .item-name { font-weight: bold; color: #111; }
+        .item-desc { font-size: 11px; color: #666; margin-top: 2px; }
+        .item-price { font-size: 14px; font-weight: bold; color: #d4a373; white-space: nowrap; margin-left: 15px; }
+        .footer { text-align: center; margin-top: 35px; border-top: 1px solid #eee; padding-top: 15px; font-size: 11px; color: #888; }
+        @media print {
+          body { padding: 0; }
+          .no-print { display: none; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="no-print" style="text-align: right; margin-bottom: 15px;">
+        <button onclick="window.print()" style="background: #d4a373; color: #fff; border: none; padding: 10px 20px; font-size: 14px; font-weight: bold; border-radius: 4px; cursor: pointer;">🖨️ Enregistrer en PDF / Imprimer</button>
+      </div>
+
+      <div class="header">
+        <h1>${brandName}</h1>
+        <p>Av. Hssaine, Sala Al Jadida • Tél & WhatsApp: +212 6 12 56 08 03 • Site: https://sushiarij.app</p>
+      </div>
+  `;
+
+  for (const cat in grouped) {
+    contentHtml += `<div class="cat-title">${categoryNames[cat] || cat.toUpperCase()}</div>`;
+    grouped[cat].forEach(item => {
+      const name = item.name?.fr || item.name || 'Plat';
+      const desc = item.desc?.fr || item.desc || '';
+      contentHtml += `
+        <div class="item-row">
+          <div>
+            <div class="item-name">${name}</div>
+            ${desc ? `<div class="item-desc">${desc}</div>` : ''}
+          </div>
+          <div class="item-price">${item.price} MAD</div>
+        </div>
+      `;
+    });
+  }
+
+  contentHtml += `
+      <div class="footer">
+        <p>Café & Restaurant Sushi Arij • Produits frais préparés chaque jour • Ouvert 06:30 - 23:30</p>
+      </div>
+      <script>
+        window.onload = function() {
+          setTimeout(function() { window.print(); }, 500);
+        };
+      </script>
+    </body>
+    </html>
+  `;
+
+  printWindow.document.write(contentHtml);
+  printWindow.document.close();
+}
+

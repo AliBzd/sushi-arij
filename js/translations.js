@@ -14,6 +14,7 @@ const translations = {
     nav_reserve: "Réserver",
     nav_order: "Order WhatsApp",
     btn_explore_menu: "Explorer le Menu",
+    btn_download_pdf: "Menu PDF",
     btn_reserve_table: "Réserver une Table",
     btn_call_now: "Appeler (+212 6 12 56 08 03)",
     btn_whatsapp_order: "Commander par WhatsApp",
