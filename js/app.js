@@ -975,11 +975,19 @@ function addToCart(id) {
   if (existing) {
     existing.qty += 1;
   } else {
-    cart.push({ id: item.id, qty: 1 });
+    cart.push({ id: item.id, qty: 1, mode: 'dine-in' });
   }
 
   updateCartUI();
   renderMenu();
+}
+
+function toggleCartItemMode(id) {
+  const item = cart.find(c => c.id === id);
+  if (item) {
+    item.mode = item.mode === 'takeaway' ? 'dine-in' : 'takeaway';
+    updateCartUI();
+  }
 }
 
 function updateCartItemQty(id, delta) {
@@ -1029,12 +1037,19 @@ function updateCartUI() {
       const lineTotal = item.price * c.qty;
       subtotal += lineTotal;
       const title = item.name[currentLang] || item.name.fr || item.name;
+      const itemMode = c.mode || 'dine-in';
+      const modeLabel = itemMode === 'takeaway' ? '🛍️ À Emporter' : '🍽️ Sur Place';
 
       return `
         <div class="cart-item">
           <div class="cart-item-details">
             <span class="cart-item-title">${title}</span>
             <span class="cart-item-price">${item.price} MAD x ${c.qty} = <strong>${lineTotal} MAD</strong></span>
+            <div>
+              <button class="cart-mode-tag" onclick="toggleCartItemMode('${c.id}')" title="Cliquez pour changer le mode de ce plat">
+                ${modeLabel} <i class="fas fa-sync-alt" style="font-size:0.65rem; opacity:0.7;"></i>
+              </button>
+            </div>
           </div>
           <div class="qty-control small">
             <button onclick="updateCartItemQty('${c.id}', -1)"><i class="fas fa-minus"></i></button>
@@ -1048,9 +1063,11 @@ function updateCartUI() {
 
   let finalTotal = subtotal;
   if (appliedDiscount > 0) {
-    finalTotal = Math.round(subtotal * (1 - appliedDiscount / 100));
-  } else if (appliedDiscount < 0) {
-    finalTotal = Math.max(0, subtotal + appliedDiscount);
+    if (discountType === 'percentage') {
+      finalTotal = subtotal * (1 - appliedDiscount / 100);
+    } else {
+      finalTotal = Math.max(0, subtotal - appliedDiscount);
+    }
   }
 
   if (subtotalEl) {

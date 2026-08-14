@@ -1303,6 +1303,26 @@ body.rtl-mode .cart-drawer.active {
   color: var(--accent-gold);
 }
 
+.cart-mode-tag {
+  background: rgba(212, 163, 115, 0.12);
+  border: 1px solid var(--border-glass);
+  color: var(--accent-gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  margin-top: 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: var(--transition);
+}
+
+.cart-mode-tag:hover {
+  background: rgba(212, 163, 115, 0.25);
+}
+
 .cart-empty-msg {
   text-align: center;
   padding: 3rem 1rem;
