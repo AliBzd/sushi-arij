@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Drag & Drop Editor | Café & Restaurant Sushi Arij</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- FontAwesome & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .admin-body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .admin-sidebar {
+      width: 270px;
+      background: var(--bg-card);
+      border-right: 1px solid var(--border-glass);
+      padding: 2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .admin-main {
+      margin-left: 270px;
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+
+    .admin-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .admin-nav-item {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .admin-nav-item:hover,
+    .admin-nav-item.active {
+      background: rgba(212, 163, 115, 0.15);
+      color: var(--accent-gold);
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      padding: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(212, 163, 115, 0.15);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .stat-val {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .admin-table-wrap {
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.8rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .data-table td {
+      padding: 0.8rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .data-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .status-select {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-glass);
+      color: var(--text-main);
+      padding: 0.3rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 8rem auto;
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    /* Dropzone Styling */
+    .dropzone-box {
+      border: 2px dashed var(--accent-gold);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-align: center;
+      background: rgba(212, 163, 115, 0.05);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .dropzone-box:hover, .dropzone-box.dragover {
+      background: rgba(212, 163, 115, 0.18);
+      border-color: #fff;
+    }
+
+    .dropzone-icon {
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    @media print {
+      body * { visibility: hidden; }
+      #ticket-print-area, #ticket-print-area * { visibility: visible; }
+      #ticket-print-area { position: absolute; left: 0; top: 0; width: 80mm; background: #fff; color: #000; padding: 10px; font-family: monospace; }
+    }
+
+    .chart-bar-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      height: 160px;
+      padding-top: 20px;
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .chart-bar {
+      flex: 1;
+      background: linear-gradient(to top, var(--accent-wood), var(--accent-gold));
+      border-radius: 4px 4px 0 0;
+      position: relative;
+      transition: height 0.5s ease;
+    }
+
+    .chart-bar-lbl {
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .chart-bar-val {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .editor-section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .editor-section-card h3 {
+      color: var(--accent-gold);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 992px) {
+      .admin-sidebar { width: 80px; padding: 1.5rem 0.5rem; }
+      .admin-sidebar .brand-title, .admin-sidebar .brand-sub, .admin-nav-item span { display: none; }
+      .admin-main { margin-left: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="login-container glass-card">
+    <div class="logo-icon" style="margin: 0 auto 1.2rem; width: 56px; height: 56px; font-size: 1.8rem;">阿里</div>
+    <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.4rem;">Admin Full Site Editor</h2>
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem;">Café & Restaurant Sushi Arij</p>
+
+    <form id="admin-login-form">
+      <div class="form-group" style="margin-bottom: 1.5rem;">
+        <input type="password" id="admin-pass" class="form-input" placeholder="Mot de passe admin" required style="text-align: center;">
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+        <i class="fas fa-lock"></i> Connexion Dashboard
+      </button>
+    </form>
+    <p id="login-error" style="color: var(--accent-crimson); font-size: 0.82rem; margin-top: 1rem; display: none;">Mot de passe incorrect (Défaut: arij2026)</p>
+    <div style="margin-top: 1.5rem;">
+      <a href="index.html" style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-arrow-left"></i> Retour au site principal</a>
+    </div>
+  </div>
+
+  <!-- DASHBOARD MAIN UI -->
+  <div id="dashboard-ui" class="admin-body" style="display: none;">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="brand-logo">
+        <div class="logo-icon">阿里</div>
+        <div class="logo-text">
+          <span class="brand-title">Sushi <span>Arij</span></span>
+          <span class="brand-sub">Full Site Editor</span>
+        </div>
+      </div>
+
+      <ul class="admin-nav">
+        <li class="admin-nav-item active" data-tab="overview"><i class="fas fa-chart-line"></i> <span>Vue d'ensemble</span></li>
+        <li class="admin-nav-item" data-tab="site-content"><i class="fas fa-edit"></i> <span>Éditeur Contenu & Images</span></li>
+        <li class="admin-nav-item" data-tab="orders"><i class="fas fa-shopping-bag"></i> <span>Commandes & Tickets</span></li>
+        <li class="admin-nav-item" data-tab="menu"><i class="fas fa-utensils"></i> <span>Gestion du Menu (CRUD)</span></li>
+        <li class="admin-nav-item" data-tab="features-editor"><i class="fas fa-concierge-bell"></i> <span>Éditeur Avantages & Avis</span></li>
+        <li class="admin-nav-item" data-tab="tables"><i class="fas fa-qrcode"></i> <span>Générateur QR Tables</span></li>
+        <li class="admin-nav-item" data-tab="coupons"><i class="fas fa-ticket-alt"></i> <span>Codes Promo & Remises</span></li>
+        <li class="admin-nav-item" data-tab="promos"><i class="fas fa-tags"></i> <span>Offres & Combos</span></li>
+        <li class="admin-nav-item" data-tab="settings"><i class="fas fa-sliders-h"></i> <span>Paramètres Système</span></li>
+      </ul>
+
+      <div style="margin-top: auto;">
+        <a href="index.html" target="_blank" class="admin-nav-item" style="color: var(--accent-gold);"><i class="fas fa-external-link-alt"></i> <span>Voir le Site Live</span></a>
+        <div class="admin-nav-item" onclick="logoutAdmin()" style="color: var(--accent-crimson);"><i class="fas fa-sign-out-alt"></i> <span>Déconnexion</span></div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      
+      <!-- TAB 1: OVERVIEW -->
+      <section id="tab-overview" class="admin-tab-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Tableau de Bord Supérieur</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Performances en temps réel & gestion globale Café & Restaurant Sushi Arij</p>
+          </div>
+          <div style="display: flex; gap: 0.8rem; align-items: center;">
+            <button class="btn-secondary" onclick="playAlertSound()" title="Tester alarme sonore"><i class="fas fa-bell"></i> Tester Alerte</button>
+            <div class="status-badge open" id="admin-status-badge">
+              <span class="pulse-dot"></span> Store Ouvert
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card glass-card">
+            <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+            <div>
+              <div class="stat-val" id="stat-revenue">0 MAD</div>
+              <div class="stat-lbl">Revenu Total Estimé</div>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon"><i class="fas fa-receipt"></i></div>
+            <div>
+              <div class="stat-val" id="stat-orders-count">0</div>
+              <div class="stat-lbl">Total Commandes</div>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon"><i class="fas fa-calculator"></i></div>
+            <div>
+              <div class="stat-val" id="stat-aov">0 MAD</div>
+              <div class="stat-lbl">Panier Moyen (AOV)</div>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon"><i class="fas fa-hamburger"></i></div>
+            <div>
+              <div class="stat-val" id="stat-menu-count">0</div>
+              <div class="stat-lbl">Plats Actifs</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity Preview -->
+        <div class="glass-card" style="padding: 2rem;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-gold);">Dernières Commandes Reçues</h3>
+          <div class="admin-table-wrap">
+            <table class="data-table" id="recent-orders-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Date & Heure</th>
+                  <th>Client / Téléphone</th>
+                  <th>Type</th>
+                  <th>Total</th>
+                  <th>Statut</th>
+                  <th>Ticket</th>
+                </tr>
+              </thead>
+              <tbody id="recent-orders-body">
+                <!-- Injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: FULL SITE CONTENT & IMAGES EDITOR -->
+      <section id="tab-site-content" class="admin-tab-content" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Éditeur du Contenu & Images du Site</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Modifiez les textes, titres, bannières et images principales du site</p>
+          </div>
+          <button class="btn-primary" onclick="saveAllSiteContent()"><i class="fas fa-save"></i> Enregistrer Tout le Site</button>
+        </div>
+
+        <!-- Brand & Hero Section -->
+        <div class="editor-section-card">
+          <h3><i class="fas fa-flag"></i> Nom du Restaurant, Marque & En-tête</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Nom Principal du Restaurant</label>
+              <input type="text" id="edit-brand-name" class="form-input" value="Café & Restaurant Sushi Arij">
+            </div>
+            <div class="form-group">
+              <label>Sous-titre de Marque</label>
+              <input type="text" id="edit-brand-sub" class="form-input" value="Café & Restaurant">
+            </div>
+          </div>
+        </div>
+
+        <div class="editor-section-card">
+          <h3><i class="fas fa-heading"></i> Section Hero (Bannière & Images)</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Titre d'Accroche Principal (H1)</label>
+              <input type="text" id="edit-hero-title" class="form-input" value="Cuisine Japonaise Fraîche & Expérience Café Exceptionnelle à Sala Al Jadida">
+            </div>
+            <div class="form-group full-width">
+              <label>Sous-Titre Descriptif Hero</label>
+              <textarea id="edit-hero-subtext" class="form-input" rows="2">Découvrez l'harmonie parfaite entre l'art du sushi japonais artisanal et l'élégance d'un café contemporain. Produits frais préparés chaque jour sur l'Avenue Hssaine.</textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="editor-section-card">
+          <h3><i class="fas fa-bell"></i> Bannière d'Annonce Promos</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Titre Notification Push</label>
+              <input type="text" id="edit-push-title" class="form-input" value="🔔 Restez Informé de nos Promos du Jour !">
+            </div>
+            <div class="form-group">
+              <label>Texte Descriptif</label>
+              <input type="text" id="edit-push-desc" class="form-input" value="Activer les notifications pour recevoir nos offres exclusives à Sala Al Jadida.">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: FEATURES & REVIEWS EDITOR -->
+      <section id="tab-features-editor" class="admin-tab-content" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Éditeur des Avantages & Témoignages</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Modifiez les cartes d'avantages et les avis clients affichés sur le site</p>
+          </div>
+          <button class="btn-primary" onclick="saveFeaturesAndReviews()"><i class="fas fa-save"></i> Sauvegarder</button>
+        </div>
+
+        <!-- 4 Feature Cards Editor -->
+        <div class="editor-section-card">
+          <h3><i class="fas fa-star"></i> Les 4 Cartes d'Avantages</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Avantage 1 - Titre</label>
+              <input type="text" id="edit-feat1-title" class="form-input" value="Ouvert dès 06h30">
+            </div>
+            <div class="form-group">
+              <label>Avantage 1 - Texte</label>
+              <input type="text" id="edit-feat1-desc" class="form-input" value="Savourez votre café matinal, expresso italien et viennoiseries fraîches.">
+            </div>
+
+            <div class="form-group">
+              <label>Avantage 2 - Titre</label>
+              <input type="text" id="edit-feat2-title" class="form-input" value="Sushi Frais Préparé à la Minute">
+            </div>
+            <div class="form-group">
+              <label>Avantage 2 - Texte</label>
+              <input type="text" id="edit-feat2-desc" class="form-input" value="Nos chefs sushimans découpent les meilleurs saumons et thons frais.">
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Editor -->
+        <div class="editor-section-card">
+          <h3><i class="fas fa-quote-left"></i> Témoignages Clients (Google Maps)</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Avis 1 (Auteur & Citation)</label>
+              <input type="text" id="edit-rev1-author" class="form-input" value="Youssef B. • Guide Local" style="margin-bottom: 0.5rem;">
+              <textarea id="edit-rev1-text" class="form-input" rows="2">Le meilleur sushi de Sala Al Jadida ! Les saumons sont ultra frais et l'ambiance café le matin est parfaite.</textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: SEARCHABLE ORDERS & KITCHEN TICKETS -->
+      <section id="tab-orders" class="admin-tab-content" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Commandes, Tickets Caisse & Suivi</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Imprimez les tickets de cuisine 80mm et envoyez les réponses WhatsApp directes</p>
+          </div>
+          <button class="btn-secondary" onclick="exportOrdersCSV()"><i class="fas fa-file-csv"></i> Exporter CSV</button>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+          <div class="search-box" style="max-width: 320px; flex: 1;">
+            <i class="fas fa-search"></i>
+            <input type="text" id="order-search-input" class="search-input" placeholder="Rechercher nom, téléphone, plat...">
+          </div>
+          <select id="order-status-filter" class="form-input" style="width: auto;">
+            <option value="all">Tous les statuts</option>
+            <option value="En attente">En attente</option>
+            <option value="En préparation">En préparation</option>
+            <option value="Livré">Livré</option>
+            <option value="Annulé">Annulé</option>
+          </select>
+          <button class="btn-primary" onclick="renderOrdersTable()"><i class="fas fa-filter"></i> Filtrer</button>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem;">
+          <div class="admin-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Horodatage</th>
+                  <th>Mode</th>
+                  <th>Détails Commande</th>
+                  <th>Montant</th>
+                  <th>Statut</th>
+                  <th>Réponse WhatsApp</th>
+                  <th>Ticket</th>
+                </tr>
+              </thead>
+              <tbody id="all-orders-body">
+                <!-- Injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: MENU MANAGER (CRUD) -->
+      <section id="tab-menu" class="admin-tab-content" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Gestionnaire du Menu & Images (CRUD)</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Ajoutez, modifiez ou supprimez les plats, les prix et les photos en temps réel</p>
+          </div>
+          <button class="btn-primary" onclick="openAddMenuItemModal()"><i class="fas fa-plus"></i> Ajouter un Plat</button>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem;">
+          <div class="admin-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Aperçu Image</th>
+                  <th>Nom (FR)</th>
+                  <th>Catégorie</th>
+                  <th>Prix (MAD)</th>
+                  <th>Badge</th>
+                  <th>Allergènes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-menu-body">
+                <!-- Injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 6: TABLE QR CODE GENERATOR -->
+      <section id="tab-tables" class="admin-tab-content" style="display: none;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Générateur de QR Code pour Tables & Terrasse</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Générez et imprimez des QR codes spécifiques avec numéro de table (Table 1..20)</p>
+
+        <div class="glass-card" style="padding: 2rem; max-width: 650px; text-align: center;">
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label>Sélectionner le Numéro de Table / Emplacement</label>
+            <select id="table-number-select" class="form-input" onchange="generateTableQR()">
+              <option value="1">Table N° 1 (Salle Intérieure)</option>
+              <option value="2">Table N° 2 (Salle Intérieure)</option>
+              <option value="3">Table N° 3 (Salle Intérieure)</option>
+              <option value="T1">Terrasse - Table T1</option>
+              <option value="T2">Terrasse - Table T2</option>
+              <option value="T3">Terrasse - Table T3</option>
+              <option value="VIP">Espace Banquette VIP</option>
+            </select>
+          </div>
+
+          <div style="background: #fff; padding: 1.2rem; display: inline-block; border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.3); margin-bottom: 1.5rem;">
+            <img id="table-qr-img" src="assets/qr_code.png" alt="QR Code Table" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
+          </div>
+
+          <p style="font-weight: 700; color: var(--accent-gold); font-size: 1.1rem;" id="table-qr-lbl">QR Code pour Table N° 1</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Les clients qui scannent ce code auront automatiquement le numéro de table pré-rempli dans leur commande !</p>
+
+          <button class="btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Imprimer Autocollant Table</button>
+        </div>
+      </section>
+
+      <!-- TAB 7: PROMO CODES & DISCOUNTS -->
+      <section id="tab-coupons" class="admin-tab-content" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Codes Promo & Remises Client</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Créez des bons de réduction (pourcentage ou montant fixe) utilisables au panier</p>
+          </div>
+          <button class="btn-primary" onclick="openAddCouponModal()"><i class="fas fa-plus"></i> Nouveau Code Promo</button>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem;">
+          <div class="admin-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Code Promo</th>
+                  <th>Type de Remise</th>
+                  <th>Valeur</th>
+                  <th>Statut</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="coupons-table-body">
+                <!-- Injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 8: PROMOS & SPECIALS -->
+      <section id="tab-promos" class="admin-tab-content" style="display: none;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Gestion des Formules & Promos du Jour</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Personnalisez les offres spéciales de la page d'accueil</p>
+
+        <div class="form-grid">
+          <div class="glass-card" style="padding: 2rem;">
+            <h3 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 1rem;">☕ Formule 1 (Café Matinal)</h3>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label>Titre de l'Offre</label>
+              <input type="text" id="promo1-title" class="form-input" value="☕ Formule Café Matinal (06:30 - 09:30)">
+            </div>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label>Description</label>
+              <input type="text" id="promo1-desc" class="form-input" value="Expresso Italien + Croissant au Beurre frais + Jus d'Orange Pressé">
+            </div>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label>Prix (MAD)</label>
+              <input type="text" id="promo1-price" class="form-input" value="35 MAD">
+            </div>
+          </div>
+
+          <div class="glass-card" style="padding: 2rem;">
+            <h3 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 1rem;">🍱 Formule 2 (Combo Sushi Duo)</h3>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label>Titre de l'Offre</label>
+              <input type="text" id="promo2-title" class="form-input" value="🍱 Combo Sushi Duo (16 pcs)">
+            </div>
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label>Description</label>
+              <input type="text" id="promo2-desc" class="form-input" value="8 Dragon Rolls + 8 Salmon Crunch + 2 Soupes Miso offertes">
+            </div>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label>Prix (MAD)</label>
+              <input type="text" id="promo2-price" class="form-input" value="139 MAD">
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: right;">
+          <button class="btn-primary" onclick="savePromos()"><i class="fas fa-save"></i> Enregistrer les Offres</button>
+        </div>
+      </section>
+
+      <!-- TAB 9: WEBSITE SETTINGS -->
+      <section id="tab-settings" class="admin-tab-content" style="display: none;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Paramètres Système & Contrôle</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Modifiez le numéro WhatsApp, l'adresse, les heures et le statut du restaurant</p>
+
+        <div class="glass-card" style="padding: 2rem; max-width: 700px;">
+          <form id="settings-form">
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label>Numéro de Téléphone WhatsApp (Réception des commandes)</label>
+                <input type="text" id="set-whatsapp" class="form-input" value="212612560803">
+              </div>
+
+              <div class="form-group">
+                <label>Statut Forcé du Store</label>
+                <select id="set-store-status" class="form-input">
+                  <option value="auto">Automatique (Selon heure 06:30-23:30)</option>
+                  <option value="open">Ouvert Forcé (En ligne)</option>
+                  <option value="closed">Fermé Forcé (Fermé temporaire)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Adresse Affichée</label>
+                <input type="text" id="set-address" class="form-input" value="Av. Hssaine, Sala Al Jadida, Maroc">
+              </div>
+
+              <div class="form-group full-width">
+                <label>Nouveau Mot de Passe Admin</label>
+                <input type="password" id="set-new-pass" class="form-input" placeholder="Laissez vide pour conserver arij2026">
+              </div>
+
+              <div class="form-group full-width" style="margin-top: 1rem;">
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                  <i class="fas fa-save"></i> Enregistrer Tous les Paramètres
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ADD / EDIT MENU ITEM MODAL (WITH DRAG & DROP IMAGE UPLOADER) -->
+  <div class="overlay" id="admin-modal-overlay"></div>
+
+  <div class="modal" id="admin-item-modal">
+    <div class="modal-header">
+      <h3 id="admin-modal-title">Ajouter un Plat au Menu</h3>
+      <button class="close-btn" onclick="closeAdminItemModal()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <form id="admin-item-form">
+        <input type="hidden" id="item-edit-id">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label>Nom du Plat (Français)</label>
+            <input type="text" id="item-name-fr" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label>Nom (Anglais)</label>
+            <input type="text" id="item-name-en" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>Nom (Arabe)</label>
+            <input type="text" id="item-name-ar" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>Catégorie</label>
+            <select id="item-category" class="form-input">
+              <option value="sushi">🍣 Sushi & Spécialités</option>
+              <option value="cafe">☕ Café & Boissons</option>
+              <option value="breakfast">🥐 Petit-Déjeuner</option>
+              <option value="mains">🍽️ Déjeuner & Dîner</option>
+              <option value="desserts">🍰 Desserts</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Prix (MAD)</label>
+            <input type="number" id="item-price" class="form-input" required min="1">
+          </div>
+          <div class="form-group">
+            <label>Badge</label>
+            <select id="item-badge" class="form-input">
+              <option value="">Aucun</option>
+              <option value="chef">Sélection du Chef</option>
+              <option value="popular">Populaire</option>
+              <option value="veg">Végétarien</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Calories Estimées</label>
+            <input type="text" id="item-calories" class="form-input" placeholder="ex: 420 kcal">
+          </div>
+
+          <!-- DRAG & DROP IMAGE UPLOADER BOX -->
+          <div class="form-group full-width">
+            <label>🖼️ Image du Plat (Glisser & Déposer un fichier ou taper URL)</label>
+            
+            <div id="item-image-dropzone" class="dropzone-box">
+              <i class="fas fa-cloud-upload-alt dropzone-icon"></i>
+              <p style="font-weight: 600; margin-bottom: 0.3rem;">Glissez-déposez une image ici</p>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">ou cliquez pour parcourir les fichiers de votre ordinateur</p>
+              <input type="file" id="item-file-input" accept="image/*" style="display: none;">
+            </div>
+
+            <!-- Thumbnail Preview -->
+            <div id="image-preview-wrap" style="margin-top: 0.8rem; text-align: center; display: none;">
+              <img id="image-preview-img" src="" style="width: 120px; height: 90px; object-fit: cover; border-radius: 8px; border: 2px solid var(--accent-gold);">
+            </div>
+
+            <div style="margin-top: 0.8rem;">
+              <label style="font-size: 0.8rem;">Ou Chemin / URL direct de l'image :</label>
+              <input type="text" id="item-image-url" class="form-input" placeholder="ex: assets/sushi_specialty.png ou https://..." required>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Description (Français)</label>
+            <textarea id="item-desc-fr" class="form-input" rows="2" required></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label>Allergènes & Ingrédients</label>
+            <input type="text" id="item-allergens" class="form-input" placeholder="ex: Saumon, Soja, Sésame">
+          </div>
+          <div class="form-group full-width" style="margin-top: 1rem;">
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fas fa-save"></i> Sauvegarder le Plat & l'Image
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- PRINTABLE KITCHEN TICKET AREA -->
+  <div id="ticket-print-area" style="display: none;">
+    <h3 style="text-align: center;">TICKET CUISINE - ARIJ</h3>
+    <p style="text-align: center; font-size: 0.8rem;" id="ticket-id-date">#ORD_1001 - 14/08/2026</p>
+    <hr style="border-top: 1px dashed #000; margin: 10px 0;">
+    <p><strong>Client:</strong> <span id="ticket-customer">Client Web</span></p>
+    <p><strong>Téléphone:</strong> <span id="ticket-phone">+212612560803</span></p>
+    <p><strong>Mode:</strong> <span id="ticket-mode">À EMPORTER</span></p>
+    <hr style="border-top: 1px dashed #000; margin: 10px 0;">
+    <div id="ticket-items-list">
+      <!-- Items -->
+    </div>
+    <hr style="border-top: 1px dashed #000; margin: 10px 0;">
+    <h4 style="text-align: right;">TOTAL: <span id="ticket-total">0 MAD</span></h4>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

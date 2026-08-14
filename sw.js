@@ -1,0 +1,54 @@
+// Café & Restaurant Sushi Arij - Service Worker (Production Ready PWA Caching)
+
+const CACHE_NAME = 'sushi-arij-v2.0';
+
+const ASSETS_TO_CACHE = [
+  '/',
+  'index.html',
+  'admin.html',
+  'css/styles.css',
+  'js/translations.js',
+  'js/app.js',
+  'js/admin.js',
+  'manifest.json',
+  'assets/hero_sushi_cafe.png',
+  'assets/sushi_specialty.png',
+  'assets/cafe_ambiance.png',
+  'assets/breakfast_pastries.png',
+  'assets/qr_code.png'
+];
+
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('[SW] Precaching production assets');
+      return cache.addAll(ASSETS_TO_CACHE);
+    })
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            console.log('[SW] Clearing old cache', key);
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', (e) => {
+  // Network first fallback to cache strategy for maximum freshness
+  e.respondWith(
+    fetch(e.request).catch(() => {
+      return caches.match(e.request);
+    })
+  );
+});

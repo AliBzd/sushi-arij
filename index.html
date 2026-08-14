@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café & Restaurant Sushi Arij | Sala Al Jadida (Av. Hssaine)</title>
+  <meta name="description" content="Café & Restaurant Sushi Arij à Sala Al Jadida. Dégustez nos sushi frais préparés à la minute, nos cafés d'exception et notre menu gourmand. Ouvert tous les jours de 06h30 à 23h30.">
+  <meta name="keywords" content="sushi sala al jadida, restaurant sala al jadida, cafe sala al jadida, sushi arij, av hssaine, restaurant maroc, livraison sushi">
+  <meta name="theme-color" content="#d4a373">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sushiarij.app/">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" href="assets/hero_sushi_cafe.png">
+  <link rel="apple-touch-icon" href="assets/hero_sushi_cafe.png">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Café & Restaurant Sushi Arij | Sala Al Jadida">
+  <meta property="og:description" content="Cuisine Japonaise Fraîche & Expérience Café Exceptionnelle à Sala Al Jadida (Av. Hssaine).">
+  <meta property="og:image" content="https://sushiarij.app/assets/hero_sushi_cafe.png">
+  <meta property="og:url" content="https://sushiarij.app/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Café & Restaurant Sushi Arij | Sala Al Jadida">
+  <meta name="twitter:description" content="Cuisine Japonaise Fraîche & Expérience Café Exceptionnelle à Sala Al Jadida (Av. Hssaine).">
+  <meta name="twitter:image" content="https://sushiarij.app/assets/hero_sushi_cafe.png">
+
+  <!-- Schema.org Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Café & Restaurant Sushi Arij",
+    "url": "https://sushiarij.app/",
+    "image": "https://sushiarij.app/assets/hero_sushi_cafe.png",
+    "telephone": "+212612560803",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Hssaine",
+      "addressLocality": "Sala Al Jadida",
+      "addressRegion": "Rabat-Salé-Kénitra",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.9882027,
+      "longitude": -6.7385552
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "06:30",
+        "closes": "23:30"
+      }
+    ],
+    "servesCuisine": ["Japanese", "Sushi", "Café", "Breakfast", "Moroccan"],
+    "priceRange": "MAD 20 - 150",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "184"
+    }
+  }
+  </script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- App Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">阿里</div>
+        <div class="logo-text">
+          <span class="brand-title">Sushi <span>Arij</span></span>
+          <span class="brand-sub">Café & Restaurant</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="active" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="#specials" data-i18n="specials_badge">Offres</a></li>
+          <li><a href="#menu" data-i18n="nav_menu">Notre Menu</a></li>
+          <li><a href="#pairing" data-i18n="nav_pairing">Trouver Mon Duo</a></li>
+          <li><a href="#loyalty" data-i18n="nav_loyalty">Fidélité</a></li>
+          <li><a href="#reviews" data-i18n="nav_reviews">Avis Clients</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact & Accès</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Changer le thème">
+          <i class="fas fa-sun" id="theme-toggle-icon"></i>
+        </button>
+
+        <!-- QR Code Trigger -->
+        <button class="cart-toggle" id="qr-modal-btn" title="QR Code Sur Place">
+          <i class="fas fa-qrcode"></i>
+        </button>
+
+        <!-- Admin Portal Quick Access -->
+        <a href="admin.html" class="cart-toggle" title="Admin Portal" target="_blank">
+          <i class="fas fa-user-shield"></i>
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+
+        <!-- Cart Drawer Toggle -->
+        <button class="cart-toggle" id="cart-toggle-btn" aria-label="Voir le Panier">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Reservation CTA -->
+        <button class="btn-primary trigger-reservation-modal">
+          <i class="far fa-calendar-alt"></i>
+          <span data-i18n="nav_reserve">Réserver</span>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Menu Toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Push Banner -->
+  <div class="push-banner">
+    <div class="container push-container">
+      <div>
+        <strong data-i18n="push_title">🔔 Restez Informé de nos Promos du Jour !</strong>
+        <span style="color: var(--text-muted); margin-left: 0.5rem;" data-i18n="push_desc">Activer les notifications pour recevoir nos offres exclusives à Sala Al Jadida.</span>
+      </div>
+      <button class="btn-secondary" onclick="requestNotificationPermission()" style="padding: 0.35rem 0.9rem; font-size: 0.8rem;">
+        <i class="fas fa-bell"></i>
+        <span data-i18n="btn_push_subscribe">Activer les Notifications</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-badge open" id="open-status-badge">
+            <span class="pulse-dot"></span>
+            <span data-i18n="status_open">Ouvert Actuellement • 06:30 - 23:30</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="tagline">
+            Cuisine Japonaise Fraîche & Expérience Café Exceptionnelle à <span>Sala Al Jadida</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero_subtext">
+            Découvrez l'harmonie parfaite entre l'art du sushi japonais artisanal et l'élégance d'un café contemporain. Produits frais préparés chaque jour sur l'Avenue Hssaine.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn-primary">
+              <i class="fas fa-utensils"></i>
+              <span data-i18n="btn_explore_menu">Explorer le Menu</span>
+            </a>
+            <button class="btn-secondary trigger-reservation-modal">
+              <i class="far fa-calendar-check"></i>
+              <span data-i18n="btn_reserve_table">Réserver une Table</span>
+            </button>
+            <a href="https://wa.me/212612560803" target="_blank" class="btn-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="btn_whatsapp_order">Commander par WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card-preview glass-card">
+          <div class="preview-stat-item">
+            <div class="preview-icon"><i class="fas fa-mug-hot"></i></div>
+            <div class="preview-info">
+              <h4 data-i18n="feat_1_title">Ouvert dès 06h30</h4>
+              <p data-i18n="info_hours_val">Tous les jours : 06:30 - 23:30</p>
+            </div>
+          </div>
+          <div class="preview-stat-item">
+            <div class="preview-icon"><i class="fas fa-fish"></i></div>
+            <div class="preview-info">
+              <h4 data-i18n="feat_2_title">Sushi Frais Préparé à la Minute</h4>
+              <p>Maki, Nigiri, Sashimi & Dragon Rolls</p>
+            </div>
+          </div>
+          <div class="preview-stat-item">
+            <div class="preview-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="preview-info">
+              <h4 data-i18n="info_loc_title">Notre Adresse</h4>
+              <p data-i18n="info_loc_val">Av. Hssaine, Sala Al Jadida, Maroc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Specials & Daily Combos Section
+       ========================================================================== -->
+  <section class="specials-section" id="specials">
+    <div class="container">
+      <div class="section-header">
+        <span class="specials-badge-pill" data-i18n="specials_badge">OFFRES SPÉCIALES DU JOUR</span>
+        <h2 class="section-title" data-i18n="specials_title">Formules & Promos Incontournables</h2>
+        <p class="section-subtitle" data-i18n="specials_sub">Profitez de nos combinaisons exclusives préparées avec soin chaque jour</p>
+      </div>
+
+      <div class="specials-grid">
+        <div class="specials-card glass-card">
+          <div>
+            <h3 data-i18n="combo1_title">☕ Formule Café Matinal (06:30 - 09:30)</h3>
+            <p data-i18n="combo1_desc">Expresso Italien + Croissant au Beurre frais + Jus d'Orange Pressé</p>
+          </div>
+          <div class="specials-footer">
+            <span class="specials-price" data-i18n="combo1_price">35 MAD</span>
+            <button class="btn-primary" onclick="orderCombo('combo1_title', '35 MAD')">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="btn_order_combo">Commander cette Offre</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="specials-card glass-card">
+          <div>
+            <h3 data-i18n="combo2_title">🍱 Combo Sushi Duo (16 pcs)</h3>
+            <p data-i18n="combo2_desc">8 Dragon Rolls + 8 Salmon Crunch + 2 Soupes Miso offertes</p>
+          </div>
+          <div class="specials-footer">
+            <span class="specials-price" data-i18n="combo2_price">139 MAD</span>
+            <button class="btn-primary" onclick="orderCombo('combo2_title', '139 MAD')">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="btn_order_combo">Commander cette Offre</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Pairing Helper Wizard
+       ========================================================================== -->
+  <section class="section" id="pairing">
+    <div class="container">
+      <div class="pairing-wizard-card glass-card">
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" data-i18n="pairing_title">Trouver Mon Duo Parfait 🥢☕</h2>
+          <p class="section-subtitle" data-i18n="pairing_sub">Répondez à cette question pour découvrir la combinaison idéale recommandée par notre Chef</p>
+        </div>
+
+        <h4 style="text-align: center; font-size: 1rem; color: var(--accent-gold);" data-i18n="pairing_q1">Quelle est votre envie du moment ?</h4>
+        <div class="pairing-options-grid">
+          <button class="pairing-option-btn active" data-mood="fresh" onclick="selectPairingMood('fresh')" data-i18n="mood_fresh">🍣 Frais & Léger</button>
+          <button class="pairing-option-btn" data-mood="rich" onclick="selectPairingMood('rich')" data-i18n="mood_rich">🥑 Onctueux & Gourmand</button>
+          <button class="pairing-option-btn" data-mood="breakfast" onclick="selectPairingMood('breakfast')" data-i18n="mood_breakfast">☕ Énergie Matinale</button>
+          <button class="pairing-option-btn" data-mood="sweet" onclick="selectPairingMood('sweet')" data-i18n="mood_sweet">🍰 Pause Sucrée</button>
+        </div>
+
+        <div class="pairing-result-box" id="pairing-result-card">
+          <!-- Injected dynamically -->
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn-primary" onclick="addCurrentPairingToCart()">
+            <i class="fas fa-cart-plus"></i>
+            <span data-i18n="btn_add_pairing_cart">Ajouter ce Duo au Panier</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Menu Showcase (Interactive Tabs)
+       ========================================================================== -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_menu_title">Notre Menu Gourmand</h2>
+        <p class="section-subtitle" data-i18n="section_menu_sub">Des ingrédients frais de première qualité préparés à la commande</p>
+      </div>
+
+      <div class="category-tabs-wrapper">
+        <button class="category-tab active" data-category="all" data-i18n="cat_all">Tous les Plats</button>
+        <button class="category-tab" data-category="sushi" data-i18n="cat_sushi">🍣 Sushi & Spécialités</button>
+        <button class="category-tab" data-category="cafe" data-i18n="cat_cafe">☕ Café & Boissons</button>
+        <button class="category-tab" data-category="breakfast" data-i18n="cat_breakfast">🥐 Petit-Déjeuner</button>
+        <button class="category-tab" data-category="mains" data-i18n="cat_mains">🍽️ Déjeuner & Dîner</button>
+        <button class="category-tab" data-category="desserts" data-i18n="cat_desserts">🍰 Desserts & Gourmandises</button>
+      </div>
+
+      <div class="menu-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="menu-search" class="search-input" placeholder="Rechercher un plat, sushi, café..." data-i18n-placeholder="search_placeholder">
+        </div>
+
+        <div class="filter-chips">
+          <button class="filter-chip active" data-filter="all" data-i18n="filter_all">Tous</button>
+          <button class="filter-chip" data-filter="chef" data-i18n="filter_chef">Sélection du Chef</button>
+          <button class="filter-chip" data-filter="popular" data-i18n="filter_popular">Populaire</button>
+          <button class="filter-chip" data-filter="veg" data-i18n="filter_veg">Végétarien</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-items-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Loyalty Section
+       ========================================================================== -->
+  <section class="section" id="loyalty">
+    <div class="container">
+      <div class="loyalty-card-container glass-card">
+        <h2 class="section-title" data-i18n="loyalty_title">Carte de Fidélité Digital Arij</h2>
+        <p class="section-subtitle" data-i18n="loyalty_sub">Cumulez 5 commandes via WhatsApp et recevez un Mochi Glacé ou un Cappuccino gratuit !</p>
+
+        <div class="stamps-grid">
+          <div class="stamp-box active"><i class="fas fa-check"></i></div>
+          <div class="stamp-box active"><i class="fas fa-check"></i></div>
+          <div class="stamp-box active"><i class="fas fa-check"></i></div>
+          <div class="stamp-box"><i class="fas fa-gift"></i></div>
+          <div class="stamp-box"><i class="fas fa-gift"></i></div>
+        </div>
+
+        <p style="font-weight: 700; color: var(--accent-gold);" data-i18n="loyalty_stamp_count">Vos Tampons Acquis : 3 / 5</p>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;" data-i18n="loyalty_reward_unlocked">Plus que 2 commandes pour votre cadeau !</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Features Section
+       ========================================================================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_features_title">Pourquoi Choisir Sushi Arij ?</h2>
+        <p class="section-subtitle" data-i18n="section_features_sub">L'alliance unique de la haute gastronomie japonaise et du café marocain contemporain</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-icon-wrap"><i class="fas fa-coffee"></i></div>
+          <h3 data-i18n="feat_1_title">Ouvert dès 06h30</h3>
+          <p data-i18n="feat_1_desc">Savourez votre café matinal, expresso italien et viennoiseries fraîches dès les premières heures de la journée.</p>
+        </div>
+
+        <div class="feature-card glass-card">
+          <div class="feature-icon-wrap"><i class="fas fa-fish"></i></div>
+          <h3 data-i18n="feat_2_title">Sushi Frais Préparé à la Minute</h3>
+          <p data-i18n="feat_2_desc">Nos chefs sushimans découpent les meilleurs saumons et thons frais pour des maki, nigiri et sashimi d'exception.</p>
+        </div>
+
+        <div class="feature-card glass-card">
+          <div class="feature-icon-wrap"><i class="fas fa-couch"></i></div>
+          <h3 data-i18n="feat_3_title">Cadre Contemporain & Familial</h3>
+          <p data-i18n="feat_3_desc">Espace climatisé, terrasse ensoleillée et banquettes confortables pour tous vos repas et rendez-vous.</p>
+        </div>
+
+        <div class="feature-card glass-card">
+          <div class="feature-icon-wrap"><i class="fas fa-glass-cheers"></i></div>
+          <h3 data-i18n="btn_private_event">Événements Privés & Anniversaires</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Organisez vos fêtes et repas de groupe avec nos formules sur-mesure.</p>
+          <button class="btn-secondary" id="evt-modal-btn" style="padding: 0.4rem 1rem; font-size: 0.82rem;">
+            <i class="fas fa-calendar-plus"></i>
+            <span data-i18n="btn_private_event">Organiser un Événement</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Customer Reviews Section
+       ========================================================================== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_reviews_title">Ce que disent nos Clients</h2>
+        <p class="section-subtitle" data-i18n="section_reviews_sub">Plus de 4.8 étoiles sur Google Maps avec des centaines d'avis passionnés</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card glass-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p data-i18n="review1_text">"Le meilleur sushi de Sala Al Jadida ! Les saumons sont ultra frais et l'ambiance café le matin est parfaite pour travailler au calme."</p>
+          <div class="review-author">
+            <h4 data-i18n="review1_author">Youssef B.</h4>
+            <span data-i18n="review1_role">Guide Local • 5/5</span>
+          </div>
+        </div>
+
+        <div class="review-card glass-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p data-i18n="review2_text">"Cadre magnifique sur l'Avenue Hssaine. Le cappuccino caramel et les dragon rolls sont divins. Service rapide et chaleureux !"</p>
+          <div class="review-author">
+            <h4 data-i18n="review2_author">Sarah K.</h4>
+            <span data-i18n="review2_role">Client Régulier • 5/5</span>
+          </div>
+        </div>
+
+        <div class="review-card glass-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p data-i18n="review3_text">"Excellent rapport qualité-prix. Commande par WhatsApp reçue en 25 min à domicile à Sala Al Jadida. Je recommande vivement !"</p>
+          <div class="review-author">
+            <h4 data-i18n="review3_author">Amine M.</h4>
+            <span data-i18n="review3_role">Client Livraison • 5/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Ambiance & Gallery
+       ========================================================================== -->
+  <section class="section" id="ambiance">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_ambiance_title">Ambiance & Décoration</h2>
+        <p class="section-subtitle" data-i18n="section_ambiance_sub">Un espace moderne et chaleureux conçu pour vos moments en famille ou entre amis</p>
+      </div>
+
+      <div class="ambiance-grid">
+        <div class="ambiance-item">
+          <img src="assets/cafe_ambiance.png" alt="Salle Intérieure Sushi Arij" loading="lazy">
+          <div class="ambiance-overlay">
+            <h4>Salle Intérieure & Design Bois</h4>
+          </div>
+        </div>
+        <div class="ambiance-item">
+          <img src="assets/sushi_specialty.png" alt="Plateau Sushi Chef" loading="lazy">
+          <div class="ambiance-overlay">
+            <h4>Bar à Sushi Artisanal</h4>
+          </div>
+        </div>
+        <div class="ambiance-item">
+          <img src="assets/breakfast_pastries.png" alt="Petit Déjeuner Café Arij" loading="lazy">
+          <div class="ambiance-overlay">
+            <h4>Espace Café Matinal</h4>
+          </div>
+        </div>
+        <div class="ambiance-item">
+          <img src="assets/hero_sushi_cafe.png" alt="Artisanat culinaire Arij" loading="lazy">
+          <div class="ambiance-overlay">
+            <h4>Expérience Gastronomique</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Location & Contact Section
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section_contact_title">Où Nous Trouver</h2>
+        <p class="section-subtitle" data-i18n="section_contact_sub">Au cœur de Sala Al Jadida sur l'Avenue Hssaine</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card glass-card">
+          <div class="info-block">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-content">
+              <h4 data-i18n="info_loc_title">Notre Adresse</h4>
+              <p data-i18n="info_loc_val">Av. Hssaine, Sala Al Jadida, Maroc</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div class="info-content">
+              <h4 data-i18n="info_hours_title">Heures d'Ouverture</h4>
+              <p data-i18n="info_hours_val">Tous les jours : 06:30 - 23:30</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-content">
+              <h4 data-i18n="info_phone_title">Réservations & Commandes</h4>
+              <p data-i18n="info_phone_val">+212 6 12 56 08 03</p>
+            </div>
+          </div>
+
+          <div class="contact-actions" style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a href="tel:+212612560803" class="btn-primary">
+              <i class="fas fa-phone"></i>
+              <span data-i18n="btn_call_now">Appeler (+212 6 12 56 08 03)</span>
+            </a>
+            <a href="https://www.google.com/maps/place/Caf%C3%A9+%26+Restaurant+Sushi+Arij/@33.9882027,-6.7385552,17z" target="_blank" class="btn-secondary">
+              <i class="fas fa-directions"></i>
+              <span data-i18n="btn_gps_google">Google Maps</span>
+            </a>
+            <a href="https://waze.com/ul?ll=33.9882027,-6.7385552&navigate=yes" target="_blank" class="btn-secondary">
+              <i class="fab fa-waze"></i>
+              <span data-i18n="btn_gps_waze">Waze</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <iframe 
+            src="https://maps.google.com/maps?q=33.9882027,-6.7385552&z=17&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map Café & Restaurant Sushi Arij">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer Overlay & Sidebar -->
+  <div class="overlay" id="cart-overlay"></div>
+
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 data-i18n="cart_title">Mon Panier WhatsApp</h3>
+      <button class="close-btn" id="cart-close-btn" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="cart-body">
+      <div class="cart-items-list" id="cart-items-list">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span data-i18n="cart_subtotal">Sous-total :</span>
+        <span id="cart-subtotal-val">0 MAD</span>
+      </div>
+
+      <!-- Promo Code / Coupon Box -->
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+        <input type="text" id="cart-coupon-input" class="form-input" placeholder="Code Promo (ex: ARIJ10)" style="font-size: 0.8rem; padding: 0.5rem;">
+        <button class="btn-secondary" onclick="applyCartCoupon()" style="padding: 0.5rem 0.9rem; font-size: 0.8rem;">Appliquer</button>
+      </div>
+
+      <div class="order-options">
+        <label data-i18n="cart_option_label">Mode de Commande :</label>
+        <div class="options-group">
+          <label>
+            <input type="radio" name="cart-order-type" value="dine-in">
+            <span data-i18n="cart_opt_dinein">Sur Place</span>
+          </label>
+          <label>
+            <input type="radio" name="cart-order-type" value="takeaway" checked>
+            <span data-i18n="cart_opt_takeaway">À Emporter</span>
+          </label>
+          <label>
+            <input type="radio" name="cart-order-type" value="delivery">
+            <span data-i18n="cart_opt_delivery">Livraison</span>
+          </label>
+        </div>
+      </div>
+
+      <textarea id="cart-notes" class="cart-notes-input" rows="2" placeholder="Notes pour le chef..." data-i18n-placeholder="cart_notes_placeholder"></textarea>
+
+      <button class="btn-whatsapp" id="cart-submit-btn" style="width: 100%; justify-content: center;">
+        <i class="fab fa-whatsapp"></i>
+        <span data-i18n="cart_submit">Envoyer ma Commande sur WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Private Event Modal -->
+  <div class="overlay" id="event-modal-overlay"></div>
+
+  <div class="modal" id="event-modal">
+    <div class="modal-header">
+      <div>
+        <h3 data-i18n="modal_event_title">Réservation d'Événement Privé</h3>
+        <p data-i18n="modal_event_sub">Organisez vos réceptions ou anniversaires chez Sushi Arij</p>
+      </div>
+      <button class="close-btn" id="evt-modal-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <form id="event-form">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label data-i18n="lbl_name">Nom complet</label>
+            <input type="text" id="evt-name" class="form-input" required placeholder="Votre Nom">
+          </div>
+          <div class="form-group full-width">
+            <label data-i18n="lbl_phone">Téléphone</label>
+            <input type="tel" id="evt-phone" class="form-input" required placeholder="+212 6 00 00 00 00">
+          </div>
+          <div class="form-group">
+            <label data-i18n="lbl_event_type">Type d'événement</label>
+            <select id="evt-type" class="form-input">
+              <option value="Anniversaire" data-i18n="evt_birthday">Anniversaire</option>
+              <option value="Réunion d'Affaires" data-i18n="evt_business">Déjeuner d'Affaires</option>
+              <option value="Fête de Famille" data-i18n="evt_family">Fête de Famille</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="lbl_date">Date souhaitée</label>
+            <input type="date" id="evt-date" class="form-input" required>
+          </div>
+          <div class="form-group full-width">
+            <label data-i18n="lbl_guests">Nombre d'invités estimé</label>
+            <select id="evt-guests" class="form-input">
+              <option value="6-10">6 à 10 personnes</option>
+              <option value="11-20">11 à 20 personnes</option>
+              <option value="20+">Plus de 20 personnes</option>
+            </select>
+          </div>
+          <div class="form-group full-width" style="margin-top: 0.5rem;">
+            <button type="submit" class="btn-whatsapp" style="width: 100%; justify-content: center;">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="btn_confirm_event">Envoyer la demande sur WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Nutritional Info Modal -->
+  <div class="overlay" id="nutri-modal-overlay"></div>
+
+  <div class="modal" id="nutri-modal">
+    <div class="modal-header">
+      <div>
+        <h3 data-i18n="modal_nutri_title">Informations Nutritionnelles & Allergènes</h3>
+      </div>
+      <button class="close-btn" id="nutri-modal-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body" id="nutri-modal-content">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- On-Table QR Code Modal -->
+  <div class="overlay" id="qr-modal-overlay"></div>
+
+  <div class="modal" id="qr-modal">
+    <div class="modal-header">
+      <div>
+        <h3 data-i18n="modal_qr_title">Menu Digital Sur Place</h3>
+        <p data-i18n="modal_qr_sub">Scannez ce QR Code avec votre téléphone pour ouvrir la carte digitale sur le site</p>
+      </div>
+      <button class="close-btn" id="qr-modal-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body" style="text-align: center; padding: 2rem;">
+      <div style="background: #ffffff; padding: 1rem; display: inline-block; border-radius: var(--radius-md); box-shadow: 0 4px 16px rgba(0,0,0,0.2); margin-bottom: 1rem;">
+        <img id="modal-qr-img-element" src="assets/qr_code.png" alt="QR Code Menu WhatsApp Sushi Arij" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
+      </div>
+      <p style="font-weight: 700; color: var(--accent-gold);">Café & Restaurant Sushi Arij</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">https://sushiarij.app/ (+212 6 12 56 08 03)</p>
+    </div>
+  </div>
+
+  <!-- Table Reservation Modal -->
+  <div class="overlay" id="res-modal-overlay"></div>
+
+  <div class="modal" id="reservation-modal">
+    <div class="modal-header">
+      <div>
+        <h3 data-i18n="modal_res_title">Réserver une Table</h3>
+        <p data-i18n="modal_res_sub">Remplissez ce formulaire pour envoyer votre demande sur WhatsApp</p>
+      </div>
+      <button class="close-btn" id="res-modal-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="modal-body">
+      <form id="reservation-form">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label data-i18n="lbl_name">Nom complet</label>
+            <input type="text" id="res-name" class="form-input" required placeholder="Votre Nom">
+          </div>
+
+          <div class="form-group full-width">
+            <label data-i18n="lbl_phone">Téléphone</label>
+            <input type="tel" id="res-phone" class="form-input" required placeholder="+212 6 00 00 00 00">
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="lbl_date">Date</label>
+            <input type="date" id="res-date" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="lbl_time">Heure souhaitée</label>
+            <select id="res-time" class="form-input" required>
+              <option value="08:00">08:00 (Petit-déjeuner)</option>
+              <option value="10:00">10:00 (Café/Brunch)</option>
+              <option value="12:30" selected>12:30 (Déjeuner)</option>
+              <option value="14:00">14:00 (Déjeuner)</option>
+              <option value="19:00">19:00 (Dîner)</option>
+              <option value="20:30">20:30 (Dîner Sushi)</option>
+              <option value="22:00">22:00 (Soirée Café/Sushi)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="lbl_guests">Nombre de personnes</label>
+            <select id="res-guests" class="form-input">
+              <option value="1">1 personne</option>
+              <option value="2" selected>2 personnes</option>
+              <option value="3">3 personnes</option>
+              <option value="4">4 personnes</option>
+              <option value="5+">5 personnes ou +</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="lbl_seating">Emplacement souhaité</label>
+            <select id="res-seating" class="form-input">
+              <option value="Indifférent" data-i18n="seat_any">Indifférent</option>
+              <option value="Terrasse" data-i18n="seat_terrace">Terrasse extérieure</option>
+              <option value="Intérieur" data-i18n="seat_indoor">Salle intérieure / Banquette</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width" style="margin-top: 0.5rem;">
+            <button type="submit" class="btn-whatsapp" style="width: 100%; justify-content: center;">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="btn_confirm_res">Envoyer la Réservation via WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon">阿里</div>
+            <div class="logo-text">
+              <span class="brand-title">Sushi <span>Arij</span></span>
+              <span class="brand-sub">Café & Restaurant</span>
+            </div>
+          </div>
+          <p data-i18n="footer_tagline">
+            Le spécialiste du Sushi frais et du Café de prestige à Sala Al Jadida.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer_quick_links">Liens Rapides</h4>
+          <ul>
+            <li><a href="#hero" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#specials" data-i18n="specials_badge">Offres</a></li>
+            <li><a href="#menu" data-i18n="nav_menu">Notre Menu</a></li>
+            <li><a href="#pairing" data-i18n="nav_pairing">Trouver Mon Duo</a></li>
+            <li><a href="#loyalty" data-i18n="nav_loyalty">Fidélité</a></li>
+            <li><a href="#reviews" data-i18n="nav_reviews">Avis Clients</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact & Accès</a></li>
+            <li><a href="admin.html" target="_blank" style="color: var(--accent-gold); font-weight: 700;"><i class="fas fa-user-shield"></i> Portal Admin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-hours">
+          <h4 data-i18n="info_hours_title">Heures d'Ouverture</h4>
+          <p data-i18n="info_hours_val" style="color: var(--text-muted); font-size: 0.9rem;">Tous les jours : 06:30 - 23:30</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Av. Hssaine, Sala Al Jadida</p>
+          <p style="color: var(--accent-gold); font-size: 0.9rem; margin-top: 0.5rem; font-weight: 700;">+212 6 12 56 08 03</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Café & Restaurant Sushi Arij. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

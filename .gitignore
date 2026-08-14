@@ -1,0 +1,5 @@
+# Ignore scratch test scripts and temp logs
+scratch/
+.system_generated/
+*.log
+.DS_Store
