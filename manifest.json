@@ -2,21 +2,21 @@
   "name": "Café & Restaurant Sushi Arij",
   "short_name": "Sushi Arij",
   "description": "Cuisine Japonaise Fraîche & Expérience Café Exceptionnelle à Sala Al Jadida (Av. Hssaine)",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#121519",
   "theme_color": "#d4a373",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "assets/hero_sushi_cafe.png",
+      "src": "assets/menu/assortiment_arij.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "assets/hero_sushi_cafe.png",
+      "src": "assets/restaurant_main.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }
