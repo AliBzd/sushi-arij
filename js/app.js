@@ -1,3 +1,17 @@
+
+// 100% Bulletproof Safe Extractors for Titles & Descriptions
+function getItemTitle(item, lang = currentLang) {
+  if (!item || !item.name) return 'Plat';
+  if (typeof item.name === 'string') return item.name;
+  return item.name[lang] || item.name.fr || item.name.en || item.name.ar || Object.values(item.name)[0] || 'Plat';
+}
+
+function getItemDesc(item, lang = currentLang) {
+  if (!item || !item.desc) return '';
+  if (typeof item.desc === 'string') return item.desc;
+  return item.desc[lang] || item.desc.fr || item.desc.en || item.desc.ar || Object.values(item.desc)[0] || '';
+}
+
 // Café & Restaurant Sushi Arij - Application Logic (Fully Dynamic & Admin Modifiable)
 
 // Full Default Menu Database with Nutritional Facts & Allergens
@@ -1965,8 +1979,9 @@ const defaultMenuItems = [
 ];
 
 // Dynamically Load Menu from Admin storage
+// Dynamically Load Menu from Admin storage
 function getActiveMenuItems() {
-  const CURRENT_MENU_VERSION = 'v7.1';
+  const CURRENT_MENU_VERSION = 'v7.2';
   const savedVersion = localStorage.getItem('arij_menu_version');
   if (savedVersion !== CURRENT_MENU_VERSION) {
     localStorage.removeItem('arij_custom_menu');
@@ -1975,8 +1990,14 @@ function getActiveMenuItems() {
   }
   try {
     const custom = localStorage.getItem('arij_custom_menu');
-    if (custom && custom !== '[]') return JSON.parse(custom);
+    if (custom && custom !== '[]') {
+      const parsed = JSON.parse(custom);
+      if (Array.isArray(parsed) && parsed.length >= 90) {
+        return parsed;
+      }
+    }
   } catch (e) {}
+  localStorage.removeItem('arij_custom_menu');
   return defaultMenuItems;
 }
 
@@ -2299,18 +2320,19 @@ function logOrderToAdmin(orderData) {
 }
 
 // DOM Elements Initialization
+// DOM Elements Initialization with Error Isolation
 document.addEventListener('DOMContentLoaded', () => {
-  applyAdminSiteOverrides();
-  initLanguage();
-  initTheme();
-  checkOperatingStatus();
-  detectTableFromURL();
-  renderSubFilterChips();
-  renderMenu();
-  setupEventListeners();
-  setupMinDate();
-  registerServiceWorker();
-  selectPairingMood('fresh');
+  try { applyAdminSiteOverrides(); } catch (e) { console.error('Overrides error', e); }
+  try { initLanguage(); } catch (e) { console.error('Language error', e); }
+  try { initTheme(); } catch (e) { console.error('Theme error', e); }
+  try { checkOperatingStatus(); } catch (e) { console.error('Status error', e); }
+  try { detectTableFromURL(); } catch (e) { console.error('Table error', e); }
+  try { renderSubFilterChips(); } catch (e) { console.error('Subchips error', e); }
+  try { renderMenu(); } catch (e) { console.error('Menu error', e); }
+  try { setupEventListeners(); } catch (e) { console.error('Listeners error', e); }
+  try { setupMinDate(); } catch (e) { console.error('Date error', e); }
+  try { registerServiceWorker(); } catch (e) { console.error('SW error', e); }
+  try { selectPairingMood('fresh'); } catch (e) { console.error('Pairing error', e); }
 });
 
 // Register PWA Service Worker
@@ -2827,84 +2849,95 @@ function renderMenu() {
   const container = document.getElementById('menu-items-grid');
   if (!container) return;
 
-  const menu = getActiveMenuItems();
-  const filtered = menu.filter(item => {
-    if (activeCategory !== 'all' && item.category !== activeCategory) return false;
-    if (activeFilter !== 'all' && item.badge !== activeFilter) return false;
-    
-    // Sub-category matching
-    if (activeCategory !== 'all' && activeSubCategory !== 'all') {
-      const configs = subCategoryConfigs[activeCategory];
-      const cfg = configs?.find(c => c.key === activeSubCategory);
-      if (cfg && cfg.match) {
-        const itemStr = ((item.name.fr || '') + ' ' + (item.desc.fr || '')).toLowerCase();
-        const matches = cfg.match.some(m => itemStr.includes(m.toLowerCase()));
-        if (!matches) return false;
+  try {
+    const menu = getActiveMenuItems();
+    const filtered = menu.filter(item => {
+      if (!item) return false;
+      if (activeCategory !== 'all' && item.category !== activeCategory) return false;
+      if (activeFilter !== 'all' && item.badge !== activeFilter) return false;
+      
+      // Sub-category matching
+      if (activeCategory !== 'all' && activeSubCategory !== 'all') {
+        const configs = subCategoryConfigs[activeCategory];
+        const cfg = configs?.find(c => c.key === activeSubCategory);
+        if (cfg && cfg.match) {
+          const itemStr = (getItemTitle(item, 'fr') + ' ' + getItemDesc(item, 'fr')).toLowerCase();
+          const matches = cfg.match.some(m => itemStr.includes(m.toLowerCase()));
+          if (!matches) return false;
+        }
       }
+
+      if (searchQuery) {
+        const name = getItemTitle(item).toLowerCase();
+        const desc = getItemDesc(item).toLowerCase();
+        if (!name.includes(searchQuery) && !desc.includes(searchQuery)) return false;
+      }
+      return true;
+    });
+
+    // Update Dynamic Counter Badge
+    const counterBadge = document.getElementById('menu-counter-badge');
+    if (counterBadge) {
+      const unit = filtered.length <= 1 ? (translations[currentLang]?.results_count_single || '1 plat disponible') : `${filtered.length} ${translations[currentLang]?.results_count_multi || 'plats disponibles'}`;
+      counterBadge.textContent = unit;
     }
 
-    if (searchQuery) {
-      const name = (item.name[currentLang] || item.name.fr || item.name || '').toLowerCase();
-      const desc = (item.desc[currentLang] || item.desc.fr || item.desc || '').toLowerCase();
-      if (!name.includes(searchQuery) && !desc.includes(searchQuery)) return false;
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div class="menu-empty" style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+          <i class="fas fa-utensils" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem; opacity: 0.7;"></i>
+          <p style="color: var(--text-muted); font-size: 1.1rem;">${currentLang === 'ar' ? 'لم يتم العثور على أطباق تطابق البحث' : currentLang === 'fr' ? 'Aucun plat ne correspond à votre recherche' : 'No items match your search'}</p>
+        </div>
+      `;
+      return;
     }
-    return true;
-  });
 
-  // Update Dynamic Counter Badge
-  const counterBadge = document.getElementById('menu-counter-badge');
-  if (counterBadge) {
-    const unit = filtered.length <= 1 ? (translations[currentLang].results_count_single || '1 plat disponible') : `${filtered.length} ${translations[currentLang].results_count_multi || 'plats disponibles'}`;
-    counterBadge.textContent = unit;
-  }
+    container.innerHTML = filtered.map(item => {
+      const badgeText = getBadgeLabel(item.badge);
+      const itemTitle = getItemTitle(item);
+      const itemDesc = getItemDesc(item);
+      const cartQty = getItemCartQuantity(item.id);
+      const isOutOfStock = item.inStock === false || item.outOfStock === true;
 
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div class="menu-empty">
-        <i class="fas fa-utensils"></i>
-        <p>${currentLang === 'ar' ? 'لم يتم العثور على أطباق تطابق البحث' : currentLang === 'fr' ? 'Aucun plat ne correspond à votre recherche' : 'No items match your search'}</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = filtered.map(item => {
-    const badgeText = getBadgeLabel(item.badge);
-    const itemTitle = item.name[currentLang] || item.name.fr || item.name;
-    const itemDesc = item.desc[currentLang] || item.desc.fr || item.desc;
-    const cartQty = getItemCartQuantity(item.id);
-
-    return `
-      <div class="menu-card glass-card" data-id="${item.id}">
-        <div class="menu-card-img-wrap">
-          <img src="${item.image}" alt="${itemTitle}" loading="lazy">
-          ${badgeText ? `<span class="card-badge ${item.badge}">${badgeText}</span>` : ''}
-          <button class="nutri-info-btn" onclick="openNutritionalModal('${item.id}')" title="Infos Nutritionnelles"><i class="fas fa-info-circle"></i></button>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-header">
-            <h3 class="menu-card-title">${itemTitle}</h3>
-            <span class="menu-card-price">${item.price} <small>MAD</small></span>
+      return `
+        <div class="menu-card glass-card ${isOutOfStock ? 'item-out-of-stock' : ''}" data-id="${item.id}">
+          <div class="menu-card-img-wrap">
+            <img src="${item.image}" alt="${itemTitle}" loading="lazy" onerror="this.src='assets/menu/assortiment_arij.webp'">
+            ${isOutOfStock ? `<span class="card-badge out-of-stock" style="background:#e63946;color:#fff;">Épuisé</span>` : (badgeText ? `<span class="card-badge ${item.badge}">${badgeText}</span>` : '')}
+            <button class="nutri-info-btn" onclick="openNutritionalModal('${item.id}')" title="Infos Nutritionnelles"><i class="fas fa-info-circle"></i></button>
           </div>
-          <p class="menu-card-desc">${itemDesc}</p>
-          <div class="menu-card-footer">
-            ${cartQty > 0 ? `
-              <div class="qty-control">
-                <button onclick="updateCartItemQty('${item.id}', -1)" aria-label="Decrease"><i class="fas fa-minus"></i></button>
-                <span>${cartQty}</span>
-                <button onclick="updateCartItemQty('${item.id}', 1)" aria-label="Increase"><i class="fas fa-plus"></i></button>
-              </div>
-            ` : `
-              <button class="add-to-cart-btn" onclick="addToCart('${item.id}')">
-                <i class="fas fa-plus-circle"></i>
-                <span data-i18n="cart_add_btn">${translations[currentLang].cart_add_btn}</span>
-              </button>
-            `}
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">${itemTitle}</h3>
+              <span class="menu-card-price">${item.price} <small>MAD</small></span>
+            </div>
+            <p class="menu-card-desc">${itemDesc}</p>
+            <div class="menu-card-footer">
+              ${isOutOfStock ? `
+                <button class="add-to-cart-btn disabled" disabled style="opacity:0.5;cursor:not-allowed;background:rgba(255,255,255,0.05);color:#888;">
+                  <i class="fas fa-ban"></i>
+                  <span>Temporairement Épuisé</span>
+                </button>
+              ` : (cartQty > 0 ? `
+                <div class="qty-control">
+                  <button onclick="updateCartItemQty('${item.id}', -1)" aria-label="Decrease"><i class="fas fa-minus"></i></button>
+                  <span>${cartQty}</span>
+                  <button onclick="updateCartItemQty('${item.id}', 1)" aria-label="Increase"><i class="fas fa-plus"></i></button>
+                </div>
+              ` : `
+                <button class="add-to-cart-btn" onclick="addToCart('${item.id}')">
+                  <i class="fas fa-plus-circle"></i>
+                  <span data-i18n="cart_add_btn">${translations[currentLang]?.cart_add_btn || 'Ajouter'}</span>
+                </button>
+              `)}
+            </div>
           </div>
         </div>
-      </div>
-    `;
-  }).join('');
+      `;
+    }).join('');
+  } catch (err) {
+    console.error('Error rendering menu:', err);
+  }
 }
 
 function getBadgeLabel(badgeKey) {
