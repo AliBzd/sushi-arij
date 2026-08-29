@@ -7,7 +7,7 @@ const PROD_DOMAIN = 'https://sushiarij.app';
 const adminDefaultMenuItems = [
   {
     "id": "m_1",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 115,
     "calories": "750 kcal",
@@ -27,7 +27,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_2",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 135,
     "calories": "750 kcal",
@@ -47,7 +47,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_3",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "chef",
     "price": 160,
     "calories": "750 kcal",
@@ -67,7 +67,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_4",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "chef",
     "price": 180,
     "calories": "750 kcal",
@@ -87,7 +87,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_5",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "chef",
     "price": 175,
     "calories": "750 kcal",
@@ -107,7 +107,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_6",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 150,
     "calories": "750 kcal",
@@ -127,7 +127,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_7",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 145,
     "calories": "750 kcal",
@@ -147,7 +147,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_8",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 135,
     "calories": "750 kcal",
@@ -167,7 +167,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_9",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 130,
     "calories": "750 kcal",
@@ -187,7 +187,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_10",
-    "category": "sushi",
+    "category": "plateaux",
     "badge": "popular",
     "price": 130,
     "calories": "750 kcal",
@@ -207,7 +207,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_11",
-    "category": "mains",
+    "category": "bentos",
     "badge": "chef",
     "price": 170,
     "calories": "520 kcal",
@@ -227,7 +227,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_12",
-    "category": "mains",
+    "category": "bentos",
     "badge": "popular",
     "price": 155,
     "calories": "520 kcal",
@@ -247,7 +247,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_13",
-    "category": "mains",
+    "category": "bentos",
     "badge": "popular",
     "price": 150,
     "calories": "520 kcal",
@@ -267,7 +267,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_14",
-    "category": "mains",
+    "category": "plateaux",
     "badge": "popular",
     "price": 145,
     "calories": "520 kcal",
@@ -287,7 +287,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_15",
-    "category": "mains",
+    "category": "plateaux",
     "badge": "chef",
     "price": 140,
     "calories": "520 kcal",
@@ -307,7 +307,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_16",
-    "category": "mains",
+    "category": "bentos",
     "badge": "popular",
     "price": 140,
     "calories": "520 kcal",
@@ -327,7 +327,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_17",
-    "category": "mains",
+    "category": "bentos",
     "badge": "popular",
     "price": 120,
     "calories": "520 kcal",
@@ -347,7 +347,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_18",
-    "category": "mains",
+    "category": "bentos",
     "badge": "popular",
     "price": 120,
     "calories": "520 kcal",
@@ -367,7 +367,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_19",
-    "category": "mains",
+    "category": "bentos",
     "badge": "popular",
     "price": 110,
     "calories": "520 kcal",
@@ -387,7 +387,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_20",
-    "category": "mains",
+    "category": "salades",
     "badge": "chef",
     "price": 72,
     "calories": "520 kcal",
@@ -407,7 +407,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_21",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -427,7 +427,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_22",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 59,
     "calories": "520 kcal",
@@ -447,7 +447,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_23",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 52,
     "calories": "520 kcal",
@@ -467,7 +467,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_24",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 72,
     "calories": "520 kcal",
@@ -487,7 +487,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_25",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -507,7 +507,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_26",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -527,7 +527,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_27",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 52,
     "calories": "520 kcal",
@@ -547,7 +547,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_28",
-    "category": "sushi",
+    "category": "brochettes",
     "badge": "popular",
     "price": 72,
     "calories": "380 kcal",
@@ -567,7 +567,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_29",
-    "category": "sushi",
+    "category": "brochettes",
     "badge": "popular",
     "price": 72,
     "calories": "380 kcal",
@@ -587,7 +587,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_30",
-    "category": "sushi",
+    "category": "brochettes",
     "badge": "popular",
     "price": 72,
     "calories": "380 kcal",
@@ -607,7 +607,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_31",
-    "category": "mains",
+    "category": "salades",
     "badge": "chef",
     "price": 52,
     "calories": "520 kcal",
@@ -627,7 +627,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_32",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 52,
     "calories": "520 kcal",
@@ -647,7 +647,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_33",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 45,
     "calories": "520 kcal",
@@ -667,7 +667,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_34",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 78,
     "calories": "520 kcal",
@@ -687,7 +687,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_35",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 72,
     "calories": "520 kcal",
@@ -707,7 +707,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_36",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 78,
     "calories": "520 kcal",
@@ -727,7 +727,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_37",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 72,
     "calories": "520 kcal",
@@ -747,7 +747,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_38",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -767,7 +767,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_39",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 84,
     "calories": "520 kcal",
@@ -787,7 +787,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_40",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 78,
     "calories": "520 kcal",
@@ -807,7 +807,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_41",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -827,7 +827,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_42",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -847,7 +847,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_43",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 84,
     "calories": "520 kcal",
@@ -867,7 +867,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_44",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 78,
     "calories": "520 kcal",
@@ -887,7 +887,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_45",
-    "category": "mains",
+    "category": "woks",
     "badge": "popular",
     "price": 72,
     "calories": "520 kcal",
@@ -907,7 +907,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_46",
-    "category": "sushi",
+    "category": "brochettes",
     "badge": "popular",
     "price": 78,
     "calories": "380 kcal",
@@ -927,7 +927,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_47",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 78,
     "calories": "380 kcal",
@@ -947,7 +947,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_48",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 78,
     "calories": "520 kcal",
@@ -967,7 +967,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_49",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 72,
     "calories": "520 kcal",
@@ -987,7 +987,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_50",
-    "category": "mains",
+    "category": "brochettes",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -1007,7 +1007,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_51",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 84,
     "calories": "520 kcal",
@@ -1027,7 +1027,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_52",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 78,
     "calories": "520 kcal",
@@ -1047,7 +1047,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_53",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 72,
     "calories": "520 kcal",
@@ -1067,7 +1067,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_54",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 65,
     "calories": "520 kcal",
@@ -1087,7 +1087,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_55",
-    "category": "mains",
+    "category": "salades",
     "badge": "popular",
     "price": 59,
     "calories": "520 kcal",
@@ -1107,8 +1107,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_56",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "nigiri",
+    "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1127,8 +1127,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_57",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "nigiri",
+    "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1147,8 +1147,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_58",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "nigiri",
+    "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1167,8 +1167,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_59",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "nigiri",
+    "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1187,8 +1187,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_60",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "nigiri",
+    "badge": "popular",
     "price": 32,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1207,7 +1207,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_61",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 59,
     "calories": "380 kcal",
@@ -1227,7 +1227,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_62",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 59,
     "calories": "380 kcal",
@@ -1247,7 +1247,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_63",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 45,
     "calories": "380 kcal",
@@ -1267,7 +1267,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_64",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 45,
     "calories": "380 kcal",
@@ -1287,7 +1287,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_65",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1307,7 +1307,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_66",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 59,
     "calories": "380 kcal",
@@ -1327,7 +1327,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_67",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 52,
     "calories": "380 kcal",
@@ -1347,7 +1347,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_68",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 52,
     "calories": "380 kcal",
@@ -1367,7 +1367,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_69",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1387,7 +1387,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_70",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1407,7 +1407,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_71",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1427,7 +1427,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_72",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1447,7 +1447,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_73",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1467,7 +1467,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_74",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1487,7 +1487,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_75",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1507,7 +1507,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_76",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 45,
     "calories": "380 kcal",
@@ -1527,7 +1527,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_77",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 45,
     "calories": "380 kcal",
@@ -1547,7 +1547,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_78",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 45,
     "calories": "380 kcal",
@@ -1567,7 +1567,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_79",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 45,
     "calories": "380 kcal",
@@ -1587,7 +1587,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_80",
-    "category": "mains",
+    "category": "rolls",
     "badge": "popular",
     "price": 45,
     "calories": "520 kcal",
@@ -1607,7 +1607,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_81",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1627,7 +1627,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_82",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 32,
     "calories": "380 kcal",
@@ -1647,7 +1647,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_83",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 32,
     "calories": "380 kcal",
@@ -1667,7 +1667,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_84",
-    "category": "sushi",
+    "category": "nigiri",
     "badge": "popular",
     "price": 29,
     "calories": "380 kcal",
@@ -1687,8 +1687,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_85",
-    "category": "sushi",
-    "badge": "popular",
+    "category": "rolls",
+    "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1707,8 +1707,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_86",
-    "category": "sushi",
-    "badge": "popular",
+    "category": "rolls",
+    "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1727,8 +1727,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_87",
-    "category": "sushi",
-    "badge": "popular",
+    "category": "rolls",
+    "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1747,8 +1747,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_88",
-    "category": "sushi",
-    "badge": "popular",
+    "category": "rolls",
+    "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1767,7 +1767,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_89",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
@@ -1787,8 +1787,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_90",
-    "category": "sushi",
-    "badge": "popular",
+    "category": "rolls",
+    "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1807,8 +1807,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_91",
-    "category": "sushi",
-    "badge": "popular",
+    "category": "rolls",
+    "badge": "chef",
     "price": 48,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1827,7 +1827,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_92",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 39,
     "calories": "380 kcal",
@@ -1847,7 +1847,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_93",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 35,
     "calories": "380 kcal",
@@ -1867,7 +1867,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_94",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 35,
     "calories": "380 kcal",
@@ -1887,8 +1887,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_95",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "rolls",
+    "badge": "popular",
     "price": 35,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1907,7 +1907,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_96",
-    "category": "sushi",
+    "category": "rolls",
     "badge": "popular",
     "price": 32,
     "calories": "380 kcal",
@@ -1927,8 +1927,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_97",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "rolls",
+    "badge": "popular",
     "price": 26,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1947,8 +1947,8 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "m_98",
-    "category": "sushi",
-    "badge": "veg",
+    "category": "rolls",
+    "badge": "popular",
     "price": 23,
     "calories": "380 kcal",
     "allergens": "Poissons, Soja, Sésame",
@@ -1967,7 +1967,7 @@ const adminDefaultMenuItems = [
   },
   {
     "id": "caf_1",
-    "category": "cafe",
+    "category": "rolls",
     "badge": "popular",
     "price": 15,
     "calories": "5 kcal",
@@ -1983,12 +1983,12 @@ const adminDefaultMenuItems = [
       "en": "Selected Arabica beans roasted Italian style, intense aroma and rich crema.",
       "ar": "حبوب بن أرابيكا مختارة ومحمصة على الطريقة الإيطالية مع رغوة كريمية غنية."
     },
-    "image": "assets/menu/assortiment_arij.webp"
+    "image": "assets/hero_sushi_cafe.png"
   },
   {
     "id": "caf_2",
-    "category": "cafe",
-    "badge": "chef",
+    "category": "rolls",
+    "badge": "popular",
     "price": 22,
     "calories": "160 kcal",
     "allergens": "Lait (Lactose)",
@@ -2003,11 +2003,11 @@ const adminDefaultMenuItems = [
       "en": "Double espresso shot with velvety steamed milk foam and salted caramel drizzle.",
       "ar": "جرعة مضاعفة من الإسبريسو مع رغوة حليب مخملية ولمسة كراميل مالح."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "caf_3",
-    "category": "cafe",
+    "category": "rolls",
     "badge": "popular",
     "price": 15,
     "calories": "10 kcal",
@@ -2023,11 +2023,11 @@ const adminDefaultMenuItems = [
       "en": "Authentic Moroccan green tea infused with fresh aromatic mint leaves.",
       "ar": "أتاي مغربي منعنع ومحضر بأوراق النعناع الطازجة على الطريقة التقليدية."
     },
-    "image": "assets/menu/bento_golden.webp"
+    "image": "assets/cafe_ambiance.png"
   },
   {
     "id": "caf_4",
-    "category": "cafe",
+    "category": "rolls",
     "badge": "popular",
     "price": 20,
     "calories": "110 kcal",
@@ -2043,12 +2043,12 @@ const adminDefaultMenuItems = [
       "en": "Freshly squeezed Moroccan oranges, 100% natural with no added sugar.",
       "ar": "عصير برتقال مغربي طبيعي 100% معصور فورياً بدون ماء أو سكر مضاف."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "caf_5",
-    "category": "cafe",
-    "badge": "chef",
+    "category": "rolls",
+    "badge": "popular",
     "price": 28,
     "calories": "145 kcal",
     "allergens": "Aucun",
@@ -2063,11 +2063,11 @@ const adminDefaultMenuItems = [
       "en": "Fresh mango puree blended with passion fruit and refreshing crushed ice.",
       "ar": "مزيج المانجو الطازجة والباشن فروت مع الثلج المجروش المنعش."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "caf_6",
-    "category": "cafe",
+    "category": "rolls",
     "badge": "popular",
     "price": 30,
     "calories": "130 kcal",
@@ -2083,11 +2083,11 @@ const adminDefaultMenuItems = [
       "en": "Refreshing mocktail with fresh strawberries, crushed lime, and garden mint.",
       "ar": "موكتيل منعش بالفراولة الطبيعية، الليمون الحامض والنعناع الأخضر."
     },
-    "image": "assets/menu/bento_golden.webp"
+    "image": "assets/cafe_ambiance.png"
   },
   {
     "id": "brk_1",
-    "category": "breakfast",
+    "category": "rolls",
     "badge": "popular",
     "price": 35,
     "calories": "450 kcal",
@@ -2103,12 +2103,12 @@ const adminDefaultMenuItems = [
       "en": "Italian Espresso + Fresh Butter Croissant + Glass of freshly squeezed orange juice.",
       "ar": "إسبريسو إيطالي + كرواسون بالزبدة + كأس عصير برتقال طبيعي."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "brk_2",
-    "category": "breakfast",
-    "badge": "chef",
+    "category": "rolls",
+    "badge": "popular",
     "price": 48,
     "calories": "580 kcal",
     "allergens": "Gluten, Lait, Œufs, Fruits à coque",
@@ -2123,12 +2123,12 @@ const adminDefaultMenuItems = [
       "en": "Moroccan mint tea, fried eggs with pure olive oil, amlou, pure honey, msemen & harcha.",
       "ar": "براد أتاي منعنع، بيض مقلي بزيت الزيتون، أملو، عسل حر، جبن، مسمن وحرشة."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "brk_3",
-    "category": "breakfast",
-    "badge": "chef",
+    "category": "rolls",
+    "badge": "popular",
     "price": 55,
     "calories": "650 kcal",
     "allergens": "Gluten, Lait, Œufs",
@@ -2143,11 +2143,11 @@ const adminDefaultMenuItems = [
       "en": "Hot beverage of choice + Orange juice + Cheese omelette + Pastries, harcha, honey & butter.",
       "ar": "مشروب ساخن + عصير برتقال + أومليت بالجبن + مسمن وحرشة ومربى وزبدة."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "brk_4",
-    "category": "breakfast",
+    "category": "rolls",
     "badge": "popular",
     "price": 25,
     "calories": "320 kcal",
@@ -2163,11 +2163,11 @@ const adminDefaultMenuItems = [
       "en": "Fresh fluffy omelette made to order with melted cheese and chives.",
       "ar": "أومليت طازجة محضرة فورياً بجبن ذائب وأعشاب طازجة."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "brk_5",
-    "category": "breakfast",
+    "category": "rolls",
     "badge": "popular",
     "price": 10,
     "calories": "240 kcal",
@@ -2183,12 +2183,12 @@ const adminDefaultMenuItems = [
       "en": "Flaky artisanal pastry baked fresh every morning from 06:30 AM.",
       "ar": "فينوازري مقرمشة وهشة مخبوزة طازجة كل صباح ابتداءً من 06:30."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "des_1",
-    "category": "desserts",
-    "badge": "chef",
+    "category": "rolls",
+    "badge": "popular",
     "price": 32,
     "calories": "240 kcal",
     "allergens": "Lait (Lactose)",
@@ -2203,11 +2203,11 @@ const adminDefaultMenuItems = [
       "en": "Traditional Japanese sweet rice dough filled with rich artisanal ice cream.",
       "ar": "حلوى الأرز اليابانية التقليدية المحشوة بآيس كريم بنكهات متعددة."
     },
-    "image": "assets/menu/assortiment_arij.webp"
+    "image": "assets/hero_sushi_cafe.png"
   },
   {
     "id": "des_2",
-    "category": "desserts",
+    "category": "rolls",
     "badge": "popular",
     "price": 32,
     "calories": "380 kcal",
@@ -2223,11 +2223,11 @@ const adminDefaultMenuItems = [
       "en": "Warm molten chocolate cake with a gooey center served with vanilla ice cream.",
       "ar": "كيكة الشوكولاتة الداكنة الساخنة ذات القلب الذائب مع آيس كريم فانيليا."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "des_3",
-    "category": "desserts",
+    "category": "rolls",
     "badge": "popular",
     "price": 28,
     "calories": "340 kcal",
@@ -2243,11 +2243,11 @@ const adminDefaultMenuItems = [
       "en": "Golden delicate crepe generously layered with creamy Nutella and sliced bananas.",
       "ar": "كريب ذهبية وهشة مغطاة بطبقة غنية من النوتيلا وقطع الموز الطازج."
     },
-    "image": "assets/menu/bento_golden.webp"
+    "image": "assets/cafe_ambiance.png"
   },
   {
     "id": "des_4",
-    "category": "desserts",
+    "category": "rolls",
     "badge": "popular",
     "price": 26,
     "calories": "310 kcal",
@@ -2263,11 +2263,11 @@ const adminDefaultMenuItems = [
       "en": "Caramelized pearl sugar waffle, crispy outside and soft inside with melted chocolate.",
       "ar": "وافل مقرمش ومكرمل بحبات السكر يقدم مع صوص الشوكولاتة الدافئة."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   },
   {
     "id": "des_5",
-    "category": "desserts",
+    "category": "rolls",
     "badge": "popular",
     "price": 20,
     "calories": "210 kcal",
@@ -2283,12 +2283,12 @@ const adminDefaultMenuItems = [
       "en": "Smooth baked vanilla custard topped with rich homemade amber caramel.",
       "ar": "كريم كراميل ناعم ومحضر على الطريقة المنزلية مع صوص الكراميل الذهبي."
     },
-    "image": "assets/menu/assortiment_arij.webp"
+    "image": "assets/hero_sushi_cafe.png"
   },
   {
     "id": "des_6",
-    "category": "desserts",
-    "badge": "chef",
+    "category": "rolls",
+    "badge": "popular",
     "price": 34,
     "calories": "360 kcal",
     "allergens": "Gluten, Lait",
@@ -2303,7 +2303,7 @@ const adminDefaultMenuItems = [
       "en": "Crunchy speculoos crust topped with velvety cream cheese and berry coulis.",
       "ar": "تشيز كيك مخملي بقاعدة بسكويت اللوتس وصلصة التوت والفواكه الحمراء."
     },
-    "image": "assets/menu/salade_arij.webp"
+    "image": "assets/breakfast_pastries.png"
   }
 ];
 
@@ -2875,6 +2875,13 @@ function openAddCouponModal() {
 
 // Menu Manager (CRUD & Image URLs)
 function getStoredMenu() {
+  const CURRENT_MENU_VERSION = 'v5.0';
+  const savedVersion = localStorage.getItem('arij_menu_version');
+  if (savedVersion !== CURRENT_MENU_VERSION) {
+    localStorage.removeItem('arij_custom_menu');
+    localStorage.setItem('arij_menu_version', CURRENT_MENU_VERSION);
+    return adminDefaultMenuItems;
+  }
   try {
     const custom = localStorage.getItem('arij_custom_menu');
     if (custom && custom !== '[]') return JSON.parse(custom);

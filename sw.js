@@ -1,6 +1,6 @@
-// Café & Restaurant Sushi Arij - Service Worker (Production Ready PWA Caching v4.0)
+// Café & Restaurant Sushi Arij - Service Worker (Production Ready PWA Caching v5.0)
 
-const CACHE_NAME = 'sushi-arij-v4.0';
+const CACHE_NAME = 'sushi-arij-v5.0';
 
 const ASSETS_TO_CACHE = [
   '/',
@@ -21,7 +21,7 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Precaching core assets v4.0');
+      console.log('[SW] Precaching core assets v5.0');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
