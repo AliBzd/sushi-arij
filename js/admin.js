@@ -2536,7 +2536,7 @@ function openAddCouponModal() {
 
 // Menu Manager (CRUD & Image URLs)
 function getStoredMenu() {
-  const CURRENT_MENU_VERSION = 'v7.0';
+  const CURRENT_MENU_VERSION = 'v7.1';
   const savedVersion = localStorage.getItem('arij_menu_version');
   if (savedVersion !== CURRENT_MENU_VERSION) {
     localStorage.removeItem('arij_custom_menu');
@@ -2961,7 +2961,7 @@ function sendWhatsAppStatusNotification(phone, orderId, statusType) {
 // 100% Comprehensive Full Site Backup & Restore
 function exportFullBackupJSON() {
   const fullBackup = {
-    version: 'v7.0',
+    version: 'v7.1',
     exportDate: new Date().toISOString(),
     menu: getStoredMenu(),
     siteContent: {

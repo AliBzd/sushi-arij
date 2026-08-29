@@ -1966,7 +1966,7 @@ const defaultMenuItems = [
 
 // Dynamically Load Menu from Admin storage
 function getActiveMenuItems() {
-  const CURRENT_MENU_VERSION = 'v7.0';
+  const CURRENT_MENU_VERSION = 'v7.1';
   const savedVersion = localStorage.getItem('arij_menu_version');
   if (savedVersion !== CURRENT_MENU_VERSION) {
     localStorage.removeItem('arij_custom_menu');
