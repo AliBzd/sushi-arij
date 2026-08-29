@@ -420,19 +420,19 @@
         </div>
       </section>
 
-      <!-- TAB 3: FEATURES & REVIEWS EDITOR -->
+      <!-- TAB 3: FEATURES, GALLERY & REVIEWS EDITOR -->
       <section id="tab-features-editor" class="admin-tab-content" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
           <div>
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Éditeur des Avantages & Témoignages</h2>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Modifiez les cartes d'avantages et les avis clients affichés sur le site</p>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Éditeur des Avantages, Galerie & Témoignages</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Contrôlez les 4 avantages, les 4 photos de galerie, les avis et la fidélité</p>
           </div>
-          <button class="btn-primary" onclick="saveFeaturesAndReviews()"><i class="fas fa-save"></i> Sauvegarder</button>
+          <button class="btn-primary" onclick="saveFeaturesAndReviews()"><i class="fas fa-save"></i> Sauvegarder les Changements</button>
         </div>
 
         <!-- 4 Feature Cards Editor -->
         <div class="editor-section-card">
-          <h3><i class="fas fa-star"></i> Les 4 Cartes d'Avantages</h3>
+          <h3><i class="fas fa-star"></i> Les 4 Cartes d'Avantages (Pourquoi Choisir Arij)</h3>
           <div class="form-grid">
             <div class="form-group">
               <label>Avantage 1 - Titre</label>
@@ -440,7 +440,7 @@
             </div>
             <div class="form-group">
               <label>Avantage 1 - Texte</label>
-              <input type="text" id="edit-feat1-desc" class="form-input" value="Savourez votre café matinal, expresso italien et viennoiseries fraîches.">
+              <input type="text" id="edit-feat1-desc" class="form-input" value="Savourez votre café matinal, expresso italien et viennoiseries fraîches dès 06h30.">
             </div>
 
             <div class="form-group">
@@ -449,7 +449,59 @@
             </div>
             <div class="form-group">
               <label>Avantage 2 - Texte</label>
-              <input type="text" id="edit-feat2-desc" class="form-input" value="Nos chefs sushimans découpent les meilleurs saumons et thons frais.">
+              <input type="text" id="edit-feat2-desc" class="form-input" value="Nos chefs sushimans découpent les meilleurs saumons et thons frais pour des plats d'exception.">
+            </div>
+
+            <div class="form-group">
+              <label>Avantage 3 - Titre</label>
+              <input type="text" id="edit-feat3-title" class="form-input" value="Ambiance Moderne & Familiale">
+            </div>
+            <div class="form-group">
+              <label>Avantage 3 - Texte</label>
+              <input type="text" id="edit-feat3-desc" class="form-input" value="Salle climatisée, banquettes confortables et terrasse ensoleillée sur l'Avenue Hssaine.">
+            </div>
+
+            <div class="form-group">
+              <label>Avantage 4 - Titre</label>
+              <input type="text" id="edit-feat4-title" class="form-input" value="Commande Rapide WhatsApp & Livraison">
+            </div>
+            <div class="form-group">
+              <label>Avantage 4 - Texte</label>
+              <input type="text" id="edit-feat4-desc" class="form-input" value="Commandez en 1 clic sans commission et recevez vos plats chauds à Sala Al Jadida.">
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Gallery Photos & Overlays -->
+        <div class="editor-section-card">
+          <h3><i class="fas fa-images"></i> Galerie Ambiance & Spécialités (Les 4 Encarts Photos)</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Photo 1 - URL / Fichier</label>
+              <input type="text" id="edit-gal1-img" class="form-input" value="assets/menu/bento_golden.webp">
+              <label style="margin-top: 0.4rem;">Titre Encart 1</label>
+              <input type="text" id="edit-gal1-title" class="form-input" value="Bentos & Plats Chauds Gourmands">
+            </div>
+
+            <div class="form-group">
+              <label>Photo 2 - URL / Fichier</label>
+              <input type="text" id="edit-gal2-img" class="form-input" value="assets/menu/special_roll_dragon.webp">
+              <label style="margin-top: 0.4rem;">Titre Encart 2</label>
+              <input type="text" id="edit-gal2-title" class="form-input" value="Spécialités Dragon & Rolls d'Exception">
+            </div>
+
+            <div class="form-group">
+              <label>Photo 3 - URL / Fichier</label>
+              <input type="text" id="edit-gal3-img" class="form-input" value="assets/menu/salade_arij.webp">
+              <label style="margin-top: 0.4rem;">Titre Encart 3</label>
+              <input type="text" id="edit-gal3-title" class="form-input" value="Salades Fraîches & Poké Bowls">
+            </div>
+
+            <div class="form-group">
+              <label>Photo 4 - URL / Fichier</label>
+              <input type="text" id="edit-gal4-img" class="form-input" value="assets/menu/assortiment_arij.webp">
+              <label style="margin-top: 0.4rem;">Titre Encart 4</label>
+              <input type="text" id="edit-gal4-title" class="form-input" value="Grands Plateaux & Assortiments">
             </div>
           </div>
         </div>
@@ -459,9 +511,35 @@
           <h3><i class="fas fa-quote-left"></i> Témoignages Clients (Google Maps)</h3>
           <div class="form-grid">
             <div class="form-group full-width">
-              <label>Avis 1 (Auteur & Citation)</label>
-              <input type="text" id="edit-rev1-author" class="form-input" value="Youssef B. • Guide Local" style="margin-bottom: 0.5rem;">
-              <textarea id="edit-rev1-text" class="form-input" rows="2">Le meilleur sushi de Sala Al Jadida ! Les saumons sont ultra frais et l'ambiance café le matin est parfaite.</textarea>
+              <label>Avis 1 (Auteur & Rôle)</label>
+              <input type="text" id="edit-rev1-author" class="form-input" value="Youssef B." style="margin-bottom: 0.4rem;">
+              <input type="text" id="edit-rev1-role" class="form-input" value="Guide Local • 5/5" style="margin-bottom: 0.4rem;">
+              <textarea id="edit-rev1-text" class="form-input" rows="2">Le meilleur sushi de Sala Al Jadida ! Les saumons sont ultra frais et l'ambiance café le matin est parfaite pour travailler au calme.</textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Avis 2 (Auteur & Rôle)</label>
+              <input type="text" id="edit-rev2-author" class="form-input" value="Sarah K." style="margin-bottom: 0.4rem;">
+              <input type="text" id="edit-rev2-role" class="form-input" value="Client Régulier • 5/5" style="margin-bottom: 0.4rem;">
+              <textarea id="edit-rev2-text" class="form-input" rows="2">Cadre magnifique sur l'Avenue Hssaine. Le cappuccino caramel et les dragon rolls sont divins. Service rapide et chaleureux !</textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Avis 3 (Auteur & Rôle)</label>
+              <input type="text" id="edit-rev3-author" class="form-input" value="Amine M." style="margin-bottom: 0.4rem;">
+              <input type="text" id="edit-rev3-role" class="form-input" value="Client Livraison • 5/5" style="margin-bottom: 0.4rem;">
+              <textarea id="edit-rev3-text" class="form-input" rows="2">Excellent rapport qualité-prix. Commande par WhatsApp reçue en 25 min à domicile à Sala Al Jadida. Je recommande vivement !</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loyalty Card Program -->
+        <div class="editor-section-card">
+          <h3><i class="fas fa-gift"></i> Programme de Carte de Fidélité</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Texte de l'Offre de Fidélité</label>
+              <input type="text" id="edit-loyalty-reward" class="form-input" value="Cumulez 5 commandes via WhatsApp et recevez un Mochi Glacé ou une Boisson offerte !">
             </div>
           </div>
         </div>
@@ -531,16 +609,36 @@
         </div>
 
         <div class="glass-card" style="padding: 1.5rem;">
+          <!-- Live Instant Search & Category Filter for 98 dishes -->
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 250px; position: relative;">
+              <i class="fas fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+              <input type="text" id="admin-menu-search" class="form-input" placeholder="🔍 Rechercher un plat par nom ou ingrédient..." style="padding-left: 2.5rem;" oninput="filterAdminMenuTable()">
+            </div>
+            <div style="min-width: 200px;">
+              <select id="admin-menu-cat-filter" class="form-input" onchange="filterAdminMenuTable()">
+                <option value="all">📁 Toutes les Catégories</option>
+                <option value="plateaux">🍱 Grands Plateaux</option>
+                <option value="rolls">🔥 Special Rolls & Makis</option>
+                <option value="nigiri">🍣 Nigiri & Temaki</option>
+                <option value="bentos">🍱 Bentos Complets</option>
+                <option value="woks">🍜 Woks & Nouilles</option>
+                <option value="brochettes">🍢 Brochettes & Nems</option>
+                <option value="salades">🥗 Salades & Soupes</option>
+              </select>
+            </div>
+          </div>
+
           <div class="admin-table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>Aperçu Image</th>
-                  <th>Nom (FR)</th>
+                  <th>Aperçu Photo</th>
+                  <th>Nom du Plat</th>
                   <th>Catégorie</th>
                   <th>Prix (MAD)</th>
+                  <th>Disponibilité / Stock</th>
                   <th>Badge</th>
-                  <th>Allergènes</th>
                   <th>Actions</th>
                 </tr>
               </thead>

@@ -2147,6 +2147,7 @@ function loadDashboardData() {
   seedInitialData();
   renderOrdersTable();
   renderAdminMenu();
+  loadAllSiteContent();
   loadPromosAndSettings();
   renderSalesChart();
   renderTopDishesRanking();
@@ -2549,6 +2550,18 @@ function getStoredMenu() {
   return adminDefaultMenuItems;
 }
 
+let adminSearchQuery = '';
+let adminCatFilter = 'all';
+
+function filterAdminMenuTable() {
+  const sInput = document.getElementById('admin-menu-search');
+  const cSelect = document.getElementById('admin-menu-cat-filter');
+  adminSearchQuery = sInput ? sInput.value.toLowerCase().trim() : '';
+  adminCatFilter = cSelect ? cSelect.value : 'all';
+  renderAdminMenu();
+  loadAllSiteContent();
+}
+
 function renderAdminMenu() {
   const menu = getStoredMenu();
   const countEl = document.getElementById('stat-menu-count');
@@ -2557,23 +2570,76 @@ function renderAdminMenu() {
   const menuBody = document.getElementById('admin-menu-body');
   if (!menuBody) return;
 
-  menuBody.innerHTML = menu.map(m => {
+  const filtered = menu.filter(m => {
+    if (adminCatFilter !== 'all' && m.category !== adminCatFilter) return false;
+    if (adminSearchQuery) {
+      const name = (m.name?.fr || m.name || '').toLowerCase();
+      const ing = (m.ingredients || '').toLowerCase();
+      if (!name.includes(adminSearchQuery) && !ing.includes(adminSearchQuery)) return false;
+    }
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    menuBody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding: 2rem; color: var(--text-muted);">Aucun plat trouvé dans cette catégorie.</td></tr>`;
+    return;
+  }
+
+  menuBody.innerHTML = filtered.map(m => {
     const title = m.name?.fr || m.name || 'Plat';
+    const isInStock = m.inStock !== false && m.outOfStock !== true;
     return `
-      <tr>
-        <td><img src="${m.image}" style="width: 52px; height: 44px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-glass);"></td>
+      <tr class="${isInStock ? '' : 'row-out-of-stock'}">
+        <td><img src="${m.image}" style="width: 54px; height: 46px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-glass);" onerror="this.src='assets/menu/assortiment_arij.webp'"></td>
         <td><strong>${title}</strong></td>
-        <td><span class="filter-chip">${m.category}</span></td>
+        <td><span class="filter-chip" style="font-size:0.75rem;">${m.category}</span></td>
         <td><strong style="color: var(--accent-gold);">${m.price} MAD</strong></td>
-        <td><span class="card-badge ${m.badge || ''}">${m.badge || 'Standard'}</span></td>
-        <td><span class="status-badge open">En stock</span></td>
         <td>
-          <button class="btn-secondary" onclick="editMenuItem('${m.id}')" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i class="fas fa-edit"></i> Modifier</button>
-          <button class="btn-secondary" onclick="deleteMenuItem('${m.id}')" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; color: var(--accent-crimson);"><i class="fas fa-trash"></i> Supprimer</button>
+          <button class="btn-secondary" onclick="toggleItemStock('${m.id}')" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; border-color: ${isInStock ? '#2ec4b6' : '#e63946'}; color: ${isInStock ? '#2ec4b6' : '#e63946'};" title="Cliquez pour changer la disponibilité">
+            <i class="fas fa-${isInStock ? 'check-circle' : 'ban'}"></i> ${isInStock ? 'En Stock' : 'Épuisé (Rupture)'}
+          </button>
+        </td>
+        <td><span class="card-badge ${m.badge || ''}">${m.badge || 'Standard'}</span></td>
+        <td>
+          <div style="display: flex; gap: 0.4rem;">
+            <button class="btn-secondary" onclick="editMenuItem('${m.id}')" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i class="fas fa-edit"></i> Modifier</button>
+            <button class="btn-secondary" onclick="deleteMenuItem('${m.id}')" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; color: var(--accent-crimson);"><i class="fas fa-trash"></i></button>
+          </div>
         </td>
       </tr>
     `;
   }).join('');
+}
+
+function toggleItemStock(id) {
+  let menu = getStoredMenu();
+  const item = menu.find(m => m.id === id);
+  if (item) {
+    const currentState = item.inStock !== false && item.outOfStock !== true;
+    item.inStock = !currentState;
+    item.outOfStock = currentState;
+    localStorage.setItem('arij_custom_menu', JSON.stringify(menu));
+    renderAdminMenu();
+  loadAllSiteContent();
+  }
+}
+
+function handleItemImageUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const base64 = e.target.result;
+    document.getElementById('item-image-url').value = base64;
+    const previewWrap = document.getElementById('image-preview-wrap');
+    const previewImg = document.getElementById('image-preview-img');
+    if (previewWrap && previewImg) {
+      previewImg.src = base64;
+      previewWrap.style.display = 'block';
+    }
+  };
+  reader.readAsDataURL(file);
 }
 
 function openAddMenuItemModal() {
@@ -2628,6 +2694,7 @@ function deleteMenuItem(id) {
     menu = menu.filter(m => m.id !== id);
     localStorage.setItem('arij_custom_menu', JSON.stringify(menu));
     renderAdminMenu();
+  loadAllSiteContent();
   }
 }
 
@@ -2670,6 +2737,7 @@ if (itemForm) {
     localStorage.setItem('arij_custom_menu', JSON.stringify(menu));
     closeAdminItemModal();
     renderAdminMenu();
+  loadAllSiteContent();
     alert('Plat et image enregistrés avec succès !');
   });
 }
@@ -2753,6 +2821,7 @@ function importMenuJSON(event) {
       if (confirm(`Voulez-vous importer ${imported.length} plats dans le menu ? Cela mettra à jour la carte.`)) {
         localStorage.setItem('arij_custom_menu', JSON.stringify(imported));
         renderAdminMenu();
+  loadAllSiteContent();
         alert(`✅ ${imported.length} plats importés et synchronisés avec succès !`);
       }
     } catch (err) {
@@ -2761,3 +2830,251 @@ function importMenuJSON(event) {
   };
   reader.readAsText(file);
 }
+
+
+// 100% Comprehensive Site Content & Features Manager
+function loadAllSiteContent() {
+  const brandName = localStorage.getItem('arij_brand_name') || 'Café & Restaurant Sushi Arij';
+  const brandSub = localStorage.getItem('arij_brand_sub') || 'Café & Restaurant';
+  const heroTitle = localStorage.getItem('arij_hero_title') || 'Cuisine Japonaise Fraîche & Expérience Café Exceptionnelle à Sala Al Jadida';
+  const heroSub = localStorage.getItem('arij_hero_subtext') || 'Découvrez l\'harmonie parfaite entre l\'art du sushi japonais artisanal et l\'élégance d\'un café contemporain. Produits frais préparés chaque jour sur l\'Avenue Hssaine.';
+  const pushTitle = localStorage.getItem('arij_push_title') || '🔔 Restez Informé de nos Promos du Jour !';
+  const pushDesc = localStorage.getItem('arij_push_desc') || 'Activer les notifications pour recevoir nos offres exclusives à Sala Al Jadida.';
+
+  if (document.getElementById('edit-brand-name')) document.getElementById('edit-brand-name').value = brandName;
+  if (document.getElementById('edit-brand-sub')) document.getElementById('edit-brand-sub').value = brandSub;
+  if (document.getElementById('edit-hero-title')) document.getElementById('edit-hero-title').value = heroTitle;
+  if (document.getElementById('edit-hero-subtext')) document.getElementById('edit-hero-subtext').value = heroSub;
+  if (document.getElementById('edit-push-title')) document.getElementById('edit-push-title').value = pushTitle;
+  if (document.getElementById('edit-push-desc')) document.getElementById('edit-push-desc').value = pushDesc;
+
+  // Features (4 Avantages)
+  for (let i = 1; i <= 4; i++) {
+    const ft = localStorage.getItem(`arij_feat${i}_title`);
+    const fd = localStorage.getItem(`arij_feat${i}_desc`);
+    const tEl = document.getElementById(`edit-feat${i}_title`);
+    const dEl = document.getElementById(`edit-feat${i}_desc`);
+    if (ft && tEl) tEl.value = ft;
+    if (fd && dEl) dEl.value = fd;
+  }
+
+  // Gallery (4 Photos)
+  for (let i = 1; i <= 4; i++) {
+    const gi = localStorage.getItem(`arij_gal${i}_img`);
+    const gt = localStorage.getItem(`arij_gal${i}_title`);
+    const iEl = document.getElementById(`edit-gal${i}-img`);
+    const tEl = document.getElementById(`edit-gal${i}-title`);
+    if (gi && iEl) iEl.value = gi;
+    if (gt && tEl) tEl.value = gt;
+  }
+
+  // Reviews (3 Avis)
+  for (let i = 1; i <= 3; i++) {
+    const ra = localStorage.getItem(`arij_rev${i}_author`);
+    const rr = localStorage.getItem(`arij_rev${i}_role`);
+    const rt = localStorage.getItem(`arij_rev${i}_text`);
+    const aEl = document.getElementById(`edit-rev${i}-author`);
+    const rEl = document.getElementById(`edit-rev${i}-role`);
+    const tEl = document.getElementById(`edit-rev${i}-text`);
+    if (ra && aEl) aEl.value = ra;
+    if (rr && rEl) rEl.value = rr;
+    if (rt && tEl) tEl.value = rt;
+  }
+
+  // Loyalty
+  const loy = localStorage.getItem('arij_loyalty_reward');
+  const loyEl = document.getElementById('edit-loyalty-reward');
+  if (loy && loyEl) loyEl.value = loy;
+}
+
+function saveAllSiteContent() {
+  const brandName = document.getElementById('edit-brand-name')?.value.trim();
+  const brandSub = document.getElementById('edit-brand-sub')?.value.trim();
+  const heroTitle = document.getElementById('edit-hero-title')?.value.trim();
+  const heroSub = document.getElementById('edit-hero-subtext')?.value.trim();
+  const pushTitle = document.getElementById('edit-push-title')?.value.trim();
+  const pushDesc = document.getElementById('edit-push-desc')?.value.trim();
+
+  if (brandName) localStorage.setItem('arij_brand_name', brandName);
+  if (brandSub) localStorage.setItem('arij_brand_sub', brandSub);
+  if (heroTitle) localStorage.setItem('arij_hero_title', heroTitle);
+  if (heroSub) localStorage.setItem('arij_hero_subtext', heroSub);
+  if (pushTitle) localStorage.setItem('arij_push_title', pushTitle);
+  if (pushDesc) localStorage.setItem('arij_push_desc', pushDesc);
+
+  alert('✅ Contenu général et en-tête enregistrés avec succès !');
+}
+
+function saveFeaturesAndReviews() {
+  // Features
+  for (let i = 1; i <= 4; i++) {
+    const tEl = document.getElementById(`edit-feat${i}-title`);
+    const dEl = document.getElementById(`edit-feat${i}-desc`);
+    if (tEl) localStorage.setItem(`arij_feat${i}_title`, tEl.value.trim());
+    if (dEl) localStorage.setItem(`arij_feat${i}_desc`, dEl.value.trim());
+  }
+
+  // Gallery
+  for (let i = 1; i <= 4; i++) {
+    const iEl = document.getElementById(`edit-gal${i}-img`);
+    const tEl = document.getElementById(`edit-gal${i}-title`);
+    if (iEl) localStorage.setItem(`arij_gal${i}_img`, iEl.value.trim());
+    if (tEl) localStorage.setItem(`arij_gal${i}_title`, tEl.value.trim());
+  }
+
+  // Reviews
+  for (let i = 1; i <= 3; i++) {
+    const aEl = document.getElementById(`edit-rev${i}-author`);
+    const rEl = document.getElementById(`edit-rev${i}-role`);
+    const tEl = document.getElementById(`edit-rev${i}-text`);
+    if (aEl) localStorage.setItem(`arij_rev${i}_author`, aEl.value.trim());
+    if (rEl) localStorage.setItem(`arij_rev${i}_role`, rEl.value.trim());
+    if (tEl) localStorage.setItem(`arij_rev${i}_text`, tEl.value.trim());
+  }
+
+  // Loyalty
+  const loyEl = document.getElementById('edit-loyalty-reward');
+  if (loyEl) localStorage.setItem('arij_loyalty_reward', loyEl.value.trim());
+
+  alert('✅ Avantages, Galerie (4 photos), Avis et Fidélité enregistrés avec succès !');
+}
+
+// 1-Click WhatsApp Order Status Notifications
+function sendWhatsAppStatusNotification(phone, orderId, statusType) {
+  if (!phone) return;
+  const cleanPhone = phone.replace(/[^0-9]/g, '');
+  let message = '';
+  
+  if (statusType === 'confirm') {
+    message = `👨‍🍳 *SUSHI ARIJ - COMMANDE CONFIRMÉE*\n\nBonjour ! Votre commande *#${orderId}* a été acceptée par nos chefs et est en cours de préparation.\n⏱️ Délai estimé : ~20-25 minutes.\n\nMerci de votre confiance !`;
+  } else if (statusType === 'delivery') {
+    message = `🛵 *SUSHI ARIJ - LIVREUR EN ROUTE*\n\nVotre commande *#${orderId}* vient de quitter le restaurant. Notre livreur arrive chez vous sous peu !\n\nBon appétit !`;
+  } else if (statusType === 'ready') {
+    message = `🛍️ *SUSHI ARIJ - COMMANDE PRÊTE*\n\nVotre commande *#${orderId}* est prête et emballée avec soin au comptoir du restaurant (Avenue Hssaine, Sala Al Jadida).\n\nÀ très bientôt !`;
+  }
+
+  const encoded = encodeURIComponent(message);
+  window.open(`https://wa.me/${cleanPhone}?text=${encoded}`, '_blank');
+}
+
+
+// 100% Comprehensive Full Site Backup & Restore
+function exportFullBackupJSON() {
+  const fullBackup = {
+    version: 'v7.0',
+    exportDate: new Date().toISOString(),
+    menu: getStoredMenu(),
+    siteContent: {
+      brandName: localStorage.getItem('arij_brand_name'),
+      brandSub: localStorage.getItem('arij_brand_sub'),
+      heroTitle: localStorage.getItem('arij_hero_title'),
+      heroSub: localStorage.getItem('arij_hero_subtext'),
+      pushTitle: localStorage.getItem('arij_push_title'),
+      pushDesc: localStorage.getItem('arij_push_desc'),
+      p1Title: localStorage.getItem('arij_p1_title'),
+      p1Desc: localStorage.getItem('arij_p1_desc'),
+      p1Price: localStorage.getItem('arij_p1_price'),
+      p2Title: localStorage.getItem('arij_p2_title'),
+      p2Desc: localStorage.getItem('arij_p2_desc'),
+      p2Price: localStorage.getItem('arij_p2_price'),
+      phone: localStorage.getItem('arij_whatsapp_phone'),
+      storeStatus: localStorage.getItem('arij_store_status_override'),
+      loyaltyReward: localStorage.getItem('arij_loyalty_reward'),
+      feat1Title: localStorage.getItem('arij_feat1_title'),
+      feat1Desc: localStorage.getItem('arij_feat1_desc'),
+      feat2Title: localStorage.getItem('arij_feat2_title'),
+      feat2Desc: localStorage.getItem('arij_feat2_desc'),
+      feat3Title: localStorage.getItem('arij_feat3_title'),
+      feat3Desc: localStorage.getItem('arij_feat3_desc'),
+      feat4Title: localStorage.getItem('arij_feat4_title'),
+      feat4Desc: localStorage.getItem('arij_feat4_desc'),
+      gal1Img: localStorage.getItem('arij_gal1_img'),
+      gal1Title: localStorage.getItem('arij_gal1_title'),
+      gal2Img: localStorage.getItem('arij_gal2_img'),
+      gal2Title: localStorage.getItem('arij_gal2_title'),
+      gal3Img: localStorage.getItem('arij_gal3_img'),
+      gal3Title: localStorage.getItem('arij_gal3_title'),
+      gal4Img: localStorage.getItem('arij_gal4_img'),
+      gal4Title: localStorage.getItem('arij_gal4_title'),
+      rev1Author: localStorage.getItem('arij_rev1_author'),
+      rev1Role: localStorage.getItem('arij_rev1_role'),
+      rev1Text: localStorage.getItem('arij_rev1_text'),
+      rev2Author: localStorage.getItem('arij_rev2_author'),
+      rev2Role: localStorage.getItem('arij_rev2_role'),
+      rev2Text: localStorage.getItem('arij_rev2_text'),
+      rev3Author: localStorage.getItem('arij_rev3_author'),
+      rev3Role: localStorage.getItem('arij_rev3_role'),
+      rev3Text: localStorage.getItem('arij_rev3_text')
+    },
+    coupons: JSON.parse(localStorage.getItem('arij_coupons') || '[]')
+  };
+
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(fullBackup, null, 2));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", `sushi_arij_FULL_BACKUP_${new Date().toISOString().split('T')[0]}.json`);
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+}
+
+function importFullBackupJSON(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (data.menu && Array.isArray(data.menu)) {
+        localStorage.setItem('arij_custom_menu', JSON.stringify(data.menu));
+      } else if (Array.isArray(data)) {
+        localStorage.setItem('arij_custom_menu', JSON.stringify(data));
+      }
+
+      if (data.siteContent) {
+        const sc = data.siteContent;
+        if (sc.brandName) localStorage.setItem('arij_brand_name', sc.brandName);
+        if (sc.brandSub) localStorage.setItem('arij_brand_sub', sc.brandSub);
+        if (sc.heroTitle) localStorage.setItem('arij_hero_title', sc.heroTitle);
+        if (sc.heroSub) localStorage.setItem('arij_hero_subtext', sc.heroSub);
+        if (sc.pushTitle) localStorage.setItem('arij_push_title', sc.pushTitle);
+        if (sc.pushDesc) localStorage.setItem('arij_push_desc', sc.pushDesc);
+        if (sc.phone) localStorage.setItem('arij_whatsapp_phone', sc.phone);
+        if (sc.p1Title) localStorage.setItem('arij_p1_title', sc.p1Title);
+        if (sc.p1Desc) localStorage.setItem('arij_p1_desc', sc.p1Desc);
+        if (sc.p1Price) localStorage.setItem('arij_p1_price', sc.p1Price);
+        if (sc.p2Title) localStorage.setItem('arij_p2_title', sc.p2Title);
+        if (sc.p2Desc) localStorage.setItem('arij_p2_desc', sc.p2Desc);
+        if (sc.p2Price) localStorage.setItem('arij_p2_price', sc.p2Price);
+        if (sc.loyaltyReward) localStorage.setItem('arij_loyalty_reward', sc.loyaltyReward);
+        for (let i = 1; i <= 4; i++) {
+          if (sc[`feat${i}Title`]) localStorage.setItem(`arij_feat${i}_title`, sc[`feat${i}Title`]);
+          if (sc[`feat${i}Desc`]) localStorage.setItem(`arij_feat${i}_desc`, sc[`feat${i}Desc`]);
+          if (sc[`gal${i}Img`]) localStorage.setItem(`arij_gal${i}_img`, sc[`gal${i}Img`]);
+          if (sc[`gal${i}Title`]) localStorage.setItem(`arij_gal${i}_title`, sc[`gal${i}Title`]);
+        }
+        for (let i = 1; i <= 3; i++) {
+          if (sc[`rev${i}Author`]) localStorage.setItem(`arij_rev${i}_author`, sc[`rev${i}Author`]);
+          if (sc[`rev${i}Role`]) localStorage.setItem(`arij_rev${i}_role`, sc[`rev${i}Role`]);
+          if (sc[`rev${i}Text`]) localStorage.setItem(`arij_rev${i}_text`, sc[`rev${i}Text`]);
+        }
+      }
+
+      if (data.coupons && Array.isArray(data.coupons)) {
+        localStorage.setItem('arij_coupons', JSON.stringify(data.coupons));
+      }
+
+      renderAdminMenu();
+      loadAllSiteContent();
+      loadPromosAndSettings();
+      alert('✅ Sauvegarde complète de tout le site restaurée avec succès !');
+    } catch (err) {
+      alert("Erreur lors de l'importation de la sauvegarde : " + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function exportMenuJSON() { exportFullBackupJSON(); }
+function importMenuJSON(e) { importFullBackupJSON(e); }

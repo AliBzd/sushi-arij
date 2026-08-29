@@ -2092,32 +2092,57 @@ function getWhatsAppPhone() {
   return localStorage.getItem('arij_whatsapp_phone') || '212530007780';
 }
 
-// Apply Admin Custom Site Content Dynamic Overrides
+// Apply 100% Comprehensive Admin Custom Site Content Dynamic Overrides
 function applyAdminSiteOverrides() {
+  // 1. Brand & Header
+  const brandTitle = localStorage.getItem('arij_brand_name');
   const brandSub = localStorage.getItem('arij_brand_sub');
-  const heroTitle = localStorage.getItem('arij_hero_title');
-  const heroSubtext = localStorage.getItem('arij_hero_subtext');
+  if (brandTitle) {
+    document.querySelectorAll('.brand-title').forEach(el => el.innerHTML = `Sushi <span>${brandTitle.replace(/^sushi/i, '').trim()}</span>`);
+  }
+  if (brandSub) {
+    document.querySelectorAll('.brand-sub').forEach(el => el.textContent = brandSub);
+  }
+
+  // 2. Announcement Push Banner
   const pushTitle = localStorage.getItem('arij_push_title');
   const pushDesc = localStorage.getItem('arij_push_desc');
+  const pushActive = localStorage.getItem('arij_push_active');
+  const bannerEl = document.querySelector('.push-banner');
+  if (bannerEl) {
+    if (pushActive === 'false') {
+      bannerEl.style.display = 'none';
+    } else {
+      bannerEl.style.display = 'block';
+      if (pushTitle) {
+        const strong = bannerEl.querySelector('strong');
+        if (strong) strong.textContent = pushTitle;
+      }
+      if (pushDesc) {
+        const span = bannerEl.querySelector('span');
+        if (span) span.textContent = pushDesc;
+      }
+    }
+  }
 
+  // 3. Hero Section
+  const heroTitle = localStorage.getItem('arij_hero_title');
+  const heroSubtext = localStorage.getItem('arij_hero_subtext');
+  const heroImg = localStorage.getItem('arij_hero_img');
   if (heroTitle) {
-    const titleEl = document.querySelector('.hero-title');
-    if (titleEl) titleEl.innerHTML = heroTitle;
+    const el = document.querySelector('.hero-title');
+    if (el) el.innerHTML = heroTitle;
   }
   if (heroSubtext) {
-    const subEl = document.querySelector('.hero-subtitle');
-    if (subEl) subEl.textContent = heroSubtext;
+    const el = document.querySelector('.hero-subtitle');
+    if (el) el.textContent = heroSubtext;
   }
-  if (pushTitle) {
-    const pTitle = document.querySelector('.push-banner strong');
-    if (pTitle) pTitle.textContent = pushTitle;
-  }
-  if (pushDesc) {
-    const pDesc = document.querySelector('.push-banner span');
-    if (pDesc) pDesc.textContent = pushDesc;
+  if (heroImg) {
+    const heroEl = document.querySelector('.hero');
+    if (heroEl) heroEl.style.backgroundImage = `linear-gradient(to bottom, rgba(18, 21, 25, 0.6), rgba(18, 21, 25, 0.95)), url('${heroImg}')`;
   }
 
-  // Daily Promos Overrides
+  // 4. Daily Specials & Combos
   const p1t = localStorage.getItem('arij_p1_title');
   const p1d = localStorage.getItem('arij_p1_desc');
   const p1p = localStorage.getItem('arij_p1_price');
@@ -2132,6 +2157,99 @@ function applyAdminSiteOverrides() {
   if (p1p) {
     const el = document.querySelector('[data-i18n="combo1_price"]');
     if (el) el.textContent = p1p;
+  }
+
+  const p2t = localStorage.getItem('arij_p2_title');
+  const p2d = localStorage.getItem('arij_p2_desc');
+  const p2p = localStorage.getItem('arij_p2_price');
+  if (p2t) {
+    const el = document.querySelector('[data-i18n="combo2_title"]');
+    if (el) el.textContent = p2t;
+  }
+  if (p2d) {
+    const el = document.querySelector('[data-i18n="combo2_desc"]');
+    if (el) el.textContent = p2d;
+  }
+  if (p2p) {
+    const el = document.querySelector('[data-i18n="combo2_price"]');
+    if (el) el.textContent = p2p;
+  }
+
+  // 5. Features (Les 4 Avantages)
+  for (let i = 1; i <= 4; i++) {
+    const ft = localStorage.getItem(`arij_feat${i}_title`);
+    const fd = localStorage.getItem(`arij_feat${i}_desc`);
+    if (ft) {
+      const el = document.querySelector(`[data-i18n="feat_${i}_title"]`);
+      if (el) el.textContent = ft;
+    }
+    if (fd) {
+      const el = document.querySelector(`[data-i18n="feat_${i}_desc"]`);
+      if (el) el.textContent = fd;
+    }
+  }
+
+  // 6. Gallery (Les 4 Photos Ambiance)
+  const galItems = document.querySelectorAll('.ambiance-grid .ambiance-item');
+  if (galItems.length >= 4) {
+    for (let i = 1; i <= 4; i++) {
+      const gImg = localStorage.getItem(`arij_gal${i}_img`);
+      const gTitle = localStorage.getItem(`arij_gal${i}_title`);
+      const itemEl = galItems[i - 1];
+      if (itemEl) {
+        if (gImg) {
+          const imgEl = itemEl.querySelector('img');
+          if (imgEl) imgEl.src = gImg;
+        }
+        if (gTitle) {
+          const titleEl = itemEl.querySelector('h4');
+          if (titleEl) titleEl.textContent = gTitle;
+        }
+      }
+    }
+  }
+
+  // 7. Customer Reviews
+  for (let i = 1; i <= 3; i++) {
+    const ra = localStorage.getItem(`arij_rev${i}_author`);
+    const rr = localStorage.getItem(`arij_rev${i}_role`);
+    const rt = localStorage.getItem(`arij_rev${i}_text`);
+    if (ra) {
+      const el = document.querySelector(`[data-i18n="review${i}_author"]`);
+      if (el) el.textContent = ra;
+    }
+    if (rr) {
+      const el = document.querySelector(`[data-i18n="review${i}_role"]`);
+      if (el) el.textContent = rr;
+    }
+    if (rt) {
+      const el = document.querySelector(`[data-i18n="review${i}_text"]`);
+      if (el) el.textContent = `"${rt.replace(/^"|"$/g, '')}"`;
+    }
+  }
+
+  // 8. Loyalty Program
+  const loyaltyReward = localStorage.getItem('arij_loyalty_reward');
+  if (loyaltyReward) {
+    const subEl = document.querySelector('[data-i18n="loyalty_sub"]');
+    if (subEl) subEl.textContent = loyaltyReward;
+  }
+
+  // 9. Contact & Socials
+  const addr = localStorage.getItem('arij_contact_addr');
+  const hours = localStorage.getItem('arij_contact_hours');
+  const phone = localStorage.getItem('arij_whatsapp_phone');
+  if (addr) {
+    const el = document.querySelector('[data-i18n="info_loc_desc"]');
+    if (el) el.textContent = addr;
+  }
+  if (hours) {
+    const el = document.querySelector('[data-i18n="info_hours_desc"]');
+    if (el) el.textContent = hours;
+  }
+  if (phone) {
+    const el = document.querySelector('[data-i18n="info_phone_desc"]');
+    if (el) el.textContent = `+${phone}`;
   }
 }
 
