@@ -163,6 +163,35 @@ const translations = {
     
     footer_tagline: "Le spécialiste du Sushi frais et du Café de prestige à Sala Al Jadida.",
     footer_quick_links: "Liens Rapides",
+    // Subcategory Filters & Result Counters
+    sub_all: "Tous",
+    sub_plateaux: "🍱 Plateaux & Assortiments",
+    sub_special_rolls: "🔥 Special Rolls",
+    sub_maki: "🥢 Makis (8 pcs)",
+    sub_california: "🥑 California Rolls",
+    sub_volcano: "🌋 Volcano & Fry Rolls",
+    sub_nigiri_temaki: "🍣 Nigiri, Sashimi & Temaki",
+    sub_bentos: "🍱 Bentos Complets",
+    sub_woks_noodles: "🍜 Woks & Nouilles Sautées",
+    sub_skewers_sides: "🍢 Brochettes, Nems & Panés",
+    sub_poke_salads: "🥗 Poké Bowls & Salades",
+    sub_hot_coffee: "☕ Cafés & Thés",
+    sub_fresh_drinks: "🍹 Jus Frais, Smoothies & Sodas",
+    sub_breakfast_combos: "🥐 Formules Complètes",
+    sub_breakfast_pastries: "🍳 Omelettes & Viennoiseries",
+    sub_mochis: "🍡 Mochis Glacés Japonais",
+    sub_pastries_cakes: "🍰 Gâteaux, Crêpes & Douceurs",
+    results_count_single: "1 plat disponible",
+    results_count_multi: "plats disponibles",
+    
+    // QR Code Table Detection & Chef Notes
+    table_detected: "🍽️ Table Détectée :",
+    table_dinein_auto: "Commande sur place à table",
+    lbl_chef_notes: "Instructions spéciales pour le Chef / Préférences :",
+    placeholder_chef_notes: "Ex: Sans gingembre, sauce soja sucrée supplémentaire, bien chaud...",
+    lbl_pickup_time: "Heure de retrait souhaitée :",
+    pickup_asap: "Dès que possible (~20-30 min)",
+    btn_leave_google_review: "⭐ Laisser un Avis sur Google (5★)",
     footer_rights: "Tous droits réservés."
   },
   en: {
@@ -315,6 +344,35 @@ const translations = {
     
     footer_tagline: "The premier destination for fresh Sushi & specialty coffee in Sala Al Jadida.",
     footer_quick_links: "Quick Links",
+    // Subcategory Filters & Result Counters
+    sub_all: "All",
+    sub_plateaux: "🍱 Platters & Combos",
+    sub_special_rolls: "🔥 Special Rolls",
+    sub_maki: "🥢 Makis (8 pcs)",
+    sub_california: "🥑 California Rolls",
+    sub_volcano: "🌋 Volcano & Fry Rolls",
+    sub_nigiri_temaki: "🍣 Nigiri, Sashimi & Temaki",
+    sub_bentos: "🍱 Complete Bento Boxes",
+    sub_woks_noodles: "🍜 Woks & Sautéed Noodles",
+    sub_skewers_sides: "🍢 Skewers, Spring Rolls & Crispy",
+    sub_poke_salads: "🥗 Poké Bowls & Fresh Salads",
+    sub_hot_coffee: "☕ Coffee & Teas",
+    sub_fresh_drinks: "🍹 Fresh Juices, Smoothies & Sodas",
+    sub_breakfast_combos: "🥐 Complete Breakfast Deals",
+    sub_breakfast_pastries: "🍳 Omelettes & Pastries",
+    sub_mochis: "🍡 Japanese Ice Cream Mochi",
+    sub_pastries_cakes: "🍰 Cakes, Crepes & Treats",
+    results_count_single: "1 dish available",
+    results_count_multi: "dishes available",
+    
+    // QR Code Table Detection & Chef Notes
+    table_detected: "🍽️ Table Detected:",
+    table_dinein_auto: "Dine-in on-table order",
+    lbl_chef_notes: "Special Chef Instructions / Preferences:",
+    placeholder_chef_notes: "Ex: No ginger, extra sweet soy sauce, extra spicy...",
+    lbl_pickup_time: "Preferred Pickup Time:",
+    pickup_asap: "As soon as possible (~20-30 min)",
+    btn_leave_google_review: "⭐ Leave a Review on Google (5★)",
     footer_rights: "All rights reserved."
   },
   ar: {
@@ -467,6 +525,35 @@ const translations = {
     
     footer_tagline: "الوجهة الأولى للسوشي الطازج والقهوة المختارة في سلا الجديدة.",
     footer_quick_links: "روابط سريعة",
+    // Subcategory Filters & Result Counters
+    sub_all: "الكل",
+    sub_plateaux: "🍱 الأطباق المشكلة والكومبو",
+    sub_special_rolls: "🔥 رولز مميزة",
+    sub_maki: "🥢 ماكي (8 قطع)",
+    sub_california: "🥑 كاليفورنيا رولز",
+    sub_volcano: "🌋 فولكانو والمقليات",
+    sub_nigiri_temaki: "🍣 نيغيري وساشيمي وتيماكي",
+    sub_bentos: "🍱 وجبات بينتو المتكاملة",
+    sub_woks_noodles: "🍜 ووك ونودلز مقلية",
+    sub_skewers_sides: "🍢 بروشيت ونيمس ومقرمشات",
+    sub_poke_salads: "🥗 بوكي بول والسلطات",
+    sub_hot_coffee: "☕ القهوة والشاي الساخن",
+    sub_fresh_drinks: "🍹 العصائر الطبيعية والسموذي",
+    sub_breakfast_combos: "🥐 وجبات الفطور المتكاملة",
+    sub_breakfast_pastries: "🍳 الأومليت والمخبوزات",
+    sub_mochis: "🍡 موتشي مثلج ياباني",
+    sub_pastries_cakes: "🍰 كيك، كريب وحلويات",
+    results_count_single: "طبق واحد متاح",
+    results_count_multi: "أطباق متاحة",
+    
+    // QR Code Table Detection & Chef Notes
+    table_detected: "🍽️ تم التعرف على الطاولة:",
+    table_dinein_auto: "طلب على الطاولة بالمطعم",
+    lbl_chef_notes: "تعليمات خاصة للشيف والمطبخ:",
+    placeholder_chef_notes: "مثال: بدون زنجبيل، صوص صويا حلو إضافي، ساخن جداً...",
+    lbl_pickup_time: "وقت الاستلام المفضل:",
+    pickup_asap: "في أقرب وقت ممكن (~20-30 دقيقة)",
+    btn_leave_google_review: "⭐ اترك تقييمك على خرائط جوجل (5★)",
     footer_rights: "جميع الحقوق محفوظة."
   }
 };

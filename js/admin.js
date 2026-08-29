@@ -23,7 +23,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 6pcs pizza , 5pcs ebi tempura, 8pcs maki crevette.",
       "ar": "طبق طازج ومعد عند الطلب: 6pcs pizza , 5pcs ebi tempura, 8pcs maki crevette."
     },
-    "image": "assets/menu/assortiment_combo.jpg"
+    "image": "assets/menu/assortiment_combo.webp"
   },
   {
     "id": "m_2",
@@ -43,7 +43,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 5pcs crunchy, 5pcs eby tempura, 6pcs pizza saumon.",
       "ar": "طبق طازج ومعد عند الطلب: 5pcs crunchy, 5pcs eby tempura, 6pcs pizza saumon."
     },
-    "image": "assets/menu/assortiment_lovers.jpg"
+    "image": "assets/menu/assortiment_lovers.webp"
   },
   {
     "id": "m_3",
@@ -63,7 +63,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs wasabi , 8pc  maki avocat , 4pcs massago, 4pcs Miami, 4pcs black.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs wasabi , 8pc  maki avocat , 4pcs massago, 4pcs Miami, 4pcs black."
     },
-    "image": "assets/menu/assortiment_signature.jpg"
+    "image": "assets/menu/assortiment_signature.webp"
   },
   {
     "id": "m_4",
@@ -83,7 +83,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs dream ,4pcs mango , 4pcs Oslo ,4pcs nigiri.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs dream ,4pcs mango , 4pcs Oslo ,4pcs nigiri."
     },
-    "image": "assets/menu/assortiment_arij.jpg"
+    "image": "assets/menu/assortiment_arij.webp"
   },
   {
     "id": "m_5",
@@ -103,7 +103,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs tiger, 4pcs mango, 4pcs Oslo , 4pcs dragon.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs tiger, 4pcs mango, 4pcs Oslo , 4pcs dragon."
     },
-    "image": "assets/menu/assortiment_hot_arij.jpg"
+    "image": "assets/menu/assortiment_hot_arij.webp"
   },
   {
     "id": "m_6",
@@ -123,7 +123,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs tobiko,  4pcs majestique, 4pcs sésame, 4pcs mango.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs tobiko,  4pcs majestique, 4pcs sésame, 4pcs mango."
     },
-    "image": "assets/menu/assortiment_rainbow.jpg"
+    "image": "assets/menu/assortiment_rainbow.webp"
   },
   {
     "id": "m_7",
@@ -143,7 +143,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs crabe, 4pcs Philadelphia, 4pcs rouleau saumon, 8pcs maki saumon.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs crabe, 4pcs Philadelphia, 4pcs rouleau saumon, 8pcs maki saumon."
     },
-    "image": "assets/menu/assortiment_fresh.jpg"
+    "image": "assets/menu/assortiment_fresh.webp"
   },
   {
     "id": "m_8",
@@ -163,7 +163,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs majestique, 4pcs tobiko , 4pcs wasabi, 4pcs black.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs majestique, 4pcs tobiko , 4pcs wasabi, 4pcs black."
     },
-    "image": "assets/menu/assortiment_mix.jpg"
+    "image": "assets/menu/assortiment_mix.webp"
   },
   {
     "id": "m_9",
@@ -183,7 +183,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4pcs tobiko , 4pcs ebi fry, 8pcs maki surimi , 2pcs nigiri saumon.",
       "ar": "طبق طازج ومعد عند الطلب: 4pcs tobiko , 4pcs ebi fry, 8pcs maki surimi , 2pcs nigiri saumon."
     },
-    "image": "assets/menu/assortiment_box.jpg"
+    "image": "assets/menu/assortiment_box.webp"
   },
   {
     "id": "m_10",
@@ -203,7 +203,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 6pcs pizza , 5pcs eby tempura , 4pcs aromaki panée.",
       "ar": "طبق طازج ومعد عند الطلب: 6pcs pizza , 5pcs eby tempura , 4pcs aromaki panée."
     },
-    "image": "assets/menu/assortiment_delight.jpg"
+    "image": "assets/menu/assortiment_delight.webp"
   },
   {
     "id": "m_11",
@@ -223,7 +223,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette grillée, saumon grillé, fromage panée, nems.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette grillée, saumon grillé, fromage panée, nems."
     },
-    "image": "assets/menu/bento_golden.jpg"
+    "image": "assets/menu/bento_golden.webp"
   },
   {
     "id": "m_12",
@@ -243,7 +243,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Maki saumon, boulettes poulet, 5pcs cranche,fromage panée.",
       "ar": "طبق طازج ومعد عند الطلب: Maki saumon, boulettes poulet, 5pcs cranche,fromage panée."
     },
-    "image": "assets/menu/bento_mix.jpg"
+    "image": "assets/menu/bento_mix.webp"
   },
   {
     "id": "m_13",
@@ -263,7 +263,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 5pcs cranche, boeuf fromage, 4pcs sushi, 4pcs aromaki panée.",
       "ar": "طبق طازج ومعد عند الطلب: 5pcs cranche, boeuf fromage, 4pcs sushi, 4pcs aromaki panée."
     },
-    "image": "assets/menu/bento_yakitori.jpg"
+    "image": "assets/menu/bento_yakitori.webp"
   },
   {
     "id": "m_14",
@@ -283,7 +283,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Salade , croquettes saumon, saumon pané , 5pcs cranche.",
       "ar": "طبق طازج ومعد عند الطلب: Salade , croquettes saumon, saumon pané , 5pcs cranche."
     },
-    "image": "assets/menu/bento_fresh.jpg"
+    "image": "assets/menu/bento_fresh.webp"
   },
   {
     "id": "m_15",
@@ -303,7 +303,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 5pcs cranche,4pcs sushi, boulettes poulet, les nouilles.",
       "ar": "طبق طازج ومعد عند الطلب: 5pcs cranche,4pcs sushi, boulettes poulet, les nouilles."
     },
-    "image": "assets/menu/bento_signature.jpg"
+    "image": "assets/menu/bento_signature.webp"
   },
   {
     "id": "m_16",
@@ -323,7 +323,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Salade, fromage panne, 5pcs cranche, poulet panee.",
       "ar": "طبق طازج ومعد عند الطلب: Salade, fromage panne, 5pcs cranche, poulet panee."
     },
-    "image": "assets/menu/bento_gourmand.jpg"
+    "image": "assets/menu/bento_gourmand.webp"
   },
   {
     "id": "m_17",
@@ -343,7 +343,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Salade , poulet teriyaki, boeuf teriyaki, 6 PCS Sushi..",
       "ar": "طبق طازج ومعد عند الطلب: Salade , poulet teriyaki, boeuf teriyaki, 6 PCS Sushi.."
     },
-    "image": "assets/menu/bento_sea.jpg"
+    "image": "assets/menu/bento_sea.webp"
   },
   {
     "id": "m_18",
@@ -363,7 +363,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Salade, boulettes poulet, poulet panée,riz cantonais.",
       "ar": "طبق طازج ومعد عند الطلب: Salade, boulettes poulet, poulet panée,riz cantonais."
     },
-    "image": "assets/menu/bento_super.jpg"
+    "image": "assets/menu/bento_super.webp"
   },
   {
     "id": "m_19",
@@ -383,7 +383,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Salade , 6pcs sushi, nems, les nouilles.",
       "ar": "طبق طازج ومعد عند الطلب: Salade , 6pcs sushi, nems, les nouilles."
     },
-    "image": "assets/menu/bento_duo.jpg"
+    "image": "assets/menu/bento_duo.webp"
   },
   {
     "id": "m_20",
@@ -403,7 +403,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Laitue, concombre, crevettes, calamar, surimi, wakame, avocat, mangue, saumon.",
       "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, crevettes, calamar, surimi, wakame, avocat, mangue, saumon."
     },
-    "image": "assets/menu/salade_arij.jpg"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "m_21",
@@ -423,7 +423,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Laitue, concombre, crevettes panées, surimi, mangue, avocat, wakame.",
       "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, crevettes panées, surimi, mangue, avocat, wakame."
     },
-    "image": "assets/menu/salade_gambas.jpg"
+    "image": "assets/menu/salade_gambas.webp"
   },
   {
     "id": "m_22",
@@ -443,7 +443,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Laitue, concombre, poulet, mangue, surimi, avocat, wakame.",
       "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, poulet, mangue, surimi, avocat, wakame."
     },
-    "image": "assets/menu/salade_chicken.jpg"
+    "image": "assets/menu/salade_chicken.webp"
   },
   {
     "id": "m_23",
@@ -463,7 +463,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Laitue, concombre, calamar, surimi, mangue, avocat, wakame.",
       "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, calamar, surimi, mangue, avocat, wakame."
     },
-    "image": "assets/menu/salade_ika.jpg"
+    "image": "assets/menu/salade_ika.webp"
   },
   {
     "id": "m_24",
@@ -483,7 +483,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces nems crevettes.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces nems crevettes."
     },
-    "image": "assets/menu/nems_crevette.jpg"
+    "image": "assets/menu/nems_crevette.webp"
   },
   {
     "id": "m_25",
@@ -503,7 +503,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz , légumes,6pc nems.",
       "ar": "طبق طازج ومعد عند الطلب: Riz , légumes,6pc nems."
     },
-    "image": "assets/menu/nems_boeuf.jpg"
+    "image": "assets/menu/nems_boeuf.webp"
   },
   {
     "id": "m_26",
@@ -523,7 +523,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces nems poulet.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces nems poulet."
     },
-    "image": "assets/menu/nems_poulet.jpg"
+    "image": "assets/menu/nems_poulet.webp"
   },
   {
     "id": "m_27",
@@ -543,7 +543,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces nems fromage.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces nems fromage."
     },
-    "image": "assets/menu/nems_fromage.jpg"
+    "image": "assets/menu/nems_fromage.webp"
   },
   {
     "id": "m_28",
@@ -563,7 +563,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette, mangue, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette, mangue, avocat, cheese."
     },
-    "image": "assets/menu/rouleau_mangue_crevette.jpg"
+    "image": "assets/menu/rouleau_mangue_crevette.webp"
   },
   {
     "id": "m_29",
@@ -583,7 +583,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crabe, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Crabe, surimi, avocat, cheese."
     },
-    "image": "assets/menu/rouleau_crabe.jpg"
+    "image": "assets/menu/rouleau_crabe.webp"
   },
   {
     "id": "m_30",
@@ -603,7 +603,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette, saumon, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette, saumon, avocat, cheese."
     },
-    "image": "assets/menu/rouleau_saumon_crevette.jpg"
+    "image": "assets/menu/rouleau_saumon_crevette.webp"
   },
   {
     "id": "m_31",
@@ -623,7 +623,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevettes, saumon, calamar, surimi, poulpe, wakame.",
       "ar": "طبق طازج ومعد عند الطلب: Crevettes, saumon, calamar, surimi, poulpe, wakame."
     },
-    "image": "assets/menu/soupe_royale.jpg"
+    "image": "assets/menu/soupe_royale.webp"
   },
   {
     "id": "m_32",
@@ -643,7 +643,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Poulet, champignon, lait de coco.",
       "ar": "طبق طازج ومعد عند الطلب: Poulet, champignon, lait de coco."
     },
-    "image": "assets/menu/soupe_tom_kha_kai.jpg"
+    "image": "assets/menu/soupe_tom_kha_kai.webp"
   },
   {
     "id": "m_33",
@@ -663,7 +663,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevettes, saumon, calamar, wakame, légumes.",
       "ar": "طبق طازج ومعد عند الطلب: Crevettes, saumon, calamar, wakame, légumes."
     },
-    "image": "assets/menu/soupe_poissons.jpg"
+    "image": "assets/menu/soupe_poissons.webp"
   },
   {
     "id": "m_34",
@@ -683,7 +683,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevettes, calamar, légumes, les nouilles.",
       "ar": "طبق طازج ومعد عند الطلب: Crevettes, calamar, légumes, les nouilles."
     },
-    "image": "assets/menu/nouilles_crevettes_calamars.jpg"
+    "image": "assets/menu/nouilles_crevettes_calamars.webp"
   },
   {
     "id": "m_35",
@@ -703,7 +703,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: BÅuf, légumes, les nouilles.",
       "ar": "طبق طازج ومعد عند الطلب: BÅuf, légumes, les nouilles."
     },
-    "image": "assets/menu/nouilles_b_uf.jpg"
+    "image": "assets/menu/nouilles_b_uf.webp"
   },
   {
     "id": "m_36",
@@ -723,7 +723,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevettes, calamar, riz cantonais.",
       "ar": "طبق طازج ومعد عند الطلب: Crevettes, calamar, riz cantonais."
     },
-    "image": "assets/menu/riz_crevette_calamar.jpg"
+    "image": "assets/menu/riz_crevette_calamar.webp"
   },
   {
     "id": "m_37",
@@ -743,7 +743,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Boeuf, riz cantonais.",
       "ar": "طبق طازج ومعد عند الطلب: Boeuf, riz cantonais."
     },
-    "image": "assets/menu/riz_boeuf.jpg"
+    "image": "assets/menu/riz_boeuf.webp"
   },
   {
     "id": "m_38",
@@ -763,7 +763,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Poulet, riz cantonais.",
       "ar": "طبق طازج ومعد عند الطلب: Poulet, riz cantonais."
     },
-    "image": "assets/menu/riz_poulet.jpg"
+    "image": "assets/menu/riz_poulet.webp"
   },
   {
     "id": "m_39",
@@ -783,7 +783,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, brochette de saumon.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, brochette de saumon."
     },
-    "image": "assets/menu/brochette_saumon.jpg"
+    "image": "assets/menu/brochette_saumon.webp"
   },
   {
     "id": "m_40",
@@ -803,7 +803,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, bÅuf fromage.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, bÅuf fromage."
     },
-    "image": "assets/menu/brochette_b_uf_fromage.jpg"
+    "image": "assets/menu/brochette_b_uf_fromage.webp"
   },
   {
     "id": "m_41",
@@ -823,7 +823,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, brochette de poulet.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, brochette de poulet."
     },
-    "image": "assets/menu/brochette_de_poulet.jpg"
+    "image": "assets/menu/brochette_de_poulet.webp"
   },
   {
     "id": "m_42",
@@ -843,7 +843,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, boulette de poulet.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, boulette de poulet."
     },
-    "image": "assets/menu/boulette_de_poulet.jpg"
+    "image": "assets/menu/boulette_de_poulet.webp"
   },
   {
     "id": "m_43",
@@ -863,7 +863,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, crevettes, calamar, poivrons, onion, maà¯s, champignon.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, crevettes, calamar, poivrons, onion, maà¯s, champignon."
     },
-    "image": "assets/menu/wok_crevettes_calamars.jpg"
+    "image": "assets/menu/wok_crevettes_calamars.webp"
   },
   {
     "id": "m_44",
@@ -883,7 +883,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, poulet, poivrons, onion, maà¯s, champignon, ananas.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, poulet, poivrons, onion, maà¯s, champignon, ananas."
     },
-    "image": "assets/menu/wok_poulet_ananas.jpg"
+    "image": "assets/menu/wok_poulet_ananas.webp"
   },
   {
     "id": "m_45",
@@ -903,7 +903,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, bÅuf, poivrons, onion, maà¯s, champignon.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, bÅuf, poivrons, onion, maà¯s, champignon."
     },
-    "image": "assets/menu/wok_b_uf.jpg"
+    "image": "assets/menu/wok_b_uf.webp"
   },
   {
     "id": "m_46",
@@ -923,7 +923,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces crevettes aux amandes.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces crevettes aux amandes."
     },
-    "image": "assets/menu/crevettes_aux_amandes.jpg"
+    "image": "assets/menu/crevettes_aux_amandes.webp"
   },
   {
     "id": "m_47",
@@ -943,7 +943,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, poivrons, poulet pané, sauce aigre doux.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, poivrons, poulet pané, sauce aigre doux."
     },
-    "image": "assets/menu/poulet_aigre_doux.jpg"
+    "image": "assets/menu/poulet_aigre_doux.webp"
   },
   {
     "id": "m_48",
@@ -963,7 +963,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces fromage pané.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces fromage pané."
     },
-    "image": "assets/menu/fromage_pan.jpg"
+    "image": "assets/menu/fromage_pan.webp"
   },
   {
     "id": "m_49",
@@ -983,7 +983,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces crevettes panées.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces crevettes panées."
     },
-    "image": "assets/menu/crevette_pan_e.jpg"
+    "image": "assets/menu/crevette_pan_e.webp"
   },
   {
     "id": "m_50",
@@ -1003,7 +1003,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, 3 pièces croquettes de saumon.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 3 pièces croquettes de saumon."
     },
-    "image": "assets/menu/croquettes_saumon.jpg"
+    "image": "assets/menu/croquettes_saumon.webp"
   },
   {
     "id": "m_51",
@@ -1023,7 +1023,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, légumes, saumon grillé.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, saumon grillé."
     },
-    "image": "assets/menu/saumon_grill.jpg"
+    "image": "assets/menu/saumon_grill.webp"
   },
   {
     "id": "m_52",
@@ -1043,7 +1043,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 4 pcs crevettes, avocat, mangue, maà¯s, onion crispy, riz, carotte.",
       "ar": "طبق طازج ومعد عند الطلب: 4 pcs crevettes, avocat, mangue, maà¯s, onion crispy, riz, carotte."
     },
-    "image": "assets/menu/crevette.jpg"
+    "image": "assets/menu/crevette.webp"
   },
   {
     "id": "m_53",
@@ -1063,7 +1063,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, avocat, mangue, maà¯s, riz, concombre, poivrons.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, mangue, maà¯s, riz, concombre, poivrons."
     },
-    "image": "assets/menu/saumon.jpg"
+    "image": "assets/menu/saumon.webp"
   },
   {
     "id": "m_54",
@@ -1083,7 +1083,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 8pcs de saumon, sésame.",
       "ar": "طبق طازج ومعد عند الطلب: 8pcs de saumon, sésame."
     },
-    "image": "assets/menu/tataki_saumon.jpg"
+    "image": "assets/menu/tataki_saumon.webp"
   },
   {
     "id": "m_55",
@@ -1103,7 +1103,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: 8pcs de saumon.",
       "ar": "طبق طازج ومعد عند الطلب: 8pcs de saumon."
     },
-    "image": "assets/menu/carpaccio_saumon.jpg"
+    "image": "assets/menu/carpaccio_saumon.webp"
   },
   {
     "id": "m_56",
@@ -1123,7 +1123,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, avocat, riz, cheese, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, riz, cheese, tobiko."
     },
-    "image": "assets/menu/temaki_saumon_avocat.jpg"
+    "image": "assets/menu/temaki_saumon_avocat.webp"
   },
   {
     "id": "m_57",
@@ -1143,7 +1143,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crabe, avocat, riz, cheese, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Crabe, avocat, riz, cheese, tobiko."
     },
-    "image": "assets/menu/temaki_crabe_avocat.jpg"
+    "image": "assets/menu/temaki_crabe_avocat.webp"
   },
   {
     "id": "m_58",
@@ -1163,7 +1163,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette, avocat, riz, cheese, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, riz, cheese, tobiko."
     },
-    "image": "assets/menu/temaki_crevette_avocat.jpg"
+    "image": "assets/menu/temaki_crevette_avocat.webp"
   },
   {
     "id": "m_59",
@@ -1183,7 +1183,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, avocat, crevette, thon, crabe, surimi, riz, cheese, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, crevette, thon, crabe, surimi, riz, cheese, tobiko."
     },
-    "image": "assets/menu/temaki_mixte_avocat.jpg"
+    "image": "assets/menu/temaki_mixte_avocat.webp"
   },
   {
     "id": "m_60",
@@ -1203,7 +1203,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Surimi, avocat, riz, cheese, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, riz, cheese, tobiko."
     },
-    "image": "assets/menu/temaki_surimi_avocat.jpg"
+    "image": "assets/menu/temaki_surimi_avocat.webp"
   },
   {
     "id": "m_61",
@@ -1223,7 +1223,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Ebi, mangue, crabe, saumon, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Ebi, mangue, crabe, saumon, cheese."
     },
-    "image": "assets/menu/futomaki_ebi.jpg"
+    "image": "assets/menu/futomaki_ebi.webp"
   },
   {
     "id": "m_62",
@@ -1243,7 +1243,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette, avocat, saumon, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, saumon, cheese."
     },
-    "image": "assets/menu/futomaki_saumon_crevette.jpg"
+    "image": "assets/menu/futomaki_saumon_crevette.webp"
   },
   {
     "id": "m_63",
@@ -1263,7 +1263,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, riz, crevette.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, riz, crevette."
     },
-    "image": "assets/menu/umi_gunkan_crevette.jpg"
+    "image": "assets/menu/umi_gunkan_crevette.webp"
   },
   {
     "id": "m_64",
@@ -1283,7 +1283,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, riz, saumon au cebollite.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, riz, saumon au cebollite."
     },
-    "image": "assets/menu/umi_gunkan_saumon.jpg"
+    "image": "assets/menu/umi_gunkan_saumon.webp"
   },
   {
     "id": "m_65",
@@ -1303,7 +1303,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, riz, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, riz, cheese."
     },
-    "image": "assets/menu/umi_gunkan_cheese.jpg"
+    "image": "assets/menu/umi_gunkan_cheese.webp"
   },
   {
     "id": "m_66",
@@ -1323,7 +1323,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Surimi, avocat, cheese, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, cheese, tobiko."
     },
-    "image": "assets/menu/volcano_roll_cheese.jpg"
+    "image": "assets/menu/volcano_roll_cheese.webp"
   },
   {
     "id": "m_67",
@@ -1343,7 +1343,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Surimi, avocat, cheese, crevette, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, cheese, crevette, tobiko."
     },
-    "image": "assets/menu/volcano_roll_crevette.jpg"
+    "image": "assets/menu/volcano_roll_crevette.webp"
   },
   {
     "id": "m_68",
@@ -1363,7 +1363,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Surimi, avocat, cheese, saumon, tobiko.",
       "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, cheese, saumon, tobiko."
     },
-    "image": "assets/menu/volcano_roll_saumon.jpg"
+    "image": "assets/menu/volcano_roll_saumon.webp"
   },
   {
     "id": "m_69",
@@ -1383,7 +1383,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Shichimi, saumon, avocat.",
       "ar": "طبق طازج ومعد عند الطلب: Shichimi, saumon, avocat."
     },
-    "image": "assets/menu/california_shichimi.jpg"
+    "image": "assets/menu/california_shichimi.webp"
   },
   {
     "id": "m_70",
@@ -1403,7 +1403,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Tobiko noir, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Tobiko noir, surimi, avocat, cheese."
     },
-    "image": "assets/menu/california_black.jpg"
+    "image": "assets/menu/california_black.webp"
   },
   {
     "id": "m_71",
@@ -1423,7 +1423,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Poulet pané, cheese, avocat.",
       "ar": "طبق طازج ومعد عند الطلب: Poulet pané, cheese, avocat."
     },
-    "image": "assets/menu/california_pavot_noir.jpg"
+    "image": "assets/menu/california_pavot_noir.webp"
   },
   {
     "id": "m_72",
@@ -1443,7 +1443,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Sesame, saumon, avocat.",
       "ar": "طبق طازج ومعد عند الطلب: Sesame, saumon, avocat."
     },
-    "image": "assets/menu/california_sesame.jpg"
+    "image": "assets/menu/california_sesame.webp"
   },
   {
     "id": "m_73",
@@ -1463,7 +1463,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Tobiko rouge, crevette, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Tobiko rouge, crevette, avocat, cheese."
     },
-    "image": "assets/menu/california_majestic.jpg"
+    "image": "assets/menu/california_majestic.webp"
   },
   {
     "id": "m_74",
@@ -1483,7 +1483,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Tobiko vert, saumon pané, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Tobiko vert, saumon pané, avocat, cheese."
     },
-    "image": "assets/menu/california_wasabi.jpg"
+    "image": "assets/menu/california_wasabi.webp"
   },
   {
     "id": "m_75",
@@ -1503,7 +1503,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Tobiko orange, saumon, avocat, surimi, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Tobiko orange, saumon, avocat, surimi, cheese."
     },
-    "image": "assets/menu/california_tobiko.jpg"
+    "image": "assets/menu/california_tobiko.webp"
   },
   {
     "id": "m_76",
@@ -1523,7 +1523,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, cheese."
     },
-    "image": "assets/menu/saumon_flash.jpg"
+    "image": "assets/menu/saumon_flash.webp"
   },
   {
     "id": "m_77",
@@ -1543,7 +1543,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette, avocat, surimi, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, surimi, cheese."
     },
-    "image": "assets/menu/crunchy_roll.jpg"
+    "image": "assets/menu/crunchy_roll.webp"
   },
   {
     "id": "m_78",
@@ -1563,7 +1563,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Crevette, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, cheese."
     },
-    "image": "assets/menu/ebi_tempora.jpg"
+    "image": "assets/menu/ebi_tempora.webp"
   },
   {
     "id": "m_79",
@@ -1583,7 +1583,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
     },
-    "image": "assets/menu/pizza_saumon1.jpg"
+    "image": "assets/menu/pizza_saumon1.webp"
   },
   {
     "id": "m_80",
@@ -1603,7 +1603,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
     },
-    "image": "assets/menu/aromaki_pan_e.jpg"
+    "image": "assets/menu/aromaki_pan_e.webp"
   },
   {
     "id": "m_81",
@@ -1623,7 +1623,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, unagi.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, unagi."
     },
-    "image": "assets/menu/nigiri_unagi.jpg"
+    "image": "assets/menu/nigiri_unagi.webp"
   },
   {
     "id": "m_82",
@@ -1643,7 +1643,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, saumon.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, saumon."
     },
-    "image": "assets/menu/nigiri_saumon.jpg"
+    "image": "assets/menu/nigiri_saumon.webp"
   },
   {
     "id": "m_83",
@@ -1663,7 +1663,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, crevette.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, crevette."
     },
-    "image": "assets/menu/nigiri_crevette.jpg"
+    "image": "assets/menu/nigiri_crevette.webp"
   },
   {
     "id": "m_84",
@@ -1683,7 +1683,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, surimi.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, surimi."
     },
-    "image": "assets/menu/nigiri_surimi.jpg"
+    "image": "assets/menu/nigiri_surimi.webp"
   },
   {
     "id": "m_85",
@@ -1703,7 +1703,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_dream.jpg"
+    "image": "assets/menu/special_roll_dream.webp"
   },
   {
     "id": "m_86",
@@ -1723,7 +1723,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, crevette, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, crevette, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_philadelphie.jpg"
+    "image": "assets/menu/special_roll_philadelphie.webp"
   },
   {
     "id": "m_87",
@@ -1743,7 +1743,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Mangue, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Mangue, surimi, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_mango.jpg"
+    "image": "assets/menu/special_roll_mango.webp"
   },
   {
     "id": "m_88",
@@ -1763,7 +1763,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_oslo.jpg"
+    "image": "assets/menu/special_roll_oslo.webp"
   },
   {
     "id": "m_89",
@@ -1783,7 +1783,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Unagi, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Unagi, surimi, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_dragon.jpg"
+    "image": "assets/menu/special_roll_dragon.webp"
   },
   {
     "id": "m_90",
@@ -1803,7 +1803,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Ebi sushi, crevette, surimi, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Ebi sushi, crevette, surimi, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_tigre.jpg"
+    "image": "assets/menu/special_roll_tigre.webp"
   },
   {
     "id": "m_91",
@@ -1823,7 +1823,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Poulet pané, carotte, avocat, cheese.",
       "ar": "طبق طازج ومعد عند الطلب: Poulet pané, carotte, avocat, cheese."
     },
-    "image": "assets/menu/special_roll_tokyo.jpg"
+    "image": "assets/menu/special_roll_tokyo.webp"
   },
   {
     "id": "m_92",
@@ -1843,7 +1843,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, crabe, mangue.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, crabe, mangue."
     },
-    "image": "assets/menu/maki_crabe_mangue.jpg"
+    "image": "assets/menu/maki_crabe_mangue.webp"
   },
   {
     "id": "m_93",
@@ -1863,7 +1863,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, saumon.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, saumon."
     },
-    "image": "assets/menu/maki_saumon.jpg"
+    "image": "assets/menu/maki_saumon.webp"
   },
   {
     "id": "m_94",
@@ -1883,7 +1883,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, crevette.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, crevette."
     },
-    "image": "assets/menu/maki_crevette.jpg"
+    "image": "assets/menu/maki_crevette.webp"
   },
   {
     "id": "m_95",
@@ -1903,7 +1903,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, saumon, avocat.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, saumon, avocat."
     },
-    "image": "assets/menu/maki_saumon_avocat.jpg"
+    "image": "assets/menu/maki_saumon_avocat.webp"
   },
   {
     "id": "m_96",
@@ -1923,7 +1923,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, surimi.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, surimi."
     },
-    "image": "assets/menu/maki_surimi.jpg"
+    "image": "assets/menu/maki_surimi.webp"
   },
   {
     "id": "m_97",
@@ -1943,7 +1943,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, avocat.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, avocat."
     },
-    "image": "assets/menu/maki_avocat.jpg"
+    "image": "assets/menu/maki_avocat.webp"
   },
   {
     "id": "m_98",
@@ -1963,7 +1963,7 @@ const adminDefaultMenuItems = [
       "en": "Fresh specialty crafted to order: Riz, concombre.",
       "ar": "طبق طازج ومعد عند الطلب: Riz, concombre."
     },
-    "image": "assets/menu/maki_concombre.jpg"
+    "image": "assets/menu/maki_concombre.webp"
   },
   {
     "id": "caf_1",
@@ -3056,4 +3056,41 @@ if (settingsForm) {
     alert('Paramètres du site sauvegardés avec succès !');
     loadPromosAndSettings();
   });
+}
+
+
+// Export Menu to JSON Backup
+function exportMenuJSON() {
+  const menu = getStoredMenu();
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(menu, null, 2));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", `sushi_arij_menu_backup_${new Date().toISOString().split('T')[0]}.json`);
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+}
+
+// Import Menu from JSON Backup
+function importMenuJSON(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (!Array.isArray(imported)) {
+        throw new Error("Format de fichier invalide (doit être un tableau JSON).");
+      }
+      if (confirm(`Voulez-vous importer ${imported.length} plats dans le menu ? Cela mettra à jour la carte.`)) {
+        localStorage.setItem('arij_custom_menu', JSON.stringify(imported));
+        renderAdminMenu();
+        alert(`✅ ${imported.length} plats importés et synchronisés avec succès !`);
+      }
+    } catch (err) {
+      alert("Erreur lors de l'importation : " + err.message);
+    }
+  };
+  reader.readAsText(file);
 }

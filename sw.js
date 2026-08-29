@@ -1,6 +1,6 @@
-// Café & Restaurant Sushi Arij - Service Worker (Production Ready PWA Caching)
+// Café & Restaurant Sushi Arij - Service Worker (Production Ready PWA Caching v4.0)
 
-const CACHE_NAME = 'sushi-arij-v3.0';
+const CACHE_NAME = 'sushi-arij-v4.0';
 
 const ASSETS_TO_CACHE = [
   '/',
@@ -21,7 +21,7 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Precaching production assets');
+      console.log('[SW] Precaching core assets v4.0');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
@@ -45,7 +45,26 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  // Network first fallback to cache strategy for maximum freshness
+  const url = new URL(e.request.url);
+
+  // Dynamic Cache-First strategy for images in assets/
+  if (url.pathname.includes('/assets/')) {
+    e.respondWith(
+      caches.match(e.request).then((cachedResponse) => {
+        if (cachedResponse) return cachedResponse;
+        return fetch(e.request).then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const clone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
+          }
+          return networkResponse;
+        });
+      })
+    );
+    return;
+  }
+
+  // Network-First with Cache fallback for HTML and scripts
   e.respondWith(
     fetch(e.request).catch(() => {
       return caches.match(e.request);

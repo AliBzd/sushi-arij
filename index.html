@@ -38,8 +38,12 @@
     "@type": "Restaurant",
     "name": "Café & Restaurant Sushi Arij",
     "url": "https://sushiarij.app/",
+    "hasMenu": "https://sushiarij.app/#menu",
     "image": "https://sushiarij.app/assets/hero_sushi_cafe.png",
     "telephone": "+212530007780",
+    "servesCuisine": ["Japanese", "Sushi", "Asian", "Café", "Breakfast"],
+    "priceRange": "$$",
+    "acceptsReservations": "True",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Hssaine",
@@ -60,8 +64,6 @@
         "closes": "23:30"
       }
     ],
-    "servesCuisine": ["Japanese", "Sushi", "Café", "Breakfast", "Moroccan"],
-    "priceRange": "MAD 20 - 150",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -321,17 +323,27 @@
         <button class="category-tab" data-category="desserts" data-i18n="cat_desserts">🍰 Desserts & Gourmandises</button>
       </div>
 
+      <!-- Sub-category quick filter chips (Phase 5) -->
+      <div class="sub-filter-wrapper">
+        <div id="sub-filter-chips" class="sub-filter-chips">
+          <!-- Dynamically populated by app.js based on active category -->
+        </div>
+      </div>
+
       <div class="menu-controls">
         <div class="search-box">
           <i class="fas fa-search"></i>
           <input type="text" id="menu-search" class="search-input" placeholder="Rechercher un plat, sushi, café..." data-i18n-placeholder="search_placeholder">
         </div>
 
-        <div class="filter-chips">
-          <button class="filter-chip active" data-filter="all" data-i18n="filter_all">Tous</button>
-          <button class="filter-chip" data-filter="chef" data-i18n="filter_chef">Sélection du Chef</button>
-          <button class="filter-chip" data-filter="popular" data-i18n="filter_popular">Populaire</button>
-          <button class="filter-chip" data-filter="veg" data-i18n="filter_veg">Végétarien</button>
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <span id="menu-counter-badge" class="menu-counter-badge">115 plats disponibles</span>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter="all" data-i18n="filter_all">Tous</button>
+            <button class="filter-chip" data-filter="chef" data-i18n="filter_chef">Sélection du Chef</button>
+            <button class="filter-chip" data-filter="popular" data-i18n="filter_popular">Populaire</button>
+            <button class="filter-chip" data-filter="veg" data-i18n="filter_veg">Végétarien</button>
+          </div>
         </div>
       </div>
 
@@ -449,6 +461,13 @@
             <span data-i18n="review3_role">Client Livraison • 5/5</span>
           </div>
         </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://search.google.com/local/writereview?placeid=ChIJ5Y1VfhdApw0RXFxKR5U3gTs" target="_blank" class="btn-google-review">
+          <i class="fab fa-google"></i>
+          <span data-i18n="btn_leave_google_review">⭐ Laisser un Avis sur Google (5★)</span>
+        </a>
       </div>
     </div>
   </section>
@@ -578,6 +597,12 @@
         <span id="cart-subtotal-val">0 MAD</span>
       </div>
 
+      <!-- Table Detected Alert Banner -->
+      <div id="cart-table-banner" class="table-detected-banner" style="display: none;">
+        <i class="fas fa-qrcode"></i>
+        <span id="cart-table-text">Table T1 Détectée</span>
+      </div>
+
       <!-- Promo Code / Coupon Box -->
       <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
         <input type="text" id="cart-coupon-input" class="form-input" placeholder="Code Promo (ex: ARIJ10)" style="font-size: 0.8rem; padding: 0.5rem;">
@@ -588,21 +613,38 @@
         <label data-i18n="cart_option_label">Mode de Commande :</label>
         <div class="options-group">
           <label>
-            <input type="radio" name="cart-order-type" value="dine-in">
+            <input type="radio" name="cart-order-type" value="dine-in" id="order-type-dinein">
             <span data-i18n="cart_opt_dinein">Sur Place</span>
           </label>
           <label>
-            <input type="radio" name="cart-order-type" value="takeaway" checked>
+            <input type="radio" name="cart-order-type" value="takeaway" id="order-type-takeaway" checked>
             <span data-i18n="cart_opt_takeaway">À Emporter</span>
           </label>
           <label>
-            <input type="radio" name="cart-order-type" value="delivery">
+            <input type="radio" name="cart-order-type" value="delivery" id="order-type-delivery">
             <span data-i18n="cart_opt_delivery">Livraison</span>
           </label>
         </div>
       </div>
 
-      <textarea id="cart-notes" class="cart-notes-input" rows="2" placeholder="Notes pour le chef..." data-i18n-placeholder="cart_notes_placeholder"></textarea>
+      <!-- Preferred Pickup Time (for Takeaway) -->
+      <div id="pickup-time-container" style="margin-bottom: 1rem; display: none;">
+        <label data-i18n="lbl_pickup_time" style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.3rem; display: block;">Heure de retrait souhaitée :</label>
+        <select id="cart-pickup-time" class="form-input" style="font-size: 0.85rem; padding: 0.5rem;">
+          <option value="ASAP" data-i18n="pickup_asap">Dès que possible (~20-30 min)</option>
+          <option value="Dans 45 min">Dans 45 min</option>
+          <option value="Dans 1 heure">Dans 1 heure</option>
+          <option value="À midi (12:30)">À midi (12:30)</option>
+          <option value="Ce soir (20:00)">Ce soir (20:00)</option>
+          <option value="Ce soir (21:00)">Ce soir (21:00)</option>
+        </select>
+      </div>
+
+      <!-- Chef Notes -->
+      <div style="margin-bottom: 1rem;">
+        <label data-i18n="lbl_chef_notes" style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.3rem; display: block;">Instructions spéciales pour le Chef :</label>
+        <textarea id="cart-notes" class="cart-notes-input" rows="2" placeholder="Ex: Sans gingembre, sauce soja sucrée supplémentaire..." data-i18n-placeholder="placeholder_chef_notes"></textarea>
+      </div>
 
       <button class="btn-whatsapp" id="cart-submit-btn" style="width: 100%; justify-content: center;">
         <i class="fab fa-whatsapp"></i>

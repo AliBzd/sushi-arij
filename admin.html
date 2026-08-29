@@ -517,12 +517,17 @@
 
       <!-- TAB 5: MENU MANAGER (CRUD) -->
       <section id="tab-menu" class="admin-tab-content" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
           <div>
             <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">Gestionnaire du Menu & Images (CRUD)</h2>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Ajoutez, modifiez ou supprimez les plats, les prix et les photos en temps réel</p>
           </div>
-          <button class="btn-primary" onclick="openAddMenuItemModal()"><i class="fas fa-plus"></i> Ajouter un Plat</button>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <button class="btn-secondary" onclick="exportMenuJSON()"><i class="fas fa-file-download"></i> 📥 Exporter Menu (JSON)</button>
+            <button class="btn-secondary" onclick="document.getElementById('import-menu-file').click()"><i class="fas fa-file-upload"></i> 📤 Importer Sauvegarde</button>
+            <input type="file" id="import-menu-file" style="display: none;" accept=".json" onchange="importMenuJSON(event)">
+            <button class="btn-primary" onclick="openAddMenuItemModal()"><i class="fas fa-plus"></i> Ajouter un Plat</button>
+          </div>
         </div>
 
         <div class="glass-card" style="padding: 1.5rem;">
