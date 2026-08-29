@@ -1980,7 +1980,7 @@ const defaultMenuItems = [
       "en": "Selected Arabica beans roasted Italian style, intense aroma and rich crema.",
       "ar": "حبوب بن أرابيكا مختارة ومحمصة على الطريقة الإيطالية مع رغوة كريمية غنية."
     },
-    "image": "assets/hero_sushi_cafe.png"
+    "image": "assets/menu/assortiment_arij.webp"
   },
   {
     "id": "caf_2",
@@ -2000,7 +2000,7 @@ const defaultMenuItems = [
       "en": "Double espresso shot with velvety steamed milk foam and salted caramel drizzle.",
       "ar": "جرعة مضاعفة من الإسبريسو مع رغوة حليب مخملية ولمسة كراميل مالح."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "caf_3",
@@ -2020,7 +2020,7 @@ const defaultMenuItems = [
       "en": "Authentic Moroccan green tea infused with fresh aromatic mint leaves.",
       "ar": "أتاي مغربي منعنع ومحضر بأوراق النعناع الطازجة على الطريقة التقليدية."
     },
-    "image": "assets/cafe_ambiance.png"
+    "image": "assets/menu/bento_golden.webp"
   },
   {
     "id": "caf_4",
@@ -2040,7 +2040,7 @@ const defaultMenuItems = [
       "en": "Freshly squeezed Moroccan oranges, 100% natural with no added sugar.",
       "ar": "عصير برتقال مغربي طبيعي 100% معصور فورياً بدون ماء أو سكر مضاف."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "caf_5",
@@ -2060,7 +2060,7 @@ const defaultMenuItems = [
       "en": "Fresh mango puree blended with passion fruit and refreshing crushed ice.",
       "ar": "مزيج المانجو الطازجة والباشن فروت مع الثلج المجروش المنعش."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "caf_6",
@@ -2080,7 +2080,7 @@ const defaultMenuItems = [
       "en": "Refreshing mocktail with fresh strawberries, crushed lime, and garden mint.",
       "ar": "موكتيل منعش بالفراولة الطبيعية، الليمون الحامض والنعناع الأخضر."
     },
-    "image": "assets/cafe_ambiance.png"
+    "image": "assets/menu/bento_golden.webp"
   },
   {
     "id": "brk_1",
@@ -2100,7 +2100,7 @@ const defaultMenuItems = [
       "en": "Italian Espresso + Fresh Butter Croissant + Glass of freshly squeezed orange juice.",
       "ar": "إسبريسو إيطالي + كرواسون بالزبدة + كأس عصير برتقال طبيعي."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "brk_2",
@@ -2120,7 +2120,7 @@ const defaultMenuItems = [
       "en": "Moroccan mint tea, fried eggs with pure olive oil, amlou, pure honey, msemen & harcha.",
       "ar": "براد أتاي منعنع، بيض مقلي بزيت الزيتون، أملو، عسل حر، جبن، مسمن وحرشة."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "brk_3",
@@ -2140,7 +2140,7 @@ const defaultMenuItems = [
       "en": "Hot beverage of choice + Orange juice + Cheese omelette + Pastries, harcha, honey & butter.",
       "ar": "مشروب ساخن + عصير برتقال + أومليت بالجبن + مسمن وحرشة ومربى وزبدة."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "brk_4",
@@ -2160,7 +2160,7 @@ const defaultMenuItems = [
       "en": "Fresh fluffy omelette made to order with melted cheese and chives.",
       "ar": "أومليت طازجة محضرة فورياً بجبن ذائب وأعشاب طازجة."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "brk_5",
@@ -2180,7 +2180,7 @@ const defaultMenuItems = [
       "en": "Flaky artisanal pastry baked fresh every morning from 06:30 AM.",
       "ar": "فينوازري مقرمشة وهشة مخبوزة طازجة كل صباح ابتداءً من 06:30."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "des_1",
@@ -2200,7 +2200,7 @@ const defaultMenuItems = [
       "en": "Traditional Japanese sweet rice dough filled with rich artisanal ice cream.",
       "ar": "حلوى الأرز اليابانية التقليدية المحشوة بآيس كريم بنكهات متعددة."
     },
-    "image": "assets/hero_sushi_cafe.png"
+    "image": "assets/menu/assortiment_arij.webp"
   },
   {
     "id": "des_2",
@@ -2220,7 +2220,7 @@ const defaultMenuItems = [
       "en": "Warm molten chocolate cake with a gooey center served with vanilla ice cream.",
       "ar": "كيكة الشوكولاتة الداكنة الساخنة ذات القلب الذائب مع آيس كريم فانيليا."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "des_3",
@@ -2240,7 +2240,7 @@ const defaultMenuItems = [
       "en": "Golden delicate crepe generously layered with creamy Nutella and sliced bananas.",
       "ar": "كريب ذهبية وهشة مغطاة بطبقة غنية من النوتيلا وقطع الموز الطازج."
     },
-    "image": "assets/cafe_ambiance.png"
+    "image": "assets/menu/bento_golden.webp"
   },
   {
     "id": "des_4",
@@ -2260,7 +2260,7 @@ const defaultMenuItems = [
       "en": "Caramelized pearl sugar waffle, crispy outside and soft inside with melted chocolate.",
       "ar": "وافل مقرمش ومكرمل بحبات السكر يقدم مع صوص الشوكولاتة الدافئة."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   },
   {
     "id": "des_5",
@@ -2280,7 +2280,7 @@ const defaultMenuItems = [
       "en": "Smooth baked vanilla custard topped with rich homemade amber caramel.",
       "ar": "كريم كراميل ناعم ومحضر على الطريقة المنزلية مع صوص الكراميل الذهبي."
     },
-    "image": "assets/hero_sushi_cafe.png"
+    "image": "assets/menu/assortiment_arij.webp"
   },
   {
     "id": "des_6",
@@ -2300,7 +2300,7 @@ const defaultMenuItems = [
       "en": "Crunchy speculoos crust topped with velvety cream cheese and berry coulis.",
       "ar": "تشيز كيك مخملي بقاعدة بسكويت اللوتس وصلصة التوت والفواكه الحمراء."
     },
-    "image": "assets/breakfast_pastries.png"
+    "image": "assets/menu/salade_arij.webp"
   }
 ];
 

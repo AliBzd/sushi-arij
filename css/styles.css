@@ -442,12 +442,12 @@ body.light-theme .header {
   align-items: center;
   padding: 5rem 0 4rem;
   background: linear-gradient(to bottom, rgba(18, 21, 25, 0.6), rgba(18, 21, 25, 0.95)),
-              url('../assets/hero_sushi_cafe.png') center/cover no-repeat;
+              url('../assets/menu/assortiment_arij.webp') center/cover no-repeat;
 }
 
 body.light-theme .hero {
   background: linear-gradient(to bottom, rgba(252, 249, 242, 0.7), rgba(252, 249, 242, 0.95)),
-              url('../assets/hero_sushi_cafe.png') center/cover no-repeat;
+              url('../assets/menu/assortiment_arij.webp') center/cover no-repeat;
 }
 
 .hero-grid {

@@ -11,10 +11,10 @@ const ASSETS_TO_CACHE = [
   'js/app.js',
   'js/admin.js',
   'manifest.json',
-  'assets/hero_sushi_cafe.png',
-  'assets/sushi_specialty.png',
-  'assets/cafe_ambiance.png',
-  'assets/breakfast_pastries.png',
+  'assets/menu/assortiment_arij.webp',
+  'assets/menu/special_roll_dragon.webp',
+  'assets/menu/bento_golden.webp',
+  'assets/menu/salade_arij.webp',
   'assets/qr_code.png'
 ];
 
