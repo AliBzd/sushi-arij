@@ -1999,40 +1999,40 @@ let currentDetectedTable = null;
 const subCategoryConfigs = {
   plateaux: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'signature', labelKey: 'sub_plateaux', match: ['signature', 'arij', 'hot arij'] },
-    { key: 'duo', labelKey: 'sub_special_rolls', match: ['lovers', 'combo', 'box', 'delight', 'fresh', 'rainbow', 'mix'] }
+    { key: 'signature', labelKey: 'sub_plat_signature', match: ['signature', 'arij', 'hot arij'] },
+    { key: 'duo', labelKey: 'sub_plat_duo', match: ['lovers', 'combo', 'box', 'delight', 'fresh', 'rainbow', 'mix'] }
   ],
   rolls: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'special', labelKey: 'sub_special_rolls', match: ['special roll', 'dragon', 'tiger', 'mango', 'oslo', 'dream', 'tokyo', 'philadelphie', 'crunchy', 'pizza', 'aromaki'] },
-    { key: 'california', labelKey: 'sub_california', match: ['california'] },
-    { key: 'maki', labelKey: 'sub_maki', match: ['maki'] },
-    { key: 'volcano', labelKey: 'sub_volcano', match: ['volcano', 'ebi tempora'] }
+    { key: 'special', labelKey: 'sub_rolls_special', match: ['special roll', 'dragon', 'tiger', 'mango', 'oslo', 'dream', 'tokyo', 'philadelphie', 'crunchy', 'pizza', 'aromaki'] },
+    { key: 'california', labelKey: 'sub_rolls_california', match: ['california'] },
+    { key: 'maki', labelKey: 'sub_rolls_maki', match: ['maki'] },
+    { key: 'volcano', labelKey: 'sub_rolls_volcano', match: ['volcano', 'ebi tempora'] }
   ],
   nigiri: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'nigiri', labelKey: 'sub_nigiri_temaki', match: ['nigiri', 'sashimi'] },
-    { key: 'temaki', labelKey: 'sub_nigiri_temaki', match: ['temaki', 'futomaki', 'gunkan'] }
+    { key: 'nigiri', labelKey: 'sub_nig_nigiri', match: ['nigiri', 'sashimi'] },
+    { key: 'temaki', labelKey: 'sub_nig_temaki', match: ['temaki', 'futomaki', 'gunkan'] }
   ],
   bentos: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'gourmand', labelKey: 'sub_bentos', match: ['gourmand', 'golden', 'signature', 'super', 'duo'] },
-    { key: 'sea', labelKey: 'sub_bentos', match: ['sea', 'fresh', 'mix', 'yakitori'] }
+    { key: 'poulet', labelKey: 'sub_bento_poulet', match: ['gourmand', 'super', 'yakitori', 'poulet'] },
+    { key: 'poisson', labelKey: 'sub_bento_poisson', match: ['golden', 'sea', 'fresh', 'mix', 'signature', 'duo', 'sushi'] }
   ],
   woks: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'woks', labelKey: 'sub_woks_noodles', match: ['wok'] },
-    { key: 'nouilles', labelKey: 'sub_woks_noodles', match: ['nouilles', 'riz'] }
+    { key: 'saute', labelKey: 'sub_wok_saute', match: ['wok'] },
+    { key: 'nouilles', labelKey: 'sub_wok_nouilles', match: ['nouilles', 'riz'] }
   ],
   brochettes: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'brochettes', labelKey: 'sub_skewers_sides', match: ['brochette', 'boulette', 'pané', 'panée', 'amandes', 'croquettes'] },
-    { key: 'nems', labelKey: 'sub_skewers_sides', match: ['nems', 'rouleau'] }
+    { key: 'grill', labelKey: 'sub_broch_grill', match: ['brochette', 'boulette'] },
+    { key: 'nems', labelKey: 'sub_broch_nems', match: ['nems', 'pané', 'panée', 'amandes', 'croquettes', 'rouleau'] }
   ],
   salades: [
     { key: 'all', labelKey: 'sub_all' },
-    { key: 'salades', labelKey: 'sub_poke_salads', match: ['salade', 'tataki', 'carpaccio'] },
-    { key: 'soupes', labelKey: 'sub_poke_salads', match: ['soupe'] }
+    { key: 'salades', labelKey: 'sub_sal_salades', match: ['salade', 'tataki', 'carpaccio', 'grillé'] },
+    { key: 'soupes', labelKey: 'sub_sal_soupes', match: ['soupe'] }
   ]
 };
 
