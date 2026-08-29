@@ -324,7 +324,7 @@ let appliedDiscount = 0;
 
 // Target Phone Number for WhatsApp
 function getWhatsAppPhone() {
-  return localStorage.getItem('arij_whatsapp_phone') || '212612560803';
+  return localStorage.getItem('arij_whatsapp_phone') || '212530007780';
 }
 
 // Apply Admin Custom Site Content Dynamic Overrides
@@ -1235,7 +1235,7 @@ function downloadMenuPDF() {
 
       <div class="header">
         <h1>${brandName}</h1>
-        <p>Av. Hssaine, Sala Al Jadida • Tél & WhatsApp: +212 6 12 56 08 03 • Site: https://sushiarij.app</p>
+        <p>Av. Hssaine, Sala Al Jadida • Tél & WhatsApp: +212 5 30 00 77 80 • Site: https://sushiarij.app</p>
       </div>
   `;
 

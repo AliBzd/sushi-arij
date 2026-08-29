@@ -340,7 +340,7 @@ function seedInitialData() {
   }
 
   if (!localStorage.getItem('arij_whatsapp_phone')) {
-    localStorage.setItem('arij_whatsapp_phone', '212612560803');
+    localStorage.setItem('arij_whatsapp_phone', '212530007780');
   }
 }
 
@@ -601,7 +601,7 @@ function updateOrderStatus(id, newStatus) {
 }
 
 function sendWhatsAppReply(orderId, phoneNum, type) {
-  const cleanPhone = (phoneNum || '').replace(/[^0-9]/g, '') || '212612560803';
+  const cleanPhone = (phoneNum || '').replace(/[^0-9]/g, '') || '212530007780';
   let msg = '';
 
   if (type === 'confirm') {
@@ -619,7 +619,7 @@ function printKitchenTicket(orderId) {
     id: orderId,
     date: new Date().toLocaleString(),
     name: 'Client Web',
-    phone: '+212612560803',
+    phone: '+212530007780',
     type: 'À EMPORTER',
     details: '1x Dragon Roll Supreme, 1x Expresso Italien',
     total: 107
@@ -932,7 +932,7 @@ function loadPromosAndSettings() {
   if (p1Desc) document.getElementById('promo1-desc').value = p1Desc;
   if (p1Price) document.getElementById('promo1-price').value = p1Price;
 
-  const phone = localStorage.getItem('arij_whatsapp_phone') || '212612560803';
+  const phone = localStorage.getItem('arij_whatsapp_phone') || '212530007780';
   const phoneStat = document.getElementById('stat-phone');
   if (phoneStat) phoneStat.textContent = `+${phone}`;
   const setPhone = document.getElementById('set-whatsapp');

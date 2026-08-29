@@ -4,7 +4,7 @@
 > **Super Admin Management Portal**: [https://sushiarij.app/admin.html](https://sushiarij.app/admin.html) *(Default Password: `arij2026`)*  
 > **GitHub Repository**: [https://github.com/AliBzd/sushi-arij](https://github.com/AliBzd/sushi-arij)  
 > **Location**: Av. Hssaine, Sala Al Jadida, Morocco (Geo: `33.9882027, -6.7385552`)  
-> **Direct Contact / WhatsApp**: `+212 6 12 56 08 03`  
+> **Direct Contact / WhatsApp**: `+212 5 30 00 77 80`  
 > **Opening Hours**: Daily from 06:30 AM to 11:30 PM (06:30 - 23:30)
 
 ---
@@ -49,7 +49,7 @@ The system features:
 ## 🍣 Customer Frontend Features
 
 ### 1. Zero-Commission WhatsApp Checkout & Reservations
-- **WhatsApp Cart Checkout**: Customers select items, pick order mode (*Sur Place*, *À Emporter*, *Livraison*), apply promo codes, and submit formatted orders to `+212 6 12 56 08 03`.
+- **WhatsApp Cart Checkout**: Customers select items, pick order mode (*Sur Place*, *À Emporter*, *Livraison*), apply promo codes, and submit formatted orders to `+212 5 30 00 77 80`.
 - **Table Reservation Modal**: Interactive booking form allowing guests to reserve tables (Terrace or Indoor) for specific dates and times.
 
 ### 2. Interactive Menu Showcase
