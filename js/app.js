@@ -2,302 +2,2305 @@
 
 // Full Default Menu Database with Nutritional Facts & Allergens
 const defaultMenuItems = [
-  // --- SUSHI & JAPANESE SPECIALTIES ---
   {
-    id: 's1',
-    category: 'sushi',
-    badge: 'chef',
-    price: 85,
-    calories: '420 kcal',
-    allergens: 'Crustacés, Poissons, Soja, Sésame',
-    ingredients: 'Crevette tempura, saumon, avocat, anguille, sauce unagi, sésame',
-    name: { fr: 'Dragon Roll Supreme (8 pcs)', en: 'Dragon Roll Supreme (8 pcs)', ar: 'دراغون رول سوبريم (8 قطع)' },
-    desc: {
-      fr: 'Crevette tempura croustillante, avocat creamy, anguille grillée, sauce unagi & sésame doré.',
-      en: 'Crispy tempura shrimp, creamy avocado, grilled eel, unagi glaze & toasted sesame.',
-      ar: 'جمبري تمبورا مقرمش، أفوكادو، ثعبان البحر المشوي، صوص أوناجي وسمسم.'
+    "id": "m_1",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 115,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "6pcs pizza , 5pcs ebi tempura, 8pcs maki crevette",
+    "name": {
+      "fr": "Assortiment Combo",
+      "en": "Platter Combo",
+      "ar": "طبق كومبو مشكل (19 قطعة)"
     },
-    image: 'assets/sushi_specialty.png'
+    "desc": {
+      "fr": "6pcs pizza , 5pcs ebi tempura, 8pcs maki crevette",
+      "en": "Fresh specialty crafted to order: 6pcs pizza , 5pcs ebi tempura, 8pcs maki crevette.",
+      "ar": "طبق طازج ومعد عند الطلب: 6pcs pizza , 5pcs ebi tempura, 8pcs maki crevette."
+    },
+    "image": "assets/menu/assortiment_combo.jpg"
   },
   {
-    id: 's2',
-    category: 'sushi',
-    badge: 'popular',
-    price: 75,
-    calories: '380 kcal',
-    allergens: 'Poissons, Lait (Lactose), Soja',
-    ingredients: 'Saumon frais, cream cheese, concombre, sauce teriyaki',
-    name: { fr: 'Salmon Crunch Roll (8 pcs)', en: 'Salmon Crunch Roll (8 pcs)', ar: 'سالمن كرنش رول (8 قطع)' },
-    desc: {
-      fr: 'Saumon frais du Nord, fromage frais, concombre croquant, nappe saumon braisé & teriyaki.',
-      en: 'Fresh Nordic salmon, cream cheese, crisp cucumber, seared salmon top & teriyaki glaze.',
-      ar: 'سلمون طازج، جبنة كريمة، خيار مقرمش، سلمون مشوح وصوص ترياكي.'
+    "id": "m_2",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 135,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "5pcs crunchy, 5pcs eby tempura, 6pcs pizza saumon",
+    "name": {
+      "fr": "Assortiment Lovers",
+      "en": "Platter Lovers",
+      "ar": "طبق العشاق المتنوع (16 قطعة)"
     },
-    image: 'assets/hero_sushi_cafe.png'
+    "desc": {
+      "fr": "5pcs crunchy, 5pcs eby tempura, 6pcs pizza saumon",
+      "en": "Fresh specialty crafted to order: 5pcs crunchy, 5pcs eby tempura, 6pcs pizza saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: 5pcs crunchy, 5pcs eby tempura, 6pcs pizza saumon."
+    },
+    "image": "assets/menu/assortiment_lovers.jpg"
   },
   {
-    id: 's3',
-    category: 'sushi',
-    badge: 'popular',
-    price: 65,
-    calories: '350 kcal',
-    allergens: 'Crustacés, Poisson, Œufs, Sésame',
-    ingredients: 'Chair de crabe, avocat, concombre, tobiko orange, mayonnaise japonaise',
-    name: { fr: 'California Tobiko Roll (8 pcs)', en: 'California Tobiko Roll (8 pcs)', ar: 'كاليفورنيا توبيكو رول (8 قطع)' },
-    desc: {
-      fr: 'Chair de surimi royale, avocat frais, concombre, enrobage tobiko orange croustillant.',
-      en: 'Surimi crab, fresh avocado, cucumber, coated with crunchy orange tobiko.',
-      ar: 'سلطعون كاليفورنيا، أفوكادو، خيار وتغليفة بيض السمك التوبيكو.'
+    "id": "m_3",
+    "category": "sushi",
+    "badge": "chef",
+    "price": 160,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs wasabi , 8pc  maki avocat , 4pcs massago, 4pcs Miami, 4pcs black",
+    "name": {
+      "fr": "Assortiment Signature",
+      "en": "Platter Signature",
+      "ar": "طبق سيغنتشر الخاص (24 قطعة)"
     },
-    image: 'assets/sushi_specialty.png'
+    "desc": {
+      "fr": "4pcs wasabi , 8pc  maki avocat , 4pcs massago, 4pcs Miami, 4pcs black",
+      "en": "Fresh specialty crafted to order: 4pcs wasabi , 8pc  maki avocat , 4pcs massago, 4pcs Miami, 4pcs black.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs wasabi , 8pc  maki avocat , 4pcs massago, 4pcs Miami, 4pcs black."
+    },
+    "image": "assets/menu/assortiment_signature.jpg"
   },
   {
-    id: 's4',
-    category: 'sushi',
-    badge: 'chef',
-    price: 149,
-    calories: '850 kcal',
-    allergens: 'Poissons, Crustacés, Soja, Gluten, Sésame',
-    ingredients: 'Saumon, Thon rouge, Crevette tempura, Riz à sushi, Algues Nori',
-    name: { fr: 'Plateau Master Arij (24 pcs)', en: 'Arij Master Platter (24 pcs)', ar: 'طبق أريج الماستر (24 قطعة)' },
-    desc: {
-      fr: '6 Sashimi Saumon & Thon, 6 Nigiri Saumon, 4 Dragon Roll, 4 California & 4 Crispy Roll.',
-      en: '6 Salmon & Tuna Sashimi, 6 Salmon Nigiri, 4 Dragon Roll, 4 California & 4 Crispy Roll.',
-      ar: '6 ساشيمي سلمون وتونة، 6 نيقيريسلمون، 4 دراغون رول، 4 كاليفورنيا و4 كريسبي.'
+    "id": "m_4",
+    "category": "sushi",
+    "badge": "chef",
+    "price": 180,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs dream ,4pcs mango , 4pcs Oslo ,4pcs nigiri",
+    "name": {
+      "fr": "Assortiment Arij",
+      "en": "Platter Arij",
+      "ar": "طبق أريج الفاخر (16 قطعة)"
     },
-    image: 'assets/sushi_specialty.png'
+    "desc": {
+      "fr": "4pcs dream ,4pcs mango , 4pcs Oslo ,4pcs nigiri",
+      "en": "Fresh specialty crafted to order: 4pcs dream ,4pcs mango , 4pcs Oslo ,4pcs nigiri.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs dream ,4pcs mango , 4pcs Oslo ,4pcs nigiri."
+    },
+    "image": "assets/menu/assortiment_arij.jpg"
   },
   {
-    id: 's5',
-    category: 'sushi',
-    badge: 'veg',
-    price: 55,
-    calories: '290 kcal',
-    allergens: 'Sésame, Soja',
-    ingredients: 'Avocat, concombre, mangue, algues Wakame',
-    name: { fr: 'Maki Veggie Green (8 pcs)', en: 'Maki Veggie Green (8 pcs)', ar: 'ماكي فيجي كرين (8 قطع)' },
-    desc: {
-      fr: 'Avocat creamy, concombre croquant, mangue douce & wakame mariné.',
-      en: 'Creamy avocado, crunchy cucumber, sweet mango & marinated wakame.',
-      ar: 'أفوكادو كريمي، خيار مقرمش، مانجو حلوة وأعشاب واكامي.'
+    "id": "m_5",
+    "category": "sushi",
+    "badge": "chef",
+    "price": 175,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs tiger, 4pcs mango, 4pcs Oslo , 4pcs dragon",
+    "name": {
+      "fr": "Assortiment Hot Arij",
+      "en": "Platter Hot Arij",
+      "ar": "طبق هوت أريج المميز (16 قطعة)"
     },
-    image: 'assets/sushi_specialty.png'
+    "desc": {
+      "fr": "4pcs tiger, 4pcs mango, 4pcs Oslo , 4pcs dragon",
+      "en": "Fresh specialty crafted to order: 4pcs tiger, 4pcs mango, 4pcs Oslo , 4pcs dragon.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs tiger, 4pcs mango, 4pcs Oslo , 4pcs dragon."
+    },
+    "image": "assets/menu/assortiment_hot_arij.jpg"
   },
   {
-    id: 's6',
-    category: 'sushi',
-    badge: 'popular',
-    price: 68,
-    calories: '520 kcal',
-    allergens: 'Gluten, Œufs, Soja',
-    ingredients: 'Nouilles japonaises, bouillon Miso, dromon poulet Katsu, œuf ajitama',
-    name: { fr: 'Ramen au Poulet Katsu', en: 'Chicken Katsu Ramen', ar: 'رامن دجاج كاتسو' },
-    desc: {
-      fr: 'Nouilles artisanales, bouillon miso riche, poulet croustillant, œuf mariné & ciboule.',
-      en: 'Artisanal noodles, rich miso broth, crispy chicken, marinated egg & scallions.',
-      ar: 'نودلز طازجة، حساء ميسو غني، دجاج مقرمش، بيض متبل وبصل أخضر.'
+    "id": "m_6",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 150,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs tobiko,  4pcs majestique, 4pcs sésame, 4pcs mango",
+    "name": {
+      "fr": "Assortiment Rainbow",
+      "en": "Platter Rainbow",
+      "ar": "طبق رينبو المتنوع (16 قطعة)"
     },
-    image: 'assets/hero_sushi_cafe.png'
-  },
-
-  // --- CAFÉ & BEVERAGES ---
-  {
-    id: 'c1',
-    category: 'cafe',
-    badge: 'popular',
-    price: 22,
-    calories: '5 kcal',
-    allergens: 'Aucun',
-    ingredients: '100% Arabica sélectionné',
-    name: { fr: 'Expresso Italien Spécial', en: 'Special Italian Espresso', ar: 'إسبريسو إيطالي فاخر' },
-    desc: {
-      fr: 'Grains Arabica sélectionnés torréfiés sur mesure, arômes intenses et crème onctueuse.',
-      en: 'Selected custom-roasted Arabica beans, intense aroma & velvety crema.',
-      ar: 'حبوب أرابيكا مختارة بعناية، نكهة غنية ورغوة مخملية.'
+    "desc": {
+      "fr": "4pcs tobiko,  4pcs majestique, 4pcs sésame, 4pcs mango",
+      "en": "Fresh specialty crafted to order: 4pcs tobiko,  4pcs majestique, 4pcs sésame, 4pcs mango.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs tobiko,  4pcs majestique, 4pcs sésame, 4pcs mango."
     },
-    image: 'assets/hero_sushi_cafe.png'
+    "image": "assets/menu/assortiment_rainbow.jpg"
   },
   {
-    id: 'c2',
-    category: 'cafe',
-    badge: 'chef',
-    price: 28,
-    calories: '180 kcal',
-    allergens: 'Lait (Lactose)',
-    ingredients: 'Expresso, lait entier moussé, coulis de caramel beurre salé',
-    name: { fr: 'Cappuccino Arij Caramel', en: 'Arij Caramel Cappuccino', ar: 'كابوتشينو أريج بالكراميل' },
-    desc: {
-      fr: 'Double shot expresso, lait moussé onctueux, coulis de caramel beurre salé.',
-      en: 'Double shot espresso, velvety steamed milk, salted butter caramel drizzle.',
-      ar: 'جرعة مضاعفة إسبريسو، حليب مبخر كريمي، وصوص كراميل مميز.'
+    "id": "m_7",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 145,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs crabe, 4pcs Philadelphia, 4pcs rouleau saumon, 8pcs maki saumon",
+    "name": {
+      "fr": "Assortiment Fresh",
+      "en": "Platter Fresh",
+      "ar": "طبق فريش الطازج (20 قطعة)"
     },
-    image: 'assets/breakfast_pastries.png'
+    "desc": {
+      "fr": "4pcs crabe, 4pcs Philadelphia, 4pcs rouleau saumon, 8pcs maki saumon",
+      "en": "Fresh specialty crafted to order: 4pcs crabe, 4pcs Philadelphia, 4pcs rouleau saumon, 8pcs maki saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs crabe, 4pcs Philadelphia, 4pcs rouleau saumon, 8pcs maki saumon."
+    },
+    "image": "assets/menu/assortiment_fresh.jpg"
   },
   {
-    id: 'c3',
-    category: 'cafe',
-    badge: 'chef',
-    price: 35,
-    calories: '140 kcal',
-    allergens: 'Fruits à coque (Amandes)',
-    ingredients: 'Poudre Matcha cérémoniel du Japon, lait d\'amande',
-    name: { fr: 'Matcha Latte Japonais', en: 'Japanese Matcha Latte', ar: 'ماتشا لاتيه ياباني' },
-    desc: {
-      fr: 'Poudre de Matcha cérémoniel importé du Japon, lait d\'amande velouté.',
-      en: 'Imported Japanese ceremonial Matcha, velvety almond milk.',
-      ar: 'بودرة ماتشا يابانية فاخرة مع حليب اللوز المخملي.'
+    "id": "m_8",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 135,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs majestique, 4pcs tobiko , 4pcs wasabi, 4pcs black",
+    "name": {
+      "fr": "Assortiment Mix",
+      "en": "Platter Mix",
+      "ar": "طبق ميكس المتنوع (16 قطعة)"
     },
-    image: 'assets/hero_sushi_cafe.png'
+    "desc": {
+      "fr": "4pcs majestique, 4pcs tobiko , 4pcs wasabi, 4pcs black",
+      "en": "Fresh specialty crafted to order: 4pcs majestique, 4pcs tobiko , 4pcs wasabi, 4pcs black.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs majestique, 4pcs tobiko , 4pcs wasabi, 4pcs black."
+    },
+    "image": "assets/menu/assortiment_mix.jpg"
   },
   {
-    id: 'c4',
-    category: 'cafe',
-    badge: 'popular',
-    price: 32,
-    calories: '120 kcal',
-    allergens: 'Aucun',
-    ingredients: 'Oranges & fraises fraîches du Maroc',
-    name: { fr: 'Jus d\'Orange & Fraise Frais', en: 'Fresh Orange & Strawberry Juice', ar: 'عصير برتقال وفرولة طازج' },
-    desc: {
-      fr: 'Pressé à la minute à partir de fruits frais naturels marocains sans sucre ajouté.',
-      en: 'Freshly squeezed natural Moroccan fruits with no added sugar.',
-      ar: 'معصور فوراً من فواكه طبيعية طازجة بدون سكر مضاف.'
+    "id": "m_9",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 130,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "4pcs tobiko , 4pcs ebi fry, 8pcs maki surimi , 2pcs nigiri saumon",
+    "name": {
+      "fr": "Assortiment Box",
+      "en": "Platter Box",
+      "ar": "بوكس السوشي المشكل (18 قطعة)"
     },
-    image: 'assets/breakfast_pastries.png'
-  },
-
-  // --- BREAKFAST ---
-  {
-    id: 'b1',
-    category: 'breakfast',
-    badge: 'chef',
-    price: 48,
-    calories: '580 kcal',
-    allergens: 'Gluten, Fruits à coque (Amandes), Lait, Œufs',
-    ingredients: 'Huile d\'olive, amlou, miel, fromage, msemmen, harcha, œufs, thé',
-    name: { fr: 'Petit-Déjeuner Beldi Marocain', en: 'Moroccan Beldi Breakfast', ar: 'فطور بلدي مغربي أصيل' },
-    desc: {
-      fr: 'Huile d\'olive pure, amlou d\'essaouira, miel pur, fromage frais, msemmen, harcha, œufs et thé à la menthe.',
-      en: 'Pure olive oil, Essaouira amlou, natural honey, fresh cheese, msemmen, harcha, eggs & mint tea.',
-      ar: 'زيت زيتون أصيل، أملو، عسل طبيعي، جبن طري، مسمن، حرشة، بيض وشاي بالنعناع.'
+    "desc": {
+      "fr": "4pcs tobiko , 4pcs ebi fry, 8pcs maki surimi , 2pcs nigiri saumon",
+      "en": "Fresh specialty crafted to order: 4pcs tobiko , 4pcs ebi fry, 8pcs maki surimi , 2pcs nigiri saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: 4pcs tobiko , 4pcs ebi fry, 8pcs maki surimi , 2pcs nigiri saumon."
     },
-    image: 'assets/breakfast_pastries.png'
+    "image": "assets/menu/assortiment_box.jpg"
   },
   {
-    id: 'b2',
-    category: 'breakfast',
-    badge: 'popular',
-    price: 45,
-    calories: '410 kcal',
-    allergens: 'Gluten, Œufs, Sésame',
-    ingredients: 'Pain au levain, avocat, œufs pochés, graines de chia',
-    name: { fr: 'Avocado Toast & Œufs Pochés', en: 'Avocado Toast & Poached Eggs', ar: 'توست الأفوكادو والبيض المسلوق' },
-    desc: {
-      fr: 'Pain de campagne au levain, guacamole maison, œufs pochés coulant & graines de chia.',
-      en: 'Sourdough bread, house guacamole, runny poached eggs & chia seeds.',
-      ar: 'خبز التوست الطازج، غواكامولي منزلي، بيض مسلوق ورشة بذور الشيا.'
+    "id": "m_10",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 130,
+    "calories": "750 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame, Gluten",
+    "ingredients": "6pcs pizza , 5pcs eby tempura , 4pcs aromaki panée",
+    "name": {
+      "fr": "Assortiment Delight",
+      "en": "Platter Delight",
+      "ar": "طبق ديلايت المقرمش (15 قطعة)"
     },
-    image: 'assets/breakfast_pastries.png'
+    "desc": {
+      "fr": "6pcs pizza , 5pcs eby tempura , 4pcs aromaki panée",
+      "en": "Fresh specialty crafted to order: 6pcs pizza , 5pcs eby tempura , 4pcs aromaki panée.",
+      "ar": "طبق طازج ومعد عند الطلب: 6pcs pizza , 5pcs eby tempura , 4pcs aromaki panée."
+    },
+    "image": "assets/menu/assortiment_delight.jpg"
   },
   {
-    id: 'b3',
-    category: 'breakfast',
-    badge: 'popular',
-    price: 38,
-    calories: '460 kcal',
-    allergens: 'Gluten, Lait, Œufs',
-    ingredients: 'Viennoiserie au beurre pur, jus d\'orange, café',
-    name: { fr: 'Formule Parisienne Viennoiserie', en: 'Parisian Viennoiserie Combo', ar: 'فطور باريزيان بالفينوازري' },
-    desc: {
-      fr: '2 Viennoiseries au beurre (Croissant/Pain au chocolat), jus d\'orange frais & café au choix.',
-      en: '2 Butter pastries (Croissant/Pain au chocolat), fresh orange juice & coffee of choice.',
-      ar: '2 كرواسون بالزبدة، عصير برتقال طازج وقهوة من اختيارك.'
+    "id": "m_11",
+    "category": "mains",
+    "badge": "chef",
+    "price": 170,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Crevette grillée, saumon grillé, fromage panée, nems",
+    "name": {
+      "fr": "Bento Golden",
+      "en": "Bento Box Golden",
+      "ar": "بينتو جولدن الملكي"
     },
-    image: 'assets/breakfast_pastries.png'
-  },
-
-  // --- LUNCH & DINNER ---
-  {
-    id: 'm1',
-    category: 'mains',
-    badge: 'chef',
-    price: 88,
-    calories: '540 kcal',
-    allergens: 'Poissons, Soja, Sésame, Gluten',
-    ingredients: 'Saumon frais, sauce teriyaki, riz jasmin, légumes wok',
-    name: { fr: 'Filet de Saumon Grillé Teriyaki', en: 'Grilled Teriyaki Salmon Fillet', ar: 'فيليه سلمون مشوي بترياكي' },
-    desc: {
-      fr: 'Saumon frais rôti, sauce teriyaki sucrée-salée, riz jasmin et légumes sautés au wok.',
-      en: 'Seared salmon fillet, sweet teriyaki glaze, jasmine rice & wok-sautéed veggies.',
-      ar: 'سلمون مشوي، صوص ترياكي، أرز ياسمين وخضار سوتيه.'
+    "desc": {
+      "fr": "Crevette grillée, saumon grillé, fromage panée, nems",
+      "en": "Fresh specialty crafted to order: Crevette grillée, saumon grillé, fromage panée, nems.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette grillée, saumon grillé, fromage panée, nems."
     },
-    image: 'assets/hero_sushi_cafe.png'
+    "image": "assets/menu/bento_golden.jpg"
   },
   {
-    id: 'm2',
-    category: 'mains',
-    badge: 'popular',
-    price: 72,
-    calories: '610 kcal',
-    allergens: 'Gluten, Lait',
-    ingredients: 'Tagliatelles fraîches, crème fraîche, poulet, champignons',
-    name: { fr: 'Tagliatelles au Poulet & Champignons', en: 'Chicken & Mushroom Tagliatelle', ar: 'تالياتيلي بالدجاج والفطر' },
-    desc: {
-      fr: 'Pâtes fraîches italiennes, crème parmesan onctueuse, émincé de poulet & champignons de paris.',
-      en: 'Fresh Italian pasta, rich parmesan cream sauce, tender chicken & button mushrooms.',
-      ar: 'باستا طازجة، كريمة البارميزان الغنية، قطع الدجاج وفطر طازج.'
+    "id": "m_12",
+    "category": "mains",
+    "badge": "popular",
+    "price": 155,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Maki saumon, boulettes poulet, 5pcs cranche,fromage panée",
+    "name": {
+      "fr": "Bento Mix",
+      "en": "Bento Box Mix",
+      "ar": "بينتو ميكس المتنوع"
     },
-    image: 'assets/cafe_ambiance.png'
+    "desc": {
+      "fr": "Maki saumon, boulettes poulet, 5pcs cranche,fromage panée",
+      "en": "Fresh specialty crafted to order: Maki saumon, boulettes poulet, 5pcs cranche,fromage panée.",
+      "ar": "طبق طازج ومعد عند الطلب: Maki saumon, boulettes poulet, 5pcs cranche,fromage panée."
+    },
+    "image": "assets/menu/bento_mix.jpg"
   },
   {
-    id: 'm3',
-    category: 'mains',
-    badge: 'chef',
-    price: 65,
-    calories: '450 kcal',
-    allergens: 'Poissons, Soja, Sésame',
-    ingredients: 'Saumon mariné, riz à sushi, avocat, edamame, mangue',
-    name: { fr: 'Salade Arij Poké Bowl Saumon', en: 'Arij Salmon Poké Bowl', ar: 'بوكي بول السلمون أريج' },
-    desc: {
-      fr: 'Saumon mariné soya-sésame, riz vinaigré, avocat, edamame, mangue & chou rouge.',
-      en: 'Soy-sesame marinated salmon, sushi rice, avocado, edamame, mango & red cabbage.',
-      ar: 'سلمون متبل بالصويا والسمسم، أرز السوشي، أفوكادو، إيدامامي ومانجو.'
+    "id": "m_13",
+    "category": "mains",
+    "badge": "popular",
+    "price": 150,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "5pcs cranche, boeuf fromage, 4pcs sushi, 4pcs aromaki panée",
+    "name": {
+      "fr": "Bento Yakitori",
+      "en": "Bento Box Yakitori",
+      "ar": "بينتو ياكيتوري الدجاج والجبن"
     },
-    image: 'assets/sushi_specialty.png'
-  },
-
-  // --- DESSERTS ---
-  {
-    id: 'd1',
-    category: 'desserts',
-    badge: 'chef',
-    price: 42,
-    calories: '280 kcal',
-    allergens: 'Lait',
-    ingredients: 'Riz gluant, glace Matcha, Mangue, Thé vert',
-    name: { fr: 'Mochi Glacé Japonais (3 pcs)', en: 'Japanese Ice Cream Mochi (3 pcs)', ar: 'موتشي ياباني بمثلجات (3 قطع)' },
-    desc: {
-      fr: 'Pâte de riz gluante artisanale fourrée glace Matcha, Mangue & Thé Vert.',
-      en: 'Artisanal rice dough filled with Matcha, Mango & Green Tea ice cream.',
-      ar: 'عجين الأرز الياباني بحشوة آيس كريم الماتشا والمانجو والشاي الأخضر.'
+    "desc": {
+      "fr": "5pcs cranche, boeuf fromage, 4pcs sushi, 4pcs aromaki panée",
+      "en": "Fresh specialty crafted to order: 5pcs cranche, boeuf fromage, 4pcs sushi, 4pcs aromaki panée.",
+      "ar": "طبق طازج ومعد عند الطلب: 5pcs cranche, boeuf fromage, 4pcs sushi, 4pcs aromaki panée."
     },
-    image: 'assets/hero_sushi_cafe.png'
+    "image": "assets/menu/bento_yakitori.jpg"
   },
   {
-    id: 'd2',
-    category: 'desserts',
-    badge: 'popular',
-    price: 35,
-    calories: '340 kcal',
-    allergens: 'Gluten, Lait, Œufs',
-    ingredients: 'Biscuit boudoir, expresso, crème mascarpone, cacao',
-    name: { fr: 'Tiramisu Mascarpone Café', en: 'Classic Coffee Tiramisu', ar: 'تيراميسو ماسكاربوني بالقهوة' },
-    desc: {
-      fr: 'Biscuit boudoir imbibé d\'expresso maison, crème mascarpone et saupoudrage cacao brut.',
-      en: 'Ladyfingers soaked in house espresso, mascarpone cream & raw cacao dusting.',
-      ar: 'بسكويت مغموس في الإسبريسو، كريمة الماسكاربوني ورشة كاكاو غنية.'
+    "id": "m_14",
+    "category": "mains",
+    "badge": "popular",
+    "price": 145,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Salade , croquettes saumon, saumon pané , 5pcs cranche",
+    "name": {
+      "fr": "Bento Fresh",
+      "en": "Bento Box Fresh",
+      "ar": "بينتو فريش بالسلمون"
     },
-    image: 'assets/breakfast_pastries.png'
+    "desc": {
+      "fr": "Salade , croquettes saumon, saumon pané , 5pcs cranche",
+      "en": "Fresh specialty crafted to order: Salade , croquettes saumon, saumon pané , 5pcs cranche.",
+      "ar": "طبق طازج ومعد عند الطلب: Salade , croquettes saumon, saumon pané , 5pcs cranche."
+    },
+    "image": "assets/menu/bento_fresh.jpg"
+  },
+  {
+    "id": "m_15",
+    "category": "mains",
+    "badge": "chef",
+    "price": 140,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "5pcs cranche,4pcs sushi, boulettes poulet, les nouilles",
+    "name": {
+      "fr": "Bento Signature",
+      "en": "Bento Box Signature",
+      "ar": "بينتو سيغنتشر الخاص"
+    },
+    "desc": {
+      "fr": "5pcs cranche,4pcs sushi, boulettes poulet, les nouilles",
+      "en": "Fresh specialty crafted to order: 5pcs cranche,4pcs sushi, boulettes poulet, les nouilles.",
+      "ar": "طبق طازج ومعد عند الطلب: 5pcs cranche,4pcs sushi, boulettes poulet, les nouilles."
+    },
+    "image": "assets/menu/bento_signature.jpg"
+  },
+  {
+    "id": "m_16",
+    "category": "mains",
+    "badge": "popular",
+    "price": 140,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Salade, fromage panne, 5pcs cranche, poulet panee",
+    "name": {
+      "fr": "Bento Gourmand",
+      "en": "Bento Box Gourmand",
+      "ar": "بينتو غورماند المقرمش"
+    },
+    "desc": {
+      "fr": "Salade, fromage panne, 5pcs cranche, poulet panee",
+      "en": "Fresh specialty crafted to order: Salade, fromage panne, 5pcs cranche, poulet panee.",
+      "ar": "طبق طازج ومعد عند الطلب: Salade, fromage panne, 5pcs cranche, poulet panee."
+    },
+    "image": "assets/menu/bento_gourmand.jpg"
+  },
+  {
+    "id": "m_17",
+    "category": "mains",
+    "badge": "popular",
+    "price": 120,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Salade , poulet teriyaki, boeuf teriyaki, 6 PCS Sushi.",
+    "name": {
+      "fr": "Bento Sea",
+      "en": "Bento Box Sea",
+      "ar": "بينتو سي فود والسوشي"
+    },
+    "desc": {
+      "fr": "Salade , poulet teriyaki, boeuf teriyaki, 6 PCS Sushi.",
+      "en": "Fresh specialty crafted to order: Salade , poulet teriyaki, boeuf teriyaki, 6 PCS Sushi..",
+      "ar": "طبق طازج ومعد عند الطلب: Salade , poulet teriyaki, boeuf teriyaki, 6 PCS Sushi.."
+    },
+    "image": "assets/menu/bento_sea.jpg"
+  },
+  {
+    "id": "m_18",
+    "category": "mains",
+    "badge": "popular",
+    "price": 120,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Salade, boulettes poulet, poulet panée,riz cantonais",
+    "name": {
+      "fr": "Bento Super",
+      "en": "Bento Box Super",
+      "ar": "بينتو سوبر بالدجاج"
+    },
+    "desc": {
+      "fr": "Salade, boulettes poulet, poulet panée,riz cantonais",
+      "en": "Fresh specialty crafted to order: Salade, boulettes poulet, poulet panée,riz cantonais.",
+      "ar": "طبق طازج ومعد عند الطلب: Salade, boulettes poulet, poulet panée,riz cantonais."
+    },
+    "image": "assets/menu/bento_super.jpg"
+  },
+  {
+    "id": "m_19",
+    "category": "mains",
+    "badge": "popular",
+    "price": 110,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Salade , 6pcs sushi, nems, les nouilles",
+    "name": {
+      "fr": "Bento Duo",
+      "en": "Bento Box Duo",
+      "ar": "بينتو دويتو مع النودلز"
+    },
+    "desc": {
+      "fr": "Salade , 6pcs sushi, nems, les nouilles",
+      "en": "Fresh specialty crafted to order: Salade , 6pcs sushi, nems, les nouilles.",
+      "ar": "طبق طازج ومعد عند الطلب: Salade , 6pcs sushi, nems, les nouilles."
+    },
+    "image": "assets/menu/bento_duo.jpg"
+  },
+  {
+    "id": "m_20",
+    "category": "mains",
+    "badge": "chef",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Laitue, concombre, crevettes, calamar, surimi, wakame, avocat, mangue, saumon",
+    "name": {
+      "fr": "Salade Arij",
+      "en": "Salad Arij",
+      "ar": "سلطة أريج الفاخرة المأكولات البحرية"
+    },
+    "desc": {
+      "fr": "Laitue, concombre, crevettes, calamar, surimi, wakame, avocat, mangue, saumon",
+      "en": "Fresh specialty crafted to order: Laitue, concombre, crevettes, calamar, surimi, wakame, avocat, mangue, saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, crevettes, calamar, surimi, wakame, avocat, mangue, saumon."
+    },
+    "image": "assets/menu/salade_arij.jpg"
+  },
+  {
+    "id": "m_21",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Laitue, concombre, crevettes panées, surimi, mangue, avocat, wakame",
+    "name": {
+      "fr": "Salade Gambas",
+      "en": "Salad Gambas",
+      "ar": "سلطة Gambas"
+    },
+    "desc": {
+      "fr": "Laitue, concombre, crevettes panées, surimi, mangue, avocat, wakame",
+      "en": "Fresh specialty crafted to order: Laitue, concombre, crevettes panées, surimi, mangue, avocat, wakame.",
+      "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, crevettes panées, surimi, mangue, avocat, wakame."
+    },
+    "image": "assets/menu/salade_gambas.jpg"
+  },
+  {
+    "id": "m_22",
+    "category": "mains",
+    "badge": "popular",
+    "price": 59,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Laitue, concombre, poulet, mangue, surimi, avocat, wakame",
+    "name": {
+      "fr": "Salade Chicken",
+      "en": "Salad Chicken",
+      "ar": "سلطة Chicken"
+    },
+    "desc": {
+      "fr": "Laitue, concombre, poulet, mangue, surimi, avocat, wakame",
+      "en": "Fresh specialty crafted to order: Laitue, concombre, poulet, mangue, surimi, avocat, wakame.",
+      "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, poulet, mangue, surimi, avocat, wakame."
+    },
+    "image": "assets/menu/salade_chicken.jpg"
+  },
+  {
+    "id": "m_23",
+    "category": "mains",
+    "badge": "popular",
+    "price": 52,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Laitue, concombre, calamar, surimi, mangue, avocat, wakame",
+    "name": {
+      "fr": "Salade Ika",
+      "en": "Salad Ika",
+      "ar": "سلطة Ika"
+    },
+    "desc": {
+      "fr": "Laitue, concombre, calamar, surimi, mangue, avocat, wakame",
+      "en": "Fresh specialty crafted to order: Laitue, concombre, calamar, surimi, mangue, avocat, wakame.",
+      "ar": "طبق طازج ومعد عند الطلب: Laitue, concombre, calamar, surimi, mangue, avocat, wakame."
+    },
+    "image": "assets/menu/salade_ika.jpg"
+  },
+  {
+    "id": "m_24",
+    "category": "mains",
+    "badge": "popular",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Riz, légumes, 6 pièces nems crevettes",
+    "name": {
+      "fr": "Nems Crevette",
+      "en": "Spring Rolls Shrimp",
+      "ar": "سبرينغ رول (نيمس) جمبري"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 6 pièces nems crevettes",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces nems crevettes.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces nems crevettes."
+    },
+    "image": "assets/menu/nems_crevette.jpg"
+  },
+  {
+    "id": "m_25",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Riz , légumes,6pc nems",
+    "name": {
+      "fr": "Nems boeuf",
+      "en": "Spring Rolls Beef",
+      "ar": "سبرينغ رول (نيمس) boeuf"
+    },
+    "desc": {
+      "fr": "Riz , légumes,6pc nems",
+      "en": "Fresh specialty crafted to order: Riz , légumes,6pc nems.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz , légumes,6pc nems."
+    },
+    "image": "assets/menu/nems_boeuf.jpg"
+  },
+  {
+    "id": "m_26",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Riz, légumes, 6 pièces nems poulet",
+    "name": {
+      "fr": "Nems Poulet",
+      "en": "Spring Rolls Chicken",
+      "ar": "سبرينغ رول (نيمس) دجاج"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 6 pièces nems poulet",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces nems poulet.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces nems poulet."
+    },
+    "image": "assets/menu/nems_poulet.jpg"
+  },
+  {
+    "id": "m_27",
+    "category": "mains",
+    "badge": "popular",
+    "price": 52,
+    "calories": "520 kcal",
+    "allergens": "Lait (Lactose), Gluten",
+    "ingredients": "Riz, légumes, 6 pièces nems fromage",
+    "name": {
+      "fr": "Nems Fromage",
+      "en": "Spring Rolls Cheese",
+      "ar": "سبرينغ رول (نيمس) جبن"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 6 pièces nems fromage",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces nems fromage.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces nems fromage."
+    },
+    "image": "assets/menu/nems_fromage.jpg"
+  },
+  {
+    "id": "m_28",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 72,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crevette, mangue, avocat, cheese",
+    "name": {
+      "fr": "Rouleau Mangue Crevette",
+      "en": "Fresh Roll Mango Shrimp",
+      "ar": "لفائف طازجة مانجو جمبري"
+    },
+    "desc": {
+      "fr": "Crevette, mangue, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Crevette, mangue, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette, mangue, avocat, cheese."
+    },
+    "image": "assets/menu/rouleau_mangue_crevette.jpg"
+  },
+  {
+    "id": "m_29",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 72,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crabe, surimi, avocat, cheese",
+    "name": {
+      "fr": "Rouleau Crabe",
+      "en": "Fresh Roll Crab",
+      "ar": "لفائف طازجة سلطعون (كابوريا)"
+    },
+    "desc": {
+      "fr": "Crabe, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Crabe, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Crabe, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/rouleau_crabe.jpg"
+  },
+  {
+    "id": "m_30",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 72,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crevette, saumon, avocat, cheese",
+    "name": {
+      "fr": "Rouleau Saumon Crevette",
+      "en": "Fresh Roll Salmon Shrimp",
+      "ar": "لفائف طازجة سلمون جمبري"
+    },
+    "desc": {
+      "fr": "Crevette, saumon, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Crevette, saumon, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette, saumon, avocat, cheese."
+    },
+    "image": "assets/menu/rouleau_saumon_crevette.jpg"
+  },
+  {
+    "id": "m_31",
+    "category": "mains",
+    "badge": "chef",
+    "price": 52,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Crevettes, saumon, calamar, surimi, poulpe, wakame",
+    "name": {
+      "fr": "Soupe Royale",
+      "en": "Soup Royale",
+      "ar": "شوربة Royale"
+    },
+    "desc": {
+      "fr": "Crevettes, saumon, calamar, surimi, poulpe, wakame",
+      "en": "Fresh specialty crafted to order: Crevettes, saumon, calamar, surimi, poulpe, wakame.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevettes, saumon, calamar, surimi, poulpe, wakame."
+    },
+    "image": "assets/menu/soupe_royale.jpg"
+  },
+  {
+    "id": "m_32",
+    "category": "mains",
+    "badge": "popular",
+    "price": 52,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Poulet, champignon, lait de coco",
+    "name": {
+      "fr": "Soupe Tom Kha Kai",
+      "en": "Soup Tom Kha Kai",
+      "ar": "شوربة Tom Kha Kai"
+    },
+    "desc": {
+      "fr": "Poulet, champignon, lait de coco",
+      "en": "Fresh specialty crafted to order: Poulet, champignon, lait de coco.",
+      "ar": "طبق طازج ومعد عند الطلب: Poulet, champignon, lait de coco."
+    },
+    "image": "assets/menu/soupe_tom_kha_kai.jpg"
+  },
+  {
+    "id": "m_33",
+    "category": "mains",
+    "badge": "popular",
+    "price": 45,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Crevettes, saumon, calamar, wakame, légumes",
+    "name": {
+      "fr": "Soupe Poissons",
+      "en": "Soup Poissons",
+      "ar": "شوربة Poissons"
+    },
+    "desc": {
+      "fr": "Crevettes, saumon, calamar, wakame, légumes",
+      "en": "Fresh specialty crafted to order: Crevettes, saumon, calamar, wakame, légumes.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevettes, saumon, calamar, wakame, légumes."
+    },
+    "image": "assets/menu/soupe_poissons.jpg"
+  },
+  {
+    "id": "m_34",
+    "category": "mains",
+    "badge": "popular",
+    "price": 78,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Crevettes, calamar, légumes, les nouilles",
+    "name": {
+      "fr": "Nouilles Crevettes Calamars",
+      "en": "Noodles Shrimps Calamars",
+      "ar": "نودلز جمبري Calamars"
+    },
+    "desc": {
+      "fr": "Crevettes, calamar, légumes, les nouilles",
+      "en": "Fresh specialty crafted to order: Crevettes, calamar, légumes, les nouilles.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevettes, calamar, légumes, les nouilles."
+    },
+    "image": "assets/menu/nouilles_crevettes_calamars.jpg"
+  },
+  {
+    "id": "m_35",
+    "category": "mains",
+    "badge": "popular",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "BÅuf, légumes, les nouilles",
+    "name": {
+      "fr": "Nouilles BÅuf",
+      "en": "Noodles BÅuf",
+      "ar": "نودلز BÅuf"
+    },
+    "desc": {
+      "fr": "BÅuf, légumes, les nouilles",
+      "en": "Fresh specialty crafted to order: BÅuf, légumes, les nouilles.",
+      "ar": "طبق طازج ومعد عند الطلب: BÅuf, légumes, les nouilles."
+    },
+    "image": "assets/menu/nouilles_b_uf.jpg"
+  },
+  {
+    "id": "m_36",
+    "category": "mains",
+    "badge": "popular",
+    "price": 78,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Crevettes, calamar, riz cantonais",
+    "name": {
+      "fr": "Riz Crevette Calamar",
+      "en": "Rice Shrimp Calamar",
+      "ar": "أرز جمبري Calamar"
+    },
+    "desc": {
+      "fr": "Crevettes, calamar, riz cantonais",
+      "en": "Fresh specialty crafted to order: Crevettes, calamar, riz cantonais.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevettes, calamar, riz cantonais."
+    },
+    "image": "assets/menu/riz_crevette_calamar.jpg"
+  },
+  {
+    "id": "m_37",
+    "category": "mains",
+    "badge": "popular",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Boeuf, riz cantonais",
+    "name": {
+      "fr": "Riz Boeuf",
+      "en": "Rice Beef",
+      "ar": "أرز لحم بقري"
+    },
+    "desc": {
+      "fr": "Boeuf, riz cantonais",
+      "en": "Fresh specialty crafted to order: Boeuf, riz cantonais.",
+      "ar": "طبق طازج ومعد عند الطلب: Boeuf, riz cantonais."
+    },
+    "image": "assets/menu/riz_boeuf.jpg"
+  },
+  {
+    "id": "m_38",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Poulet, riz cantonais",
+    "name": {
+      "fr": "Riz Poulet",
+      "en": "Rice Chicken",
+      "ar": "أرز دجاج"
+    },
+    "desc": {
+      "fr": "Poulet, riz cantonais",
+      "en": "Fresh specialty crafted to order: Poulet, riz cantonais.",
+      "ar": "طبق طازج ومعد عند الطلب: Poulet, riz cantonais."
+    },
+    "image": "assets/menu/riz_poulet.jpg"
+  },
+  {
+    "id": "m_39",
+    "category": "mains",
+    "badge": "popular",
+    "price": 84,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Riz, légumes, brochette de saumon",
+    "name": {
+      "fr": "Brochette Saumon",
+      "en": "Skewers Salmon",
+      "ar": "بروشيت (سفود) سلمون"
+    },
+    "desc": {
+      "fr": "Riz, légumes, brochette de saumon",
+      "en": "Fresh specialty crafted to order: Riz, légumes, brochette de saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, brochette de saumon."
+    },
+    "image": "assets/menu/brochette_saumon.jpg"
+  },
+  {
+    "id": "m_40",
+    "category": "mains",
+    "badge": "popular",
+    "price": 78,
+    "calories": "520 kcal",
+    "allergens": "Lait (Lactose), Gluten",
+    "ingredients": "Riz, légumes, bÅuf fromage",
+    "name": {
+      "fr": "Brochette BÅuf Fromage",
+      "en": "Skewers BÅuf Cheese",
+      "ar": "بروشيت لحم بقري بالجبن"
+    },
+    "desc": {
+      "fr": "Riz, légumes, bÅuf fromage",
+      "en": "Fresh specialty crafted to order: Riz, légumes, bÅuf fromage.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, bÅuf fromage."
+    },
+    "image": "assets/menu/brochette_b_uf_fromage.jpg"
+  },
+  {
+    "id": "m_41",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Riz, légumes, brochette de poulet",
+    "name": {
+      "fr": "Brochette De Poulet",
+      "en": "Skewers De Chicken",
+      "ar": "بروشيت (سفود) De دجاج"
+    },
+    "desc": {
+      "fr": "Riz, légumes, brochette de poulet",
+      "en": "Fresh specialty crafted to order: Riz, légumes, brochette de poulet.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, brochette de poulet."
+    },
+    "image": "assets/menu/brochette_de_poulet.jpg"
+  },
+  {
+    "id": "m_42",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Riz, légumes, boulette de poulet",
+    "name": {
+      "fr": "Boulette De Poulet",
+      "en": "Meatballs De Chicken",
+      "ar": "كرات De دجاج"
+    },
+    "desc": {
+      "fr": "Riz, légumes, boulette de poulet",
+      "en": "Fresh specialty crafted to order: Riz, légumes, boulette de poulet.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, boulette de poulet."
+    },
+    "image": "assets/menu/boulette_de_poulet.jpg"
+  },
+  {
+    "id": "m_43",
+    "category": "mains",
+    "badge": "popular",
+    "price": 84,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Riz, crevettes, calamar, poivrons, onion, maà¯s, champignon",
+    "name": {
+      "fr": "Wok Crevettes Calamars",
+      "en": "Wok Shrimps Calamars",
+      "ar": "ووك جمبري Calamars"
+    },
+    "desc": {
+      "fr": "Riz, crevettes, calamar, poivrons, onion, maà¯s, champignon",
+      "en": "Fresh specialty crafted to order: Riz, crevettes, calamar, poivrons, onion, maà¯s, champignon.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, crevettes, calamar, poivrons, onion, maà¯s, champignon."
+    },
+    "image": "assets/menu/wok_crevettes_calamars.jpg"
+  },
+  {
+    "id": "m_44",
+    "category": "mains",
+    "badge": "popular",
+    "price": 78,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Riz, poulet, poivrons, onion, maà¯s, champignon, ananas",
+    "name": {
+      "fr": "Wok Poulet Ananas",
+      "en": "Wok Chicken Ananas",
+      "ar": "ووك دجاج Ananas"
+    },
+    "desc": {
+      "fr": "Riz, poulet, poivrons, onion, maà¯s, champignon, ananas",
+      "en": "Fresh specialty crafted to order: Riz, poulet, poivrons, onion, maà¯s, champignon, ananas.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, poulet, poivrons, onion, maà¯s, champignon, ananas."
+    },
+    "image": "assets/menu/wok_poulet_ananas.jpg"
+  },
+  {
+    "id": "m_45",
+    "category": "mains",
+    "badge": "popular",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Riz, bÅuf, poivrons, onion, maà¯s, champignon",
+    "name": {
+      "fr": "Wok BÅuf",
+      "en": "Wok BÅuf",
+      "ar": "ووك BÅuf"
+    },
+    "desc": {
+      "fr": "Riz, bÅuf, poivrons, onion, maà¯s, champignon",
+      "en": "Fresh specialty crafted to order: Riz, bÅuf, poivrons, onion, maà¯s, champignon.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, bÅuf, poivrons, onion, maà¯s, champignon."
+    },
+    "image": "assets/menu/wok_b_uf.jpg"
+  },
+  {
+    "id": "m_46",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 78,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, légumes, 6 pièces crevettes aux amandes",
+    "name": {
+      "fr": "Crevettes Aux Amandes",
+      "en": "Shrimps Aux Amandes",
+      "ar": "جمبري Aux Amandes"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 6 pièces crevettes aux amandes",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces crevettes aux amandes.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces crevettes aux amandes."
+    },
+    "image": "assets/menu/crevettes_aux_amandes.jpg"
+  },
+  {
+    "id": "m_47",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 78,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, poivrons, poulet pané, sauce aigre doux",
+    "name": {
+      "fr": "Poulet Aigre Doux",
+      "en": "Chicken Aigre Doux",
+      "ar": "دجاج Aigre Doux"
+    },
+    "desc": {
+      "fr": "Riz, poivrons, poulet pané, sauce aigre doux",
+      "en": "Fresh specialty crafted to order: Riz, poivrons, poulet pané, sauce aigre doux.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, poivrons, poulet pané, sauce aigre doux."
+    },
+    "image": "assets/menu/poulet_aigre_doux.jpg"
+  },
+  {
+    "id": "m_48",
+    "category": "mains",
+    "badge": "popular",
+    "price": 78,
+    "calories": "520 kcal",
+    "allergens": "Lait (Lactose), Gluten",
+    "ingredients": "Riz, légumes, 6 pièces fromage pané",
+    "name": {
+      "fr": "Fromage Pané",
+      "en": "Cheese Crispy Tempura",
+      "ar": "جبن مقرمش بانيه"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 6 pièces fromage pané",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces fromage pané.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces fromage pané."
+    },
+    "image": "assets/menu/fromage_pan.jpg"
+  },
+  {
+    "id": "m_49",
+    "category": "mains",
+    "badge": "popular",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Riz, légumes, 6 pièces crevettes panées",
+    "name": {
+      "fr": "Crevette Panée",
+      "en": "Shrimp Crispy Tempura",
+      "ar": "جمبري مقرمش بانيه"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 6 pièces crevettes panées",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 6 pièces crevettes panées.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 6 pièces crevettes panées."
+    },
+    "image": "assets/menu/crevette_pan_e.jpg"
+  },
+  {
+    "id": "m_50",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Riz, légumes, 3 pièces croquettes de saumon",
+    "name": {
+      "fr": "Croquettes Saumon",
+      "en": "Croquettes Salmon",
+      "ar": "Croquettes سلمون"
+    },
+    "desc": {
+      "fr": "Riz, légumes, 3 pièces croquettes de saumon",
+      "en": "Fresh specialty crafted to order: Riz, légumes, 3 pièces croquettes de saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, 3 pièces croquettes de saumon."
+    },
+    "image": "assets/menu/croquettes_saumon.jpg"
+  },
+  {
+    "id": "m_51",
+    "category": "mains",
+    "badge": "popular",
+    "price": 84,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Riz, légumes, saumon grillé",
+    "name": {
+      "fr": "Saumon Grillé",
+      "en": "Salmon Grilled",
+      "ar": "سلمون مشوي"
+    },
+    "desc": {
+      "fr": "Riz, légumes, saumon grillé",
+      "en": "Fresh specialty crafted to order: Riz, légumes, saumon grillé.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, légumes, saumon grillé."
+    },
+    "image": "assets/menu/saumon_grill.jpg"
+  },
+  {
+    "id": "m_52",
+    "category": "mains",
+    "badge": "popular",
+    "price": 78,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "4 pcs crevettes, avocat, mangue, maà¯s, onion crispy, riz, carotte",
+    "name": {
+      "fr": "Poke Bowl Crevettes",
+      "en": "Poke Bowl Shrimps",
+      "ar": "Poke Bowl جمبري"
+    },
+    "desc": {
+      "fr": "4 pcs crevettes, avocat, mangue, maà¯s, onion crispy, riz, carotte",
+      "en": "Fresh specialty crafted to order: 4 pcs crevettes, avocat, mangue, maà¯s, onion crispy, riz, carotte.",
+      "ar": "طبق طازج ومعد عند الطلب: 4 pcs crevettes, avocat, mangue, maà¯s, onion crispy, riz, carotte."
+    },
+    "image": "assets/menu/crevette.jpg"
+  },
+  {
+    "id": "m_53",
+    "category": "mains",
+    "badge": "popular",
+    "price": 72,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "Saumon, avocat, mangue, maà¯s, riz, concombre, poivrons",
+    "name": {
+      "fr": "Poke Bowl Saumon",
+      "en": "Poke Bowl Salmon",
+      "ar": "Poke Bowl سلمون"
+    },
+    "desc": {
+      "fr": "Saumon, avocat, mangue, maà¯s, riz, concombre, poivrons",
+      "en": "Fresh specialty crafted to order: Saumon, avocat, mangue, maà¯s, riz, concombre, poivrons.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, mangue, maà¯s, riz, concombre, poivrons."
+    },
+    "image": "assets/menu/saumon.jpg"
+  },
+  {
+    "id": "m_54",
+    "category": "mains",
+    "badge": "popular",
+    "price": 65,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "8pcs de saumon, sésame",
+    "name": {
+      "fr": "Tataki Saumon",
+      "en": "Tataki Salmon",
+      "ar": "Tataki سلمون"
+    },
+    "desc": {
+      "fr": "8pcs de saumon, sésame",
+      "en": "Fresh specialty crafted to order: 8pcs de saumon, sésame.",
+      "ar": "طبق طازج ومعد عند الطلب: 8pcs de saumon, sésame."
+    },
+    "image": "assets/menu/tataki_saumon.jpg"
+  },
+  {
+    "id": "m_55",
+    "category": "mains",
+    "badge": "popular",
+    "price": 59,
+    "calories": "520 kcal",
+    "allergens": "Poissons, Crustacés, Soja, Sésame",
+    "ingredients": "8pcs de saumon",
+    "name": {
+      "fr": "Carpaccio Saumon",
+      "en": "Carpaccio Salmon",
+      "ar": "Carpaccio سلمون"
+    },
+    "desc": {
+      "fr": "8pcs de saumon",
+      "en": "Fresh specialty crafted to order: 8pcs de saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: 8pcs de saumon."
+    },
+    "image": "assets/menu/carpaccio_saumon.jpg"
+  },
+  {
+    "id": "m_56",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, avocat, riz, cheese, tobiko",
+    "name": {
+      "fr": "Temaki Saumon Avocat",
+      "en": "Temaki Salmon Avocado",
+      "ar": "Temaki سلمون أفوكادو"
+    },
+    "desc": {
+      "fr": "Saumon, avocat, riz, cheese, tobiko",
+      "en": "Fresh specialty crafted to order: Saumon, avocat, riz, cheese, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, riz, cheese, tobiko."
+    },
+    "image": "assets/menu/temaki_saumon_avocat.jpg"
+  },
+  {
+    "id": "m_57",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crabe, avocat, riz, cheese, tobiko",
+    "name": {
+      "fr": "Temaki Crabe Avocat",
+      "en": "Temaki Crab Avocado",
+      "ar": "Temaki سلطعون (كابوريا) أفوكادو"
+    },
+    "desc": {
+      "fr": "Crabe, avocat, riz, cheese, tobiko",
+      "en": "Fresh specialty crafted to order: Crabe, avocat, riz, cheese, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Crabe, avocat, riz, cheese, tobiko."
+    },
+    "image": "assets/menu/temaki_crabe_avocat.jpg"
+  },
+  {
+    "id": "m_58",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crevette, avocat, riz, cheese, tobiko",
+    "name": {
+      "fr": "Temaki Crevette Avocat",
+      "en": "Temaki Shrimp Avocado",
+      "ar": "Temaki جمبري أفوكادو"
+    },
+    "desc": {
+      "fr": "Crevette, avocat, riz, cheese, tobiko",
+      "en": "Fresh specialty crafted to order: Crevette, avocat, riz, cheese, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, riz, cheese, tobiko."
+    },
+    "image": "assets/menu/temaki_crevette_avocat.jpg"
+  },
+  {
+    "id": "m_59",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, avocat, crevette, thon, crabe, surimi, riz, cheese, tobiko",
+    "name": {
+      "fr": "Temaki Mixte Avocat",
+      "en": "Temaki Mixte Avocado",
+      "ar": "Temaki Mixte أفوكادو"
+    },
+    "desc": {
+      "fr": "Saumon, avocat, crevette, thon, crabe, surimi, riz, cheese, tobiko",
+      "en": "Fresh specialty crafted to order: Saumon, avocat, crevette, thon, crabe, surimi, riz, cheese, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, crevette, thon, crabe, surimi, riz, cheese, tobiko."
+    },
+    "image": "assets/menu/temaki_mixte_avocat.jpg"
+  },
+  {
+    "id": "m_60",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 32,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Surimi, avocat, riz, cheese, tobiko",
+    "name": {
+      "fr": "Temaki Surimi Avocat",
+      "en": "Temaki Surimi Avocado",
+      "ar": "Temaki Surimi أفوكادو"
+    },
+    "desc": {
+      "fr": "Surimi, avocat, riz, cheese, tobiko",
+      "en": "Fresh specialty crafted to order: Surimi, avocat, riz, cheese, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, riz, cheese, tobiko."
+    },
+    "image": "assets/menu/temaki_surimi_avocat.jpg"
+  },
+  {
+    "id": "m_61",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 59,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Ebi, mangue, crabe, saumon, cheese",
+    "name": {
+      "fr": "Futomaki Ebi",
+      "en": "Futomaki Ebi",
+      "ar": "Futomaki Ebi"
+    },
+    "desc": {
+      "fr": "Ebi, mangue, crabe, saumon, cheese",
+      "en": "Fresh specialty crafted to order: Ebi, mangue, crabe, saumon, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Ebi, mangue, crabe, saumon, cheese."
+    },
+    "image": "assets/menu/futomaki_ebi.jpg"
+  },
+  {
+    "id": "m_62",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 59,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crevette, avocat, saumon, cheese",
+    "name": {
+      "fr": "Futomaki Saumon Crevette",
+      "en": "Futomaki Salmon Shrimp",
+      "ar": "Futomaki سلمون جمبري"
+    },
+    "desc": {
+      "fr": "Crevette, avocat, saumon, cheese",
+      "en": "Fresh specialty crafted to order: Crevette, avocat, saumon, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, saumon, cheese."
+    },
+    "image": "assets/menu/futomaki_saumon_crevette.jpg"
+  },
+  {
+    "id": "m_63",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 45,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, riz, crevette",
+    "name": {
+      "fr": "Umi Gunkan Crevette",
+      "en": "Umi Gunkan Shrimp",
+      "ar": "Umi Gunkan جمبري"
+    },
+    "desc": {
+      "fr": "Saumon, riz, crevette",
+      "en": "Fresh specialty crafted to order: Saumon, riz, crevette.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, riz, crevette."
+    },
+    "image": "assets/menu/umi_gunkan_crevette.jpg"
+  },
+  {
+    "id": "m_64",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 45,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, riz, saumon au cebollite",
+    "name": {
+      "fr": "Umi Gunkan Saumon",
+      "en": "Umi Gunkan Salmon",
+      "ar": "Umi Gunkan سلمون"
+    },
+    "desc": {
+      "fr": "Saumon, riz, saumon au cebollite",
+      "en": "Fresh specialty crafted to order: Saumon, riz, saumon au cebollite.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, riz, saumon au cebollite."
+    },
+    "image": "assets/menu/umi_gunkan_saumon.jpg"
+  },
+  {
+    "id": "m_65",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, riz, cheese",
+    "name": {
+      "fr": "Umi Gunkan Cheese",
+      "en": "Umi Gunkan Cheese",
+      "ar": "Umi Gunkan Cheese"
+    },
+    "desc": {
+      "fr": "Saumon, riz, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, riz, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, riz, cheese."
+    },
+    "image": "assets/menu/umi_gunkan_cheese.jpg"
+  },
+  {
+    "id": "m_66",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 59,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Surimi, avocat, cheese, tobiko",
+    "name": {
+      "fr": "Volcano Roll Cheese",
+      "en": "Volcano Roll Cheese",
+      "ar": "Volcano Roll Cheese"
+    },
+    "desc": {
+      "fr": "Surimi, avocat, cheese, tobiko",
+      "en": "Fresh specialty crafted to order: Surimi, avocat, cheese, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, cheese, tobiko."
+    },
+    "image": "assets/menu/volcano_roll_cheese.jpg"
+  },
+  {
+    "id": "m_67",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 52,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Surimi, avocat, cheese, crevette, tobiko",
+    "name": {
+      "fr": "Volcano Roll Crevette",
+      "en": "Volcano Roll Shrimp",
+      "ar": "Volcano Roll جمبري"
+    },
+    "desc": {
+      "fr": "Surimi, avocat, cheese, crevette, tobiko",
+      "en": "Fresh specialty crafted to order: Surimi, avocat, cheese, crevette, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, cheese, crevette, tobiko."
+    },
+    "image": "assets/menu/volcano_roll_crevette.jpg"
+  },
+  {
+    "id": "m_68",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 52,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Surimi, avocat, cheese, saumon, tobiko",
+    "name": {
+      "fr": "Volcano Roll Saumon",
+      "en": "Volcano Roll Salmon",
+      "ar": "Volcano Roll سلمون"
+    },
+    "desc": {
+      "fr": "Surimi, avocat, cheese, saumon, tobiko",
+      "en": "Fresh specialty crafted to order: Surimi, avocat, cheese, saumon, tobiko.",
+      "ar": "طبق طازج ومعد عند الطلب: Surimi, avocat, cheese, saumon, tobiko."
+    },
+    "image": "assets/menu/volcano_roll_saumon.jpg"
+  },
+  {
+    "id": "m_69",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Shichimi, saumon, avocat",
+    "name": {
+      "fr": "California Shichimi",
+      "en": "California Shichimi",
+      "ar": "California Shichimi"
+    },
+    "desc": {
+      "fr": "Shichimi, saumon, avocat",
+      "en": "Fresh specialty crafted to order: Shichimi, saumon, avocat.",
+      "ar": "طبق طازج ومعد عند الطلب: Shichimi, saumon, avocat."
+    },
+    "image": "assets/menu/california_shichimi.jpg"
+  },
+  {
+    "id": "m_70",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Tobiko noir, surimi, avocat, cheese",
+    "name": {
+      "fr": "California Black",
+      "en": "California Black",
+      "ar": "California Black"
+    },
+    "desc": {
+      "fr": "Tobiko noir, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Tobiko noir, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Tobiko noir, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/california_black.jpg"
+  },
+  {
+    "id": "m_71",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Poulet pané, cheese, avocat",
+    "name": {
+      "fr": "California Pavot Noir",
+      "en": "California Pavot Noir",
+      "ar": "California Pavot Noir"
+    },
+    "desc": {
+      "fr": "Poulet pané, cheese, avocat",
+      "en": "Fresh specialty crafted to order: Poulet pané, cheese, avocat.",
+      "ar": "طبق طازج ومعد عند الطلب: Poulet pané, cheese, avocat."
+    },
+    "image": "assets/menu/california_pavot_noir.jpg"
+  },
+  {
+    "id": "m_72",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Sesame, saumon, avocat",
+    "name": {
+      "fr": "California Sesame",
+      "en": "California Sesame",
+      "ar": "California Sesame"
+    },
+    "desc": {
+      "fr": "Sesame, saumon, avocat",
+      "en": "Fresh specialty crafted to order: Sesame, saumon, avocat.",
+      "ar": "طبق طازج ومعد عند الطلب: Sesame, saumon, avocat."
+    },
+    "image": "assets/menu/california_sesame.jpg"
+  },
+  {
+    "id": "m_73",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Tobiko rouge, crevette, avocat, cheese",
+    "name": {
+      "fr": "California Majestic",
+      "en": "California Majestic",
+      "ar": "California Majestic"
+    },
+    "desc": {
+      "fr": "Tobiko rouge, crevette, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Tobiko rouge, crevette, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Tobiko rouge, crevette, avocat, cheese."
+    },
+    "image": "assets/menu/california_majestic.jpg"
+  },
+  {
+    "id": "m_74",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Tobiko vert, saumon pané, avocat, cheese",
+    "name": {
+      "fr": "California Wasabi",
+      "en": "California Wasabi",
+      "ar": "California Wasabi"
+    },
+    "desc": {
+      "fr": "Tobiko vert, saumon pané, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Tobiko vert, saumon pané, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Tobiko vert, saumon pané, avocat, cheese."
+    },
+    "image": "assets/menu/california_wasabi.jpg"
+  },
+  {
+    "id": "m_75",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Tobiko orange, saumon, avocat, surimi, cheese",
+    "name": {
+      "fr": "California Tobiko",
+      "en": "California Tobiko",
+      "ar": "California Tobiko"
+    },
+    "desc": {
+      "fr": "Tobiko orange, saumon, avocat, surimi, cheese",
+      "en": "Fresh specialty crafted to order: Tobiko orange, saumon, avocat, surimi, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Tobiko orange, saumon, avocat, surimi, cheese."
+    },
+    "image": "assets/menu/california_tobiko.jpg"
+  },
+  {
+    "id": "m_76",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 45,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, avocat, cheese",
+    "name": {
+      "fr": "Saumon Flash",
+      "en": "Salmon Flash",
+      "ar": "سلمون Flash"
+    },
+    "desc": {
+      "fr": "Saumon, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, avocat, cheese."
+    },
+    "image": "assets/menu/saumon_flash.jpg"
+  },
+  {
+    "id": "m_77",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 45,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crevette, avocat, surimi, cheese",
+    "name": {
+      "fr": "Crunchy Roll",
+      "en": "Crunchy Roll",
+      "ar": "Crunchy Roll"
+    },
+    "desc": {
+      "fr": "Crevette, avocat, surimi, cheese",
+      "en": "Fresh specialty crafted to order: Crevette, avocat, surimi, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, surimi, cheese."
+    },
+    "image": "assets/menu/crunchy_roll.jpg"
+  },
+  {
+    "id": "m_78",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 45,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Crevette, avocat, cheese",
+    "name": {
+      "fr": "Ebi Tempora",
+      "en": "Ebi Tempora",
+      "ar": "Ebi Tempora"
+    },
+    "desc": {
+      "fr": "Crevette, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Crevette, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Crevette, avocat, cheese."
+    },
+    "image": "assets/menu/ebi_tempora.jpg"
+  },
+  {
+    "id": "m_79",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 45,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, surimi, avocat, cheese",
+    "name": {
+      "fr": "Pizza Saumon Crispy",
+      "en": "Pizza Salmon Crispy",
+      "ar": "Pizza سلمون Crispy"
+    },
+    "desc": {
+      "fr": "Saumon, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/pizza_saumon1.jpg"
+  },
+  {
+    "id": "m_80",
+    "category": "mains",
+    "badge": "popular",
+    "price": 45,
+    "calories": "520 kcal",
+    "allergens": "Gluten, Soja, Sésame",
+    "ingredients": "Saumon, surimi, avocat, cheese",
+    "name": {
+      "fr": "Aromaki Panée",
+      "en": "Aromaki Crispy Tempura",
+      "ar": "Aromaki مقرمش بانيه"
+    },
+    "desc": {
+      "fr": "Saumon, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/aromaki_pan_e.jpg"
+  },
+  {
+    "id": "m_81",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, unagi",
+    "name": {
+      "fr": "Nigiri Unagi",
+      "en": "Nigiri Unagi",
+      "ar": "Nigiri Unagi"
+    },
+    "desc": {
+      "fr": "Riz, unagi",
+      "en": "Fresh specialty crafted to order: Riz, unagi.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, unagi."
+    },
+    "image": "assets/menu/nigiri_unagi.jpg"
+  },
+  {
+    "id": "m_82",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 32,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, saumon",
+    "name": {
+      "fr": "Nigiri Saumon",
+      "en": "Nigiri Salmon",
+      "ar": "نيغيري سلمون طازج"
+    },
+    "desc": {
+      "fr": "Riz, saumon",
+      "en": "Fresh specialty crafted to order: Riz, saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, saumon."
+    },
+    "image": "assets/menu/nigiri_saumon.jpg"
+  },
+  {
+    "id": "m_83",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 32,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, crevette",
+    "name": {
+      "fr": "Nigiri Crevette",
+      "en": "Nigiri Shrimp",
+      "ar": "Nigiri جمبري"
+    },
+    "desc": {
+      "fr": "Riz, crevette",
+      "en": "Fresh specialty crafted to order: Riz, crevette.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, crevette."
+    },
+    "image": "assets/menu/nigiri_crevette.jpg"
+  },
+  {
+    "id": "m_84",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 29,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, surimi",
+    "name": {
+      "fr": "Nigiri Surimi",
+      "en": "Nigiri Surimi",
+      "ar": "Nigiri Surimi"
+    },
+    "desc": {
+      "fr": "Riz, surimi",
+      "en": "Fresh specialty crafted to order: Riz, surimi.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, surimi."
+    },
+    "image": "assets/menu/nigiri_surimi.jpg"
+  },
+  {
+    "id": "m_85",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, surimi, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Dream",
+      "en": "Special Roll Dream",
+      "ar": "Special Roll Dream"
+    },
+    "desc": {
+      "fr": "Saumon, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_dream.jpg"
+  },
+  {
+    "id": "m_86",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, crevette, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Philadelphie",
+      "en": "Special Roll Philadelphie",
+      "ar": "Special Roll Philadelphie"
+    },
+    "desc": {
+      "fr": "Saumon, crevette, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, crevette, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, crevette, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_philadelphie.jpg"
+  },
+  {
+    "id": "m_87",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Mangue, surimi, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Mango",
+      "en": "Special Roll Mango",
+      "ar": "مانغو رول طازج"
+    },
+    "desc": {
+      "fr": "Mangue, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Mangue, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Mangue, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_mango.jpg"
+  },
+  {
+    "id": "m_88",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Saumon, surimi, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Oslo",
+      "en": "Special Roll Oslo",
+      "ar": "أوسلو رول بالسلمون"
+    },
+    "desc": {
+      "fr": "Saumon, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Saumon, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Saumon, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_oslo.jpg"
+  },
+  {
+    "id": "m_89",
+    "category": "sushi",
+    "badge": "chef",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Unagi, surimi, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Dragon",
+      "en": "Special Roll Dragon",
+      "ar": "دراغون رول فاخر"
+    },
+    "desc": {
+      "fr": "Unagi, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Unagi, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Unagi, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_dragon.jpg"
+  },
+  {
+    "id": "m_90",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Ebi sushi, crevette, surimi, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Tigre",
+      "en": "Special Roll Tigre",
+      "ar": "تايغر رول"
+    },
+    "desc": {
+      "fr": "Ebi sushi, crevette, surimi, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Ebi sushi, crevette, surimi, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Ebi sushi, crevette, surimi, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_tigre.jpg"
+  },
+  {
+    "id": "m_91",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 48,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Poulet pané, carotte, avocat, cheese",
+    "name": {
+      "fr": "Special Roll Tokyo",
+      "en": "Special Roll Tokyo",
+      "ar": "Special Roll Tokyo"
+    },
+    "desc": {
+      "fr": "Poulet pané, carotte, avocat, cheese",
+      "en": "Fresh specialty crafted to order: Poulet pané, carotte, avocat, cheese.",
+      "ar": "طبق طازج ومعد عند الطلب: Poulet pané, carotte, avocat, cheese."
+    },
+    "image": "assets/menu/special_roll_tokyo.jpg"
+  },
+  {
+    "id": "m_92",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 39,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, crabe, mangue",
+    "name": {
+      "fr": "Maki Crabe Mangue",
+      "en": "Maki Crab Mango",
+      "ar": "Maki سلطعون (كابوريا) مانجو"
+    },
+    "desc": {
+      "fr": "Riz, crabe, mangue",
+      "en": "Fresh specialty crafted to order: Riz, crabe, mangue.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, crabe, mangue."
+    },
+    "image": "assets/menu/maki_crabe_mangue.jpg"
+  },
+  {
+    "id": "m_93",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 35,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, saumon",
+    "name": {
+      "fr": "Maki Saumon",
+      "en": "Maki Salmon",
+      "ar": "ماكي سلمون طازج (8 قطع)"
+    },
+    "desc": {
+      "fr": "Riz, saumon",
+      "en": "Fresh specialty crafted to order: Riz, saumon.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, saumon."
+    },
+    "image": "assets/menu/maki_saumon.jpg"
+  },
+  {
+    "id": "m_94",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 35,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, crevette",
+    "name": {
+      "fr": "Maki Crevette",
+      "en": "Maki Shrimp",
+      "ar": "Maki جمبري"
+    },
+    "desc": {
+      "fr": "Riz, crevette",
+      "en": "Fresh specialty crafted to order: Riz, crevette.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, crevette."
+    },
+    "image": "assets/menu/maki_crevette.jpg"
+  },
+  {
+    "id": "m_95",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 35,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, saumon, avocat",
+    "name": {
+      "fr": "Maki Saumon Avocat",
+      "en": "Maki Salmon Avocado",
+      "ar": "ماكي سلمون طازج (8 قطع)"
+    },
+    "desc": {
+      "fr": "Riz, saumon, avocat",
+      "en": "Fresh specialty crafted to order: Riz, saumon, avocat.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, saumon, avocat."
+    },
+    "image": "assets/menu/maki_saumon_avocat.jpg"
+  },
+  {
+    "id": "m_96",
+    "category": "sushi",
+    "badge": "popular",
+    "price": 32,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, surimi",
+    "name": {
+      "fr": "Maki Surimi",
+      "en": "Maki Surimi",
+      "ar": "Maki Surimi"
+    },
+    "desc": {
+      "fr": "Riz, surimi",
+      "en": "Fresh specialty crafted to order: Riz, surimi.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, surimi."
+    },
+    "image": "assets/menu/maki_surimi.jpg"
+  },
+  {
+    "id": "m_97",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 26,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, avocat",
+    "name": {
+      "fr": "Maki Avocat",
+      "en": "Maki Avocado",
+      "ar": "ماكي أفوكادو (8 قطع)"
+    },
+    "desc": {
+      "fr": "Riz, avocat",
+      "en": "Fresh specialty crafted to order: Riz, avocat.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, avocat."
+    },
+    "image": "assets/menu/maki_avocat.jpg"
+  },
+  {
+    "id": "m_98",
+    "category": "sushi",
+    "badge": "veg",
+    "price": 23,
+    "calories": "380 kcal",
+    "allergens": "Poissons, Soja, Sésame",
+    "ingredients": "Riz, concombre",
+    "name": {
+      "fr": "Maki Concombre",
+      "en": "Maki Cucumber",
+      "ar": "Maki خيار"
+    },
+    "desc": {
+      "fr": "Riz, concombre",
+      "en": "Fresh specialty crafted to order: Riz, concombre.",
+      "ar": "طبق طازج ومعد عند الطلب: Riz, concombre."
+    },
+    "image": "assets/menu/maki_concombre.jpg"
+  },
+  {
+    "id": "caf_1",
+    "category": "cafe",
+    "badge": "popular",
+    "price": 15,
+    "calories": "5 kcal",
+    "allergens": "Aucun",
+    "ingredients": "100% Pur Arabica torréfié",
+    "name": {
+      "fr": "Expresso Italien Pur Arabica",
+      "en": "Pure Arabica Italian Espresso",
+      "ar": "إسبريسو إيطالي بيور أرابيكا"
+    },
+    "desc": {
+      "fr": "Grains Arabica sélectionnés torréfiés à l'italienne, arômes puissants et crema onctueuse.",
+      "en": "Selected Arabica beans roasted Italian style, intense aroma and rich crema.",
+      "ar": "حبوب بن أرابيكا مختارة ومحمصة على الطريقة الإيطالية مع رغوة كريمية غنية."
+    },
+    "image": "assets/hero_sushi_cafe.png"
+  },
+  {
+    "id": "caf_2",
+    "category": "cafe",
+    "badge": "chef",
+    "price": 22,
+    "calories": "160 kcal",
+    "allergens": "Lait (Lactose)",
+    "ingredients": "Double expresso, lait entier moussé, caramel beurre salé",
+    "name": {
+      "fr": "Cappuccino Arij Caramel & Mousse",
+      "en": "Arij Caramel Foam Cappuccino",
+      "ar": "كابوتشينو أريج بالكراميل والرغوة"
+    },
+    "desc": {
+      "fr": "Double dose d'expresso italien, mousse de lait onctueuse et filet de caramel beurre salé.",
+      "en": "Double espresso shot with velvety steamed milk foam and salted caramel drizzle.",
+      "ar": "جرعة مضاعفة من الإسبريسو مع رغوة حليب مخملية ولمسة كراميل مالح."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "caf_3",
+    "category": "cafe",
+    "badge": "popular",
+    "price": 15,
+    "calories": "10 kcal",
+    "allergens": "Aucun",
+    "ingredients": "Thé vert Gunpowder, menthe fraîche de saison, sucre",
+    "name": {
+      "fr": "Thé à la Menthe Marocain Traditionnel",
+      "en": "Traditional Moroccan Mint Tea",
+      "ar": "شاي مغربي أصيل بالنعناع"
+    },
+    "desc": {
+      "fr": "Thé vert infusé à la menthe fraîche parfumée servi dans la pure tradition marocaine.",
+      "en": "Authentic Moroccan green tea infused with fresh aromatic mint leaves.",
+      "ar": "أتاي مغربي منعنع ومحضر بأوراق النعناع الطازجة على الطريقة التقليدية."
+    },
+    "image": "assets/cafe_ambiance.png"
+  },
+  {
+    "id": "caf_4",
+    "category": "cafe",
+    "badge": "popular",
+    "price": 20,
+    "calories": "110 kcal",
+    "allergens": "Aucun",
+    "ingredients": "Oranges fraîches du Maroc",
+    "name": {
+      "fr": "Jus d'Orange Frais Pressé",
+      "en": "Freshly Squeezed Orange Juice",
+      "ar": "عصير برتقال طبيعي معصور"
+    },
+    "desc": {
+      "fr": "Oranges marocaines pressées à la minute sans eau ni sucre ajouté.",
+      "en": "Freshly squeezed Moroccan oranges, 100% natural with no added sugar.",
+      "ar": "عصير برتقال مغربي طبيعي 100% معصور فورياً بدون ماء أو سكر مضاف."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "caf_5",
+    "category": "cafe",
+    "badge": "chef",
+    "price": 28,
+    "calories": "145 kcal",
+    "allergens": "Aucun",
+    "ingredients": "Mangue fraîche, fruits de la passion, glace pilée",
+    "name": {
+      "fr": "Smoothie Exotique Mangue & Passion",
+      "en": "Exotic Mango & Passion Fruit Smoothie",
+      "ar": "سموذي استوائي بالمانجو والباشن فروت"
+    },
+    "desc": {
+      "fr": "Pulpe de mangue fraîche, jus de fruits de la passion et glace pilée rafraîchissante.",
+      "en": "Fresh mango puree blended with passion fruit and refreshing crushed ice.",
+      "ar": "مزيج المانجو الطازجة والباشن فروت مع الثلج المجروش المنعش."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "caf_6",
+    "category": "cafe",
+    "badge": "popular",
+    "price": 30,
+    "calories": "130 kcal",
+    "allergens": "Aucun",
+    "ingredients": "Citron vert, feuilles de menthe, purée de fraise, eau gazeuse",
+    "name": {
+      "fr": "Mojito Fraise & Menthe Fraîche",
+      "en": "Strawberry & Fresh Mint Mojito",
+      "ar": "موهيتو الفراولة والنعناع المنعش"
+    },
+    "desc": {
+      "fr": "Mocktail rafraîchissant aux fraises mixées, citron vert pressé et menthe fraîche.",
+      "en": "Refreshing mocktail with fresh strawberries, crushed lime, and garden mint.",
+      "ar": "موكتيل منعش بالفراولة الطبيعية، الليمون الحامض والنعناع الأخضر."
+    },
+    "image": "assets/cafe_ambiance.png"
+  },
+  {
+    "id": "brk_1",
+    "category": "breakfast",
+    "badge": "popular",
+    "price": 35,
+    "calories": "450 kcal",
+    "allergens": "Gluten, Lait, Œufs",
+    "ingredients": "Expresso ou café au lait, croissant au beurre frais, jus d'orange pressé",
+    "name": {
+      "fr": "Formule Café Matinal (06:30 - 11:30)",
+      "en": "Morning Express Breakfast",
+      "ar": "فطور الصباح إكسبريس (06:30 - 11:30)"
+    },
+    "desc": {
+      "fr": "Expresso Italien + Croissant croustillant pur beurre + Verre de jus d'orange pressé.",
+      "en": "Italian Espresso + Fresh Butter Croissant + Glass of freshly squeezed orange juice.",
+      "ar": "إسبريسو إيطالي + كرواسون بالزبدة + كأس عصير برتقال طبيعي."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "brk_2",
+    "category": "breakfast",
+    "badge": "chef",
+    "price": 48,
+    "calories": "580 kcal",
+    "allergens": "Gluten, Lait, Œufs, Fruits à coque",
+    "ingredients": "Thé à la menthe, œufs au plat khlii/huile d'olive, msemen, harcha, amlou, miel, fromage",
+    "name": {
+      "fr": "Formule Petit-Déjeuner Beldi Marocain",
+      "en": "Authentic Moroccan Beldi Breakfast",
+      "ar": "فطور بلدي مغربي أصيل"
+    },
+    "desc": {
+      "fr": "Thé à la menthe, 2 œufs au plat, huile d'olive d'origine, amlou, miel pur, msemen & harcha.",
+      "en": "Moroccan mint tea, fried eggs with pure olive oil, amlou, pure honey, msemen & harcha.",
+      "ar": "براد أتاي منعنع، بيض مقلي بزيت الزيتون، أملو، عسل حر، جبن، مسمن وحرشة."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "brk_3",
+    "category": "breakfast",
+    "badge": "chef",
+    "price": 55,
+    "calories": "650 kcal",
+    "allergens": "Gluten, Lait, Œufs",
+    "ingredients": "Boisson chaude, jus d'orange frais, omelette au fromage fondant, corbeille de viennoiseries, harcha, confiture artisanale",
+    "name": {
+      "fr": "Formule Fassi Complète Gourmande",
+      "en": "Complete Fassi Royal Breakfast",
+      "ar": "فطور فاسي ملكي متكامل"
+    },
+    "desc": {
+      "fr": "Boisson chaude au choix + Jus d'orange + Omelette fromage + Harcha, Msemen, Confitures & beurre.",
+      "en": "Hot beverage of choice + Orange juice + Cheese omelette + Pastries, harcha, honey & butter.",
+      "ar": "مشروب ساخن + عصير برتقال + أومليت بالجبن + مسمن وحرشة ومربى وزبدة."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "brk_4",
+    "category": "breakfast",
+    "badge": "popular",
+    "price": 25,
+    "calories": "320 kcal",
+    "allergens": "Œufs, Lait",
+    "ingredients": "Œufs frais, fromage mozzarella/gouda fondant, fines herbes",
+    "name": {
+      "fr": "Omelette Fromage & Fines Herbes",
+      "en": "Cheese & Herbs Omelette",
+      "ar": "أومليت بالجبن والأعشاب المنسمة"
+    },
+    "desc": {
+      "fr": "Omelette baveuse préparée à la minute avec fromage fondant et ciboulette.",
+      "en": "Fresh fluffy omelette made to order with melted cheese and chives.",
+      "ar": "أومليت طازجة محضرة فورياً بجبن ذائب وأعشاب طازجة."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "brk_5",
+    "category": "breakfast",
+    "badge": "popular",
+    "price": 10,
+    "calories": "240 kcal",
+    "allergens": "Gluten, Lait, Œufs",
+    "ingredients": "Farine de blé, beurre pur de tourage, chocolat noir",
+    "name": {
+      "fr": "Croissant / Pain au Chocolat Pur Beurre",
+      "en": "Pure Butter Croissant / Pain au Chocolat",
+      "ar": "كرواسون أو بان أو شوكولا بالزبدة"
+    },
+    "desc": {
+      "fr": "Viennoiserie feuilletée artisanale dorée au four chaque matin dès 06h30.",
+      "en": "Flaky artisanal pastry baked fresh every morning from 06:30 AM.",
+      "ar": "فينوازري مقرمشة وهشة مخبوزة طازجة كل صباح ابتداءً من 06:30."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "des_1",
+    "category": "desserts",
+    "badge": "chef",
+    "price": 32,
+    "calories": "240 kcal",
+    "allergens": "Lait (Lactose)",
+    "ingredients": "Riz gluant japonais, glace artisanale Vanille / Matcha / Mangue",
+    "name": {
+      "fr": "Mochi Glacé Artisanal (Duo 2 pcs)",
+      "en": "Artisanal Ice Cream Mochi (2 pcs)",
+      "ar": "موتشي ياباني مثلج (قطعتان)"
+    },
+    "desc": {
+      "fr": "Pâte de riz japonaise traditionnelle fourrée d'un cœur de glace onctueuse parfum au choix.",
+      "en": "Traditional Japanese sweet rice dough filled with rich artisanal ice cream.",
+      "ar": "حلوى الأرز اليابانية التقليدية المحشوة بآيس كريم بنكهات متعددة."
+    },
+    "image": "assets/hero_sushi_cafe.png"
+  },
+  {
+    "id": "des_2",
+    "category": "desserts",
+    "badge": "popular",
+    "price": 32,
+    "calories": "380 kcal",
+    "allergens": "Gluten, Lait, Œufs",
+    "ingredients": "Chocolat noir 70%, beurre, œufs, boule de glace vanille",
+    "name": {
+      "fr": "Fondant au Chocolat Cœur Coulant",
+      "en": "Molten Lava Chocolate Cake",
+      "ar": "فوندان الشوكولاتة الذائبة"
+    },
+    "desc": {
+      "fr": "Gâteau moelleux au chocolat noir intense avec cœur coulant chaud servi avec sa glace vanille.",
+      "en": "Warm molten chocolate cake with a gooey center served with vanilla ice cream.",
+      "ar": "كيكة الشوكولاتة الداكنة الساخنة ذات القلب الذائب مع آيس كريم فانيليا."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "des_3",
+    "category": "desserts",
+    "badge": "popular",
+    "price": 28,
+    "calories": "340 kcal",
+    "allergens": "Gluten, Lait, Œufs, Noisettes",
+    "ingredients": "Pâte à crêpe maison, Nutella crémeux, bananes fraîches en rondelles",
+    "name": {
+      "fr": "Crêpe Gourmande Nutella Banane",
+      "en": "Nutella & Fresh Banana Crepe",
+      "ar": "كريب النوتيلا والموز الشهية"
+    },
+    "desc": {
+      "fr": "Crêpe dorée et moelleuse garnie généreusement de Nutella et de rondelles de banane.",
+      "en": "Golden delicate crepe generously layered with creamy Nutella and sliced bananas.",
+      "ar": "كريب ذهبية وهشة مغطاة بطبقة غنية من النوتيلا وقطع الموز الطازج."
+    },
+    "image": "assets/cafe_ambiance.png"
+  },
+  {
+    "id": "des_4",
+    "category": "desserts",
+    "badge": "popular",
+    "price": 26,
+    "calories": "310 kcal",
+    "allergens": "Gluten, Lait, Œufs",
+    "ingredients": "Gaufre liégeoise pur beurre, sucre perlé, coulis de chocolat fondu",
+    "name": {
+      "fr": "Gaufre Liégeoise Croustillante Chocolat",
+      "en": "Crispy Belgian Waffle with Chocolate",
+      "ar": "وافل لييج المقرمش بصلصة الشوكولاتة"
+    },
+    "desc": {
+      "fr": "Gaufre caramélisée au sucre perlé, croustillante à l'extérieur et moelleuse à l'intérieur.",
+      "en": "Caramelized pearl sugar waffle, crispy outside and soft inside with melted chocolate.",
+      "ar": "وافل مقرمش ومكرمل بحبات السكر يقدم مع صوص الشوكولاتة الدافئة."
+    },
+    "image": "assets/breakfast_pastries.png"
+  },
+  {
+    "id": "des_5",
+    "category": "desserts",
+    "badge": "popular",
+    "price": 20,
+    "calories": "210 kcal",
+    "allergens": "Lait, Œufs",
+    "ingredients": "Lait entier, œufs, sucre vanillé, caramel blond maison",
+    "name": {
+      "fr": "Crème Caramel Maison Arij",
+      "en": "House Caramel Flan",
+      "ar": "كريم كراميل منزلي بالكراميل"
+    },
+    "desc": {
+      "fr": "Crème onctueuse cuite au bain-marie nappée de son coulis caramel doré maison.",
+      "en": "Smooth baked vanilla custard topped with rich homemade amber caramel.",
+      "ar": "كريم كراميل ناعم ومحضر على الطريقة المنزلية مع صوص الكراميل الذهبي."
+    },
+    "image": "assets/hero_sushi_cafe.png"
+  },
+  {
+    "id": "des_6",
+    "category": "desserts",
+    "badge": "chef",
+    "price": 34,
+    "calories": "360 kcal",
+    "allergens": "Gluten, Lait",
+    "ingredients": "Biscuit spéculoos croquant, cream cheese fondant, coulis de fruits rouges",
+    "name": {
+      "fr": "Cheesecake aux Fruits Rouges",
+      "en": "Red Berries Coulis Cheesecake",
+      "ar": "تشيز كيك بالتوت والفواكه الحمراء"
+    },
+    "desc": {
+      "fr": "Base croustillante au spéculoos, appareil crémeux au fromage frais et coulis de fruits rouges.",
+      "en": "Crunchy speculoos crust topped with velvety cream cheese and berry coulis.",
+      "ar": "تشيز كيك مخملي بقاعدة بسكويت اللوتس وصلصة التوت والفواكه الحمراء."
+    },
+    "image": "assets/breakfast_pastries.png"
   }
 ];
 

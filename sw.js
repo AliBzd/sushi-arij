@@ -1,6 +1,6 @@
 // Café & Restaurant Sushi Arij - Service Worker (Production Ready PWA Caching)
 
-const CACHE_NAME = 'sushi-arij-v2.0';
+const CACHE_NAME = 'sushi-arij-v3.0';
 
 const ASSETS_TO_CACHE = [
   '/',
