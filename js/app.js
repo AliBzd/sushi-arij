@@ -2088,7 +2088,17 @@ function detectTableFromURL() {
 
 
 // Target Phone Number for WhatsApp
+function getRestaurantPhone() {
+  return localStorage.getItem('arij_tel_phone') || '+212530007780';
+}
+
 function getWhatsAppPhone() {
+  const customPhone = localStorage.getItem('arij_whatsapp_phone');
+  if (customPhone) return customPhone.replace(/[^0-9]/g, '');
+  return '212530007780';
+}
+/* old func replaced */
+function _old_getWhatsAppPhone() {
   return localStorage.getItem('arij_whatsapp_phone') || '212530007780';
 }
 
@@ -2238,7 +2248,31 @@ function applyAdminSiteOverrides() {
   // 9. Contact & Socials
   const addr = localStorage.getItem('arij_contact_addr');
   const hours = localStorage.getItem('arij_contact_hours');
-  const phone = localStorage.getItem('arij_whatsapp_phone');
+  const telPhone = localStorage.getItem('arij_tel_phone') || '+212 5 30 00 77 80';
+  const waPhone = localStorage.getItem('arij_whatsapp_phone') || '212530007780';
+  const cleanWa = waPhone.replace(/[^0-9]/g, '');
+
+  const phoneEl = document.getElementById('contact-phone-display');
+  if (phoneEl) {
+    phoneEl.textContent = telPhone;
+    phoneEl.href = `tel:${telPhone.replace(/\s+/g, '')}`;
+  }
+
+  const callBtn = document.getElementById('btn-call-action');
+  if (callBtn) {
+    callBtn.href = `tel:${telPhone.replace(/\s+/g, '')}`;
+  }
+
+  const waEl = document.getElementById('contact-whatsapp-display');
+  if (waEl) {
+    waEl.textContent = `+${cleanWa}`;
+    waEl.href = `https://wa.me/${cleanWa}`;
+  }
+
+  const waBtn = document.getElementById('btn-whatsapp-action');
+  if (waBtn) {
+    waBtn.href = `https://wa.me/${cleanWa}`;
+  }
   if (addr) {
     const el = document.querySelector('[data-i18n="info_loc_desc"]');
     if (el) el.textContent = addr;

@@ -544,23 +544,31 @@
           <div class="info-block">
             <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
             <div class="info-content">
-              <h4 data-i18n="info_phone_title">Réservations & Commandes</h4>
-              <p data-i18n="info_phone_val">+212 5 30 00 77 80</p>
+              <h4 data-i18n="info_phone_title">Téléphone Fixe (Appels & Réservations)</h4>
+              <p><a href="tel:+212530007780" id="contact-phone-display" data-i18n="info_phone_val">+212 5 30 00 77 80</a></p>
             </div>
           </div>
 
-          <div class="contact-actions" style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
-            <a href="tel:+212530007780" class="btn-primary">
-              <i class="fas fa-phone"></i>
-              <span data-i18n="btn_call_now">Appeler (+212 5 30 00 77 80)</span>
+          <div class="info-block">
+            <div class="info-icon" style="color: #25D366;"><i class="fab fa-whatsapp"></i></div>
+            <div class="info-content">
+              <h4 data-i18n="info_whatsapp_title">WhatsApp Direct (Commandes & Support)</h4>
+              <p><a href="https://wa.me/212530007780" target="_blank" id="contact-whatsapp-display" data-i18n="info_whatsapp_val">+212 5 30 00 77 80</a></p>
+            </div>
+          </div>
+
+          <div class="contact-actions" style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.2rem;">
+            <a href="tel:+212530007780" class="btn-primary" id="btn-call-action">
+              <i class="fas fa-phone-alt"></i>
+              <span data-i18n="btn_call_now">Appel Direct (05 30 00 77 80)</span>
+            </a>
+            <a href="https://wa.me/212530007780" target="_blank" class="btn-whatsapp" id="btn-whatsapp-action">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="btn_whatsapp_order">WhatsApp Direct</span>
             </a>
             <a href="https://www.google.com/maps/place/Caf%C3%A9+%26+Restaurant+Sushi+Arij/@33.9882027,-6.7385552,17z" target="_blank" class="btn-secondary">
               <i class="fas fa-directions"></i>
               <span data-i18n="btn_gps_google">Google Maps</span>
-            </a>
-            <a href="https://waze.com/ul?ll=33.9882027,-6.7385552&navigate=yes" target="_blank" class="btn-secondary">
-              <i class="fab fa-waze"></i>
-              <span data-i18n="btn_gps_waze">Waze</span>
             </a>
           </div>
         </div>
