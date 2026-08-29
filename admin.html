@@ -230,6 +230,50 @@
       gap: 0.5rem;
     }
 
+    /* Modal Responsive & Scrolling Fix */
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) !important;
+      width: 92%;
+      max-width: 680px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      background: #181d24;
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+    }
+
+    .modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-header {
+      padding: 1.2rem 1.8rem;
+      border-bottom: 1px solid var(--border-glass);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.03);
+      flex-shrink: 0;
+    }
+
+    .modal-body {
+      padding: 1.5rem 1.8rem 2rem;
+      overflow-y: auto;
+      max-height: calc(90vh - 75px);
+      -webkit-overflow-scrolling: touch;
+    }
+
     @media (max-width: 992px) {
       .admin-sidebar { width: 80px; padding: 1.5rem 0.5rem; }
       .admin-sidebar .brand-title, .admin-sidebar .brand-sub, .admin-nav-item span { display: none; }
@@ -799,7 +843,7 @@
   </div>
 
   <!-- ADD / EDIT MENU ITEM MODAL (WITH DRAG & DROP IMAGE UPLOADER) -->
-  <div class="overlay" id="admin-modal-overlay"></div>
+  <div class="overlay" id="admin-modal-overlay" onclick="closeAdminItemModal()"></div>
 
   <div class="modal" id="admin-item-modal">
     <div class="modal-header">
@@ -825,11 +869,13 @@
           <div class="form-group">
             <label>Catégorie</label>
             <select id="item-category" class="form-input">
-              <option value="sushi">🍣 Sushi & Spécialités</option>
-              <option value="cafe">☕ Café & Boissons</option>
-              <option value="breakfast">🥐 Petit-Déjeuner</option>
-              <option value="mains">🍽️ Déjeuner & Dîner</option>
-              <option value="desserts">🍰 Desserts</option>
+              <option value="plateaux">🍱 Grands Plateaux</option>
+              <option value="rolls">🔥 Special Rolls & Makis</option>
+              <option value="nigiri">🍣 Nigiri & Temaki</option>
+              <option value="bentos">🍱 Bentos Complets</option>
+              <option value="woks">🍜 Woks & Nouilles</option>
+              <option value="brochettes">🍢 Brochettes & Nems</option>
+              <option value="salades">🥗 Salades & Soupes</option>
             </select>
           </div>
           <div class="form-group">

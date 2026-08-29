@@ -2668,7 +2668,7 @@ function editMenuItem(id) {
   document.getElementById('item-name-fr').value = item.name?.fr || item.name || '';
   document.getElementById('item-name-en').value = item.name?.en || '';
   document.getElementById('item-name-ar').value = item.name?.ar || '';
-  document.getElementById('item-category').value = item.category || 'sushi';
+  document.getElementById('item-category').value = item.category || 'rolls';
   document.getElementById('item-price').value = item.price || 50;
   document.getElementById('item-badge').value = item.badge || '';
   document.getElementById('item-calories').value = item.calories || '';
